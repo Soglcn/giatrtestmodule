@@ -40,6 +40,17 @@ html, body {
     display: none;
 }
 
+#textID{
+    position: fixed;
+    bottom: 5%;
+    z-index: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 24pt;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .scroll-container {
     text-decoration: none;
     height: 100vh;
