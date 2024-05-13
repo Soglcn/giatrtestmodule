@@ -81,6 +81,28 @@
 
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
+            <div id="closeMainMenuPanel">
+                <button id="closeMain">&#10006;</button>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var closeMainButton = document.getElementById("closeMain");
+                        var menuPanel = document.getElementById("menu-panel");
+
+                        closeMainButton.addEventListener("click", function () {
+                            closeMenuWithAnimation();
+                        });
+
+                        function closeMenuWithAnimation() {
+                            menuPanel.classList.remove("open");
+                            menuPanel.classList.add("close");
+                            setTimeout(function () {
+                                menuPanel.style.display = "none";
+                            }, 500);
+                        }
+                    });
+
+                </script>
+            </div>
             <ul id="first-list">
                 <li id="about">Hakkında</li>
                 <li id="ecosystem">Ekosistem</li>
@@ -118,6 +140,7 @@
                 <li><a href="./pages/yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
             </ul>
             <ul class="gallery-list" id="second-list">
+                <li><a href="maingallery.html">Interaktif Galeri</a></li>
                 <li><a href="merkezgaleri.html">Merkez</a></li>
                 <li><a href="fabrikalargaleri.html">Fabrikalar</a></li>
                 <li><a href="lojmanlargaleri.html">Lojmanlar</a></li>
@@ -332,7 +355,7 @@
             </div>
             <script>
                 const characters = ['T', 'O', 'P', 'L', 'A', 'M', '', 'A', 'L', 'A', 'N', '', '2', '9', '.', '4', '6', '2', '.', '5', '5', '1', 'm', '²'];
-                const secondText = ['1', '.',  'E', 'T', 'A', 'P', '', '', '', '', '', '', '5', '.','8', '3', '6','.', '0', '0', '0', 'm', '²','', ];
+                const secondText = ['1', '.', 'E', 'T', 'A', 'P', '', '', '', '', '', '', '5', '.', '8', '3', '6', '.', '0', '0', '0', 'm', '²', '',];
                 const thirdText = ['T', 'O', 'P', 'L', 'A', 'M', '', 'A', 'L', 'A', 'N', '', '2', '9', '.', '4', '6', '2', '.', '5', '5', '1', 'm', '²'];
 
                 const fxBoxes = document.querySelectorAll('.fxBox');
@@ -385,7 +408,7 @@
                                 showSecondText();
                                 setTimeout(() => {
                                     intervalId = startRandomAnimation();
-                                    showThirdText(); 
+                                    showThirdText();
                                     setTimeout(() => {
                                         stopRandomAnimation(intervalId);
                                         showFirstText();

@@ -36,6 +36,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+#closeMainMenuPanel{
+    display: none;
+}
+
 .scroll-container {
     text-decoration: none;
     height: 100vh;
@@ -674,7 +678,7 @@ a:hover {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    z-index: 999;
+    z-index: 1;
     background-color: transparent;
     color: white;
     border: none;
@@ -1356,6 +1360,21 @@ a:hover {
 
 /*RESPONSIVE AREA*/
 @media only screen and (orientation: portrait) {
+
+    #closeMainMenuPanel{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        padding: 7.5px 5px 7.5px 5px;
+        background-color: #fff;
+        border-radius: 250px;
+    }
+    
+    #closeMain{
+        background-color: transparent;
+        border:rgb(0, 153, 255);
+    }
 
     #backButton {
         display: flex;
@@ -2393,7 +2412,7 @@ a:hover {
         position: absolute;
         top: 85%;
         transform: translateY(-50%);
-        z-index: 999;
+        z-index: 9999;
         background-color: transparent;
         color: white;
         border: none;
