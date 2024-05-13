@@ -1683,6 +1683,7 @@ a:hover {
     /*FOOTER*/
 
     #footer-container {
+        margin-top: 25%;
         background-color: #0047BA;
         display: flex;
         flex-direction: row;
