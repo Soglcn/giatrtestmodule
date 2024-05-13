@@ -83,7 +83,7 @@ body {
     z-index: 777;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(2, 36, 227, 0.8);
+    background-color: rgba(0, 2, 12, 0.6);
     display: none;
     animation: growIn 0.5s ease forwards;
     overflow: hidden;
@@ -1293,7 +1293,47 @@ a:hover {
 
 
 /*RESPONSIVE AREA*/
-@media only screen and (orientation: portrait) {
+
+
+/* TABS */
+@media only screen and (min-aspect-ratio: 2.5/4) and (max-aspect-ratio: 4.5/3) {
+    
+    .menu-logo {
+        max-width: 50%;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    }
+
+    #footer-elements {
+        color: #424242;
+        background-color: #ffffff;
+        display: flex;
+        order: 2;
+        height: 45vh;
+        padding-left: 20%;
+        padding-right: 7.5%;
+    }
+
+    #social-link-list li {
+        text-decoration: none;
+        display: inline-block;
+        background-color: #4d4d4d;
+        padding: 10px;
+        width: 5%;
+        text-align: center;
+        border-radius: 100%;
+        margin-right: 2.5%;
+        color: #EBEBEB;
+        transition: all 0.5s ease;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
 
 
     #backButton {
@@ -1798,7 +1838,7 @@ a:hover {
     }
 
     .menu-logo {
-        max-width: 75%;
+        max-width: 25%;
         height: auto;
         display: block;
         position: absolute;
@@ -1841,22 +1881,22 @@ a:hover {
         from {
             transform: translateX(-100%);
         }
-
+    
         to {
             transform: translateX(0%);
         }
     }
-
+    
     @keyframes slideLeft {
         from {
             transform: translateX(0%);
         }
-
+    
         to {
             transform: translateX(-100%);
         }
     }
-
+    
     #menu-panel {
         border-radius: 0;
         position: fixed;
@@ -1864,32 +1904,125 @@ a:hover {
         margin: -5px;
         z-index: 2;
         background: linear-gradient(to top left, #0047BA, #6E2F72);
-        width: 105%;
+        width: 50%;
         padding-top: 7.5%;
         height: 105%;
         display: none;
     }
-
+    
     #menu-panel-second {
         border-radius: 0;
         position: fixed;
-        top: 15%;
-        left: 0;
+        top: 25%;
+        right: 0%;
+        left: 50%;
         margin: -5px;
         z-index: 2;
-        width: 100%;
+        width: 60%;
         height: 100%;
         display: none;
-        background: linear-gradient(to top left, #0047BA, #6E2F72);
     }
-
+    
     #menu-panel-first {
         position: fixed;
+        font-size: 12pt;
         padding-left: 25px;
         top: 20%;
         left: 0;
-        z-index: 0;
-
+    }
+    
+    #close-second-menu {
+        font-size: 10pt;
+        margin-bottom: -50px;
+        padding-left: 15%;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    
+    #close-second-menu:hover {
+        padding-left: 15%;
+        color: #ffffff7e;
+        cursor: pointer;
+    }
+    
+    .about-list {
+        display: none;
+    }
+    
+    .eco-list {
+        display: none;
+    }
+    
+    .services-list {
+        display: none;
+    }
+    
+    .gallery-list {
+        display: none;
+    }
+    
+    .contact-list {
+        display: none;
+    }
+    
+    #menu-panel.open {
+        display: block;
+        animation: slideRight 0.5s forwards;
+    }
+    
+    #menu-panel.close {
+        animation: slideLeft 0.5s forwards;
+    }
+    
+    .menu-logo {
+        cursor: pointer;
+    }
+    
+    #menu-panel ul {
+        padding-top: 15%;
+        padding-left: 15%;
+    }
+    
+    
+    #first-list li {
+        list-style-type: none;
+        color: #dcdcdcce;
+        font-size: 24pt;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+    
+    #first-list li:hover {
+        cursor: pointer;
+        color: #ffffff;
+    }
+    
+    #second-list li,
+    a {
+        cursor: pointer;
+        font-weight: lighter;
+        list-style-type: none;
+        color: #ffffff8e;
+        margin-top: 5%;
+        font-size: 10pt;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+    
+    
+    
+    #second-list li:hover,
+    a:hover {
+        cursor: pointer;
+        color: #ffffff;
+    }
+    
+    #second-list a {
+        cursor: pointer;
+        text-decoration: none;
     }
 
 
@@ -2395,45 +2528,7 @@ a:hover {
 
 }
 
-/* TABS */
-@media only screen and (min-aspect-ratio: 2.5/4) and (max-aspect-ratio: 4.5/3) {
-    
-    .menu-logo {
-        max-width: 50%;
-        height: auto;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-    }
-
-    #footer-elements {
-        color: #424242;
-        background-color: #ffffff;
-        display: flex;
-        order: 2;
-        height: 45vh;
-        padding-left: 20%;
-        padding-right: 7.5%;
-    }
-
-    #social-link-list li {
-        text-decoration: none;
-        display: inline-block;
-        background-color: #4d4d4d;
-        padding: 10px;
-        width: 5%;
-        text-align: center;
-        border-radius: 100%;
-        margin-right: 2.5%;
-        color: #EBEBEB;
-        transition: all 0.5s ease;
-    }
-
-}
-
-@media only screen and (max-width: 1366px) and (orientation: landscape) {
+@media only screen and (max-width: 480px) and (orientation: landscape) {
 
 
     #backButton {
