@@ -2363,7 +2363,7 @@ a:hover {
     .content {
         position: absolute;
         width: 50%;
-        top: 60%;
+        top: 50%;
         left: 40%;
         transform: translate(-50%, -50%);
         color: white;
@@ -2410,7 +2410,7 @@ a:hover {
     .prev-btn,
     .next-btn {
         position: absolute;
-        top: 85%;
+        top: 75%;
         transform: translateY(-50%);
         z-index: 9999;
         background-color: transparent;
