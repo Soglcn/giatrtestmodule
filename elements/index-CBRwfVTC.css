@@ -99,7 +99,7 @@ html, body {
     left: 10%;
     padding: 7.5px;
     background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
     border-radius: 250px;
     transition: all 0.5s ease;
 }
@@ -113,7 +113,7 @@ html, body {
 }
 
 #closeMain:hover{
-    color: #000000;
+    color: #5e5e5e;
     font-size: 18pt;
     background-color: transparent;
     border:rgb(0, 153, 255);
@@ -1449,7 +1449,7 @@ a:hover {
 
 
 /*RESPONSIVE AREA*/
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 500px) {
 
 
     #closeMainMenuPanel{
@@ -1488,7 +1488,6 @@ a:hover {
     }
     
     #closeMain:hover{
-
         color: #ffffff;
         font-size: 10pt;
         background-color: transparent;
