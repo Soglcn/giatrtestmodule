@@ -45,7 +45,7 @@ html, body {
     font-family: 'CamptonBold';
     text-align: center;
     font-size: 11pt;
-    z-index: 9999;
+    z-index: 0;
     position: absolute;
     border-radius: 100%;
     padding: 50px;
@@ -67,7 +67,7 @@ html, body {
     font-family: 'CamptonBold';
     text-align: center;
     font-size: 13pt;
-    z-index: 9999;
+    z-index: 0;
     position: absolute;
     border-radius: 100%;
     padding: 50px;
@@ -82,7 +82,41 @@ html, body {
 
 
 #closeMainMenuPanel{
-    display: none;
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    padding: 7.5px;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 250px;
+}
+
+#closeMainMenuPanel:hover{
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    padding: 7.5px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 250px;
+    transition: all 0.5s ease;
+}
+
+#closeMain{
+    color: #ffffff;
+    font-size: 18pt;
+    background-color: transparent;
+    border:rgb(0, 153, 255);
+    transition: all 0.5s ease;
+}
+
+#closeMain:hover{
+    color: #000000;
+    font-size: 18pt;
+    background-color: transparent;
+    border:rgb(0, 153, 255);
 }
 
 #textID{
@@ -436,7 +470,7 @@ canvas {
     position: fixed;
     top: 0;
     margin: -5px;
-    z-index: 2;
+    z-index: 9999;
     background: linear-gradient(to top left, #0047BA, #6E2F72);
     width: 35%;
     padding-top: 7.5%;
@@ -1164,8 +1198,8 @@ a:hover {
 }
 
 #person-container img {
-    height: 50%;
-    border: #000 5px solid;
+    width: 60%;
+    border: #2d76e4 1px solid;
 }
 
 
@@ -1626,7 +1660,7 @@ a:hover {
         font-family: 'CamptonBold';
         text-align: center;
         font-size: 8pt;
-        z-index: 9999;
+        z-index: 0;
         position: absolute;
         border-radius: 100%;
         padding: 50px;
@@ -1648,7 +1682,7 @@ a:hover {
         font-family: 'CamptonBold';
         text-align: center;
         font-size: 8pt;
-        z-index: 9999;
+        z-index: 0;
         position: absolute;
         border-radius: 100%;
         padding: 50px;
@@ -2174,8 +2208,8 @@ a:hover {
     }
 
     #person-container img {
-        height: 25%;
-        border: #000 5px solid;
+        width: 25%;
+        border: #e9e9e9 1px solid;
     }
 
     #person-content-black {
