@@ -67,8 +67,8 @@ body{text-decoration:none;margin:0;padding:0;overflow-x:hidden;scroll-behavior: 
     #hebele h1 {
         text-decoration: none;
         text-align: left;
-        font-size: 14pt;
-        margin-top: 110%;
+        font-size: 16pt;
+        margin-top: 75%;
         margin-left: 10%;
         margin-right: 10%;
         letter-spacing: 2px;
@@ -77,14 +77,16 @@ body{text-decoration:none;margin:0;padding:0;overflow-x:hidden;scroll-behavior: 
     #hebele p {
         font-family: 'CamptonLighter';
         text-decoration: none;
-        text-align: justify;
-        font-size: 10pt;
+        text-align: left;
+        font-size: 11pt;
+        margin-top: 10%;
         margin-left: 10%;
-        margin-right: 10%;
+        margin-right: 25%;
         letter-spacing: 1px;
     }
 
     #goToGalleryArea {
+        margin-top: 10%;
         text-decoration: none;
         width: 35%;
         background-color: #fff;
@@ -103,6 +105,7 @@ body{text-decoration:none;margin:0;padding:0;overflow-x:hidden;scroll-behavior: 
     }
     
     #goToGalleryArea:hover {
+        margin-top: 10%;
         text-decoration: none;
         width: 35%;
         background-color: #fff;
