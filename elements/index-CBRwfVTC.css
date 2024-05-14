@@ -36,6 +36,51 @@ html, body {
     scroll-behavior: smooth;
 }
 
+#MapArea {
+    position: relative; 
+    height: 100vh;
+}
+
+#interactiveMapButton {
+    font-family: 'CamptonBold';
+    text-align: center;
+    font-size: 11pt;
+    z-index: 9999;
+    position: absolute;
+    border-radius: 100%;
+    padding: 50px;
+    bottom: 10%;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #24242456;
+    box-shadow: 0 0 20px rgba(70, 161, 236, 0.562);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#interactiveMapButton:hover {
+    font-family: 'CamptonBold';
+    text-align: center;
+    font-size: 13pt;
+    z-index: 9999;
+    position: absolute;
+    border-radius: 100%;
+    padding: 50px;
+    bottom: 10%;
+    right: 10%;
+    width: 75px;
+    height: 75px;
+    color: #ffffff;
+    background-color: #0044ffdc;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.329);
+}
+
+
 #closeMainMenuPanel{
     display: none;
 }
@@ -1574,6 +1619,51 @@ a:hover {
         100% {
             transform: translateY(-100%);
         }
+    }
+    
+
+    #interactiveMapButton {
+        font-family: 'CamptonBold';
+        text-align: center;
+        font-size: 8pt;
+        z-index: 9999;
+        position: absolute;
+        border-radius: 100%;
+        padding: 50px;
+        bottom: 70%;
+        right: 10%;
+        width: 15px;
+        height: 15px;
+        color: #ffffff;
+        background-color: #24242456;
+        box-shadow: 0 0 20px rgba(70, 161, 236, 0.562);
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #interactiveMapButton:hover {
+        font-family: 'CamptonBold';
+        text-align: center;
+        font-size: 8pt;
+        z-index: 9999;
+        position: absolute;
+        border-radius: 100%;
+        padding: 50px;
+        bottom: 70%;
+        right: 10%;
+        width: 15px;
+        height: 15px;
+        color: #ffffff;
+        background-color: #24242456;
+        box-shadow: 0 0 20px rgba(70, 161, 236, 0.562);
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
 
