@@ -1458,6 +1458,8 @@ a:hover {
         top: 5%;
         left: 10%;
         padding: 7.5px;
+        width: 15px;
+        height: 15px;
         background-color: transparent;
         color: #ffffff;
         border-radius: 250px;
@@ -1469,22 +1471,26 @@ a:hover {
         top: 5%;
         left: 10%;
         padding: 7.5px;
+        width: 15px;
+        height: 15px;
         background-color: transparent;
         color: #ffffff;
         border-radius: 250px;
     }
     
     #closeMain{
+        text-align: center;
         color: #ffffff;
-        font-size: 18pt;
+        font-size: 10pt;
         background-color: transparent;
         border:rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
     
     #closeMain:hover{
+
         color: #ffffff;
-        font-size: 18pt;
+        font-size: 10pt;
         background-color: transparent;
         border:rgb(0, 153, 255);
         transition: all 0.5s ease;

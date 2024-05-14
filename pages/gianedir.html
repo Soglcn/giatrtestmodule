@@ -26,13 +26,14 @@
             Sincerely 
             SOCY -->
     </noscript>
-  <link rel="stylesheet" crossorigin href="../elements/index-CBRwfVTC.css">
+    <link rel="stylesheet" crossorigin href="../elements/index-CBRwfVTC.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
+            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo"
+                        class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
                 <script>
@@ -40,7 +41,7 @@
                         var hamburgerIcon = document.getElementById("hamburger-icon");
                         var menuPanel = document.getElementById("menu-panel");
                         var isOpen = false;
-    
+
                         hamburgerIcon.addEventListener("click", function () {
                             if (!isOpen) {
                                 openMenuWithAnimation();
@@ -48,24 +49,24 @@
                                 closeMenuWithAnimation();
                             }
                         });
-    
+
                         document.addEventListener("click", function (event) {
                             var target = event.target;
                             var isMenu = target.closest("#menu-panel") === menuPanel;
                             var isHamburger = target === hamburgerIcon;
-    
+
                             if (!isMenu && !isHamburger && isOpen) {
                                 closeMenuWithAnimation();
                             }
                         });
-    
+
                         function openMenuWithAnimation() {
                             menuPanel.style.display = "block";
                             menuPanel.classList.remove("close");
                             menuPanel.classList.add("open");
                             isOpen = true;
                         }
-    
+
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -75,8 +76,8 @@
                             isOpen = false;
                         }
                     });
-    
-    
+
+
                 </script>
             </div>
             <div class="item">
@@ -90,7 +91,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
             <div id="closeMainMenuPanel">
@@ -99,11 +100,11 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         var closeMainButton = document.getElementById("closeMain");
                         var menuPanel = document.getElementById("menu-panel");
-    
+
                         closeMainButton.addEventListener("click", function () {
                             closeMenuWithAnimation();
                         });
-    
+
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -112,7 +113,7 @@
                             }, 500);
                         }
                     });
-    
+
                 </script>
             </div>
             <ul id="first-list">
@@ -124,11 +125,11 @@
                 <li id="contact">İletişim</li>
             </ul>
             <ul id="second-list">
-    
+
                 <a href="../pages/viewer.html">
                     <li>Parsel Sorgu</li>
                 </a>
-    
+
             </ul>
         </div>
         <div id="menu-panel-second">
@@ -169,7 +170,7 @@
             </ul>
         </div>
         <script>
-    
+
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
                 if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -178,8 +179,8 @@
                     document.querySelector('#menu-panel').style.width = '25%';
                 }
             });
-    
-    
+
+
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -188,7 +189,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
             document.getElementById('ecosystem').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'block';
@@ -197,7 +198,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
             document.getElementById('services').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -222,7 +223,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'block';
             });
-    
+
             document.getElementById('contact').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -231,18 +232,18 @@
                 document.querySelector('.contact-list').style.display = 'block';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
         </script>
-    
-    
-    
+
+
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var listItems = document.querySelectorAll("#first-list li");
                 var menuPanel = document.getElementById("menu-panel");
                 var menuPanelSecond = document.getElementById("menu-panel-second");
                 var emptyArea = document.body;
-    
+
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
                         var screenWidth = window.innerWidth;
@@ -254,7 +255,7 @@
                         menuPanelSecond.style.display = "block";
                     });
                 });
-    
+
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
                         if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -265,11 +266,11 @@
                         menuPanelSecond.style.display = "none";
                     }
                 });
-    
+
             });
         </script>
     </div>
-    
+
     <div class="main-container">
         <div class="main-container">
             <div class="main-element">
@@ -295,14 +296,15 @@
             <div class="main-element">
                 <div id="sub-page-content">
                     <div id="sub-page-paragraph">
-                        <p>Niğde İli'nin Ulukışla İlçesi'nde konumlanan Anadolu Uluslararası Özel Endüstri Bölgesi, 17
-                            Mayıs 2023 tarihinde Cumhurbaşkanlığı kararnamesiyle resmen ilan edilen bu bölge, 4737
-                            sayılı Endüstri Bölgesi Kanunu'nun 4/Ç maddesi uyarınca hayata geçirilmiştir. Sıradan bir
-                            endüstri bölgesi olmaktan öteye geçerek, GIA üst kimliği altında faaliyet gösteren, çalışan
-                            lojmanları, Merkezi Yönetim Alanı, Ar-Ge Merkezi, Tır Parkı ve Konaklama Merkezi ve Fuar
-                            Alanı gibi modern donatılarla donatılmış bir yapı sunmaktadır. Bu donatılar, sadece
-                            endüstriyel faaliyetlerin yürütülmesini değil, aynı zamanda yeni bir çalışma, üretme ve
-                            yaşam tarzı sunmayı amaçlamaktadır.
+                        <p>Niğde ilinin Ulukışla ilçesinde konumlanan Anadolu Uluslararası Özel Endüstri Bölgesi, 17
+                            Mayıs 2023 tarihinde Cumhurbaşkanlığı kararnamesiyle resmen ilan edilmiş ve 4737 sayılı
+                            Endüstri Bölgesi Kanunu'nun 4/Ç maddesi uyarınca hayata geçirilmiştir. Sıradan bir endüstri
+                            bölgesi olmaktan öteye geçerek, GIA üst kimliği altında faaliyet gösteren; Lojmanlar,
+                            Merkezi Yönetim Alanı, Ar-Ge Merkezi, Tır Parkı, Konaklama Merkezi ve Fuar Alanı gibi modern
+                            donatılarla tasarlanmış bir yapı sunmaktadır. Bu donatılar, sadece endüstriyel faaliyetlerin
+                            yürütülmesini değil, aynı zamanda yeni bir çalışma, üretme ve yaşam tarzı sunmayı
+                            amaçlamaktadır.
+
                         <p>
                     </div>
                     <div id="sub-page-image">
