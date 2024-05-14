@@ -1451,19 +1451,43 @@ a:hover {
 /*RESPONSIVE AREA*/
 @media only screen and (orientation: portrait) {
 
+
     #closeMainMenuPanel{
         display: block;
         position: fixed;
         top: 5%;
-        right: 5%;
-        padding: 7.5px 5px 7.5px 5px;
-        background-color: #fff;
+        left: 10%;
+        padding: 7.5px;
+        background-color: transparent;
+        color: #ffffff;
+        border-radius: 250px;
+    }
+    
+    #closeMainMenuPanel:hover{
+        display: block;
+        position: fixed;
+        top: 5%;
+        left: 10%;
+        padding: 7.5px;
+        background-color: transparent;
+        color: #ffffff;
         border-radius: 250px;
     }
     
     #closeMain{
+        color: #ffffff;
+        font-size: 18pt;
         background-color: transparent;
         border:rgb(0, 153, 255);
+        transition: all 0.5s ease;
+    }
+    
+    #closeMain:hover{
+        color: #ffffff;
+        font-size: 18pt;
+        background-color: transparent;
+        border:rgb(0, 153, 255);
+        transition: all 0.5s ease;
     }
 
     #backButton {
