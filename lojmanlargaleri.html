@@ -716,15 +716,15 @@
                     });
 
                     document.addEventListener("click", function (event) {
-                        var target = event.target;
-                        var isMenu = target.closest("#menu-panel") === menuPanel;
-                        var isHamburger = target === hamburgerIcon;
+              var target = event.target;
+              var isMenu = target.closest("#menu-panel") === menuPanel;
+              var isHamburger = target === hamburgerIcon;
 
-                        if (!isMenu && !isHamburger && isOpen) {
-                            closeMenuWithAnimation();
-                        }
-                    });
-
+              if (!isMenu && !isHamburger && isOpen) {
+                menuPanel.style.display = "none";
+                isOpen = false;
+              }
+            });
                     function openMenuWithAnimation() {
                         menuPanel.style.display = "block";
                         menuPanel.classList.remove("close");
