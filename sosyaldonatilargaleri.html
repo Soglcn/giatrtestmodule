@@ -9,7 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/site-images/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
-  <link rel="stylesheet" crossorigin href="./assets/index-NaqL_L0Z.css">
+  <link rel="stylesheet" crossorigin href="./elements/index-CBRwfVTC.css">
   <title>Sosyal Donatılar</title>
   <style>
     @font-face {
@@ -697,69 +697,89 @@
 <body>
   <header>
     <div class="container">
-      <div class="item"><a href="index.html"><img src="./assets/Logo-CzcIiDrb_111.png" alt="Logo" class="menu-logo"></a>
-      </div>
-      <div class="item">
-        <div id="hamburger-icon">&#9776;</div>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            var hamburgerIcon = document.getElementById("hamburger-icon");
-            var menuPanel = document.getElementById("menu-panel");
-            var isOpen = false;
+      <div class="item"><a href="index.html"><img src="./elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
+        <div class="item">
+            <div id="hamburger-icon">&#9776;</div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var hamburgerIcon = document.getElementById("hamburger-icon");
+                    var menuPanel = document.getElementById("menu-panel");
+                    var isOpen = false;
 
-            hamburgerIcon.addEventListener("click", function () {
-              if (!isOpen) {
-                openMenuWithAnimation();
-              } else {
-                closeMenuWithAnimation();
-              }
-            });
+                    hamburgerIcon.addEventListener("click", function () {
+                        if (!isOpen) {
+                            openMenuWithAnimation();
+                        } else {
+                            closeMenuWithAnimation();
+                        }
+                    });
 
-            document.addEventListener("click", function (event) {
-              var target = event.target;
-              var isMenu = target.closest("#menu-panel") === menuPanel;
-              var isHamburger = target === hamburgerIcon;
+                    document.addEventListener("click", function (event) {
+                        var target = event.target;
+                        var isMenu = target.closest("#menu-panel") === menuPanel;
+                        var isHamburger = target === hamburgerIcon;
 
-              if (!isMenu && !isHamburger && isOpen) {
-                closeMenuWithAnimation();
-              }
-            });
+                        if (!isMenu && !isHamburger && isOpen) {
+                            closeMenuWithAnimation();
+                        }
+                    });
 
-            function openMenuWithAnimation() {
-              menuPanel.style.display = "block";
-              menuPanel.classList.remove("close");
-              menuPanel.classList.add("open");
-              isOpen = true;
-            }
+                    function openMenuWithAnimation() {
+                        menuPanel.style.display = "block";
+                        menuPanel.classList.remove("close");
+                        menuPanel.classList.add("open");
+                        isOpen = true;
+                    }
 
-            function closeMenuWithAnimation() {
-              menuPanel.classList.remove("open");
-              menuPanel.classList.add("close");
-              setTimeout(function () {
-                menuPanel.style.display = "none";
-              }, 500);
-              isOpen = false;
-            }
-          });
+                    function closeMenuWithAnimation() {
+                        menuPanel.classList.remove("open");
+                        menuPanel.classList.add("close");
+                        setTimeout(function () {
+                            menuPanel.style.display = "none";
+                        }, 500);
+                        isOpen = false;
+                    }
+                });
 
 
-        </script>
-      </div>
-      <div class="item">
-        <div id="empty-area"></div>
-      </div>
-      <div class="item">
-        <a href="#" id="change-language">TR</a>
-      </div>
-      <div class="item">
-        <a href="./pages/viewer.html" id="show-stages">Parsel Sorgu</a>
-      </div>
+            </script>
+        </div>
+        <div class="item">
+            <div id="empty-area"></div>
+        </div>
+        <div class="item">
+            <a href="#" id="change-language">TR</a>
+        </div>
+        <div class="item">
+            <a href="./pages/viewer.html" id="show-stages">Parsel Sorgu</a>
+        </div>
     </div>
-  </header>
+</header>
 
-
-  <div class="item" id="menu-panel">
+<div class="item" id="menu-panel">
     <div id="menu-panel-first">
+        <div id="closeMainMenuPanel">
+            <button id="closeMain">&#10006;</button>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var closeMainButton = document.getElementById("closeMain");
+                    var menuPanel = document.getElementById("menu-panel");
+
+                    closeMainButton.addEventListener("click", function () {
+                        closeMenuWithAnimation();
+                    });
+
+                    function closeMenuWithAnimation() {
+                        menuPanel.classList.remove("open");
+                        menuPanel.classList.add("close");
+                        setTimeout(function () {
+                            menuPanel.style.display = "none";
+                        }, 500);
+                    }
+                });
+
+            </script>
+        </div>
         <ul id="first-list">
             <li id="about">Hakkında</li>
             <li id="ecosystem">Ekosistem</li>
@@ -769,9 +789,11 @@
             <li id="contact">İletişim</li>
         </ul>
         <ul id="second-list">
-            
-            <a href="./pages/viewer.html"><li>Parsel Sorgu</li></a>
-            
+
+            <a href="./pages/viewer.html">
+                <li>Parsel Sorgu</li>
+            </a>
+
         </ul>
     </div>
     <div id="menu-panel-second">
@@ -795,6 +817,7 @@
             <li><a href="./pages/yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
         </ul>
         <ul class="gallery-list" id="second-list">
+            <li><a href="maingallery.html">Interaktif Galeri</a></li>
             <li><a href="merkezgaleri.html">Merkez</a></li>
             <li><a href="fabrikalargaleri.html">Fabrikalar</a></li>
             <li><a href="lojmanlargaleri.html">Lojmanlar</a></li>
@@ -812,98 +835,104 @@
     </div>
     <script>
 
-      document.getElementById('close-second-menu').addEventListener('click', function () {
-          document.querySelector('#menu-panel-second').style.display = 'none';
-          if (window.innerWidth <= 1024) { // Mobil cihazlarda
-              document.querySelector('#menu-panel').style.width = '100%';
-          } else {
-              document.querySelector('#menu-panel').style.width = '25%';
-          }
-      });
+        document.getElementById('close-second-menu').addEventListener('click', function () {
+            document.querySelector('#menu-panel-second').style.display = 'none';
+            if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                document.querySelector('#menu-panel').style.width = '100%';
+            } else {
+                document.querySelector('#menu-panel').style.width = '25%';
+            }
+        });
 
 
-      document.getElementById('about').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'block';
-          document.querySelector('.eco-list').style.display = 'none';
-          document.querySelector('.services-list').style.display = 'none';
-          document.querySelector('.gallery-list').style.display = 'none';
-          document.querySelector('.contact-list').style.display = 'none';
-          document.querySelector('.press-list').style.display = 'none';
-      });
+        document.getElementById('about').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'block';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
 
-      document.getElementById('ecosystem').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'none';
-          document.querySelector('.eco-list').style.display = 'block';
-          document.querySelector('.services-list').style.display = 'none';
-          document.querySelector('.gallery-list').style.display = 'none';
-          document.querySelector('.contact-list').style.display = 'none';
-          document.querySelector('.press-list').style.display = 'none';
-      });
+        document.getElementById('ecosystem').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'block';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
 
-      document.getElementById('services').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'none';
-          document.querySelector('.eco-list').style.display = 'none';
-          document.querySelector('.services-list').style.display = 'block';
-          document.querySelector('.gallery-list').style.display = 'none';
-          document.querySelector('.contact-list').style.display = 'none';
-          document.querySelector('.press-list').style.display = 'none';
-      });
-      document.getElementById('gallery').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'none';
-          document.querySelector('.eco-list').style.display = 'none';
-          document.querySelector('.services-list').style.display = 'none';
-          document.querySelector('.gallery-list').style.display = 'block';
-          document.querySelector('.contact-list').style.display = 'none';
-          document.querySelector('.press-list').style.display = 'none';
-      });
-      document.getElementById('press').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'none';
-          document.querySelector('.eco-list').style.display = 'none';
-          document.querySelector('.services-list').style.display = 'none';
-          document.querySelector('.gallery-list').style.display = 'none';
-          document.querySelector('.contact-list').style.display = 'none';
-          document.querySelector('.press-list').style.display = 'block';
-      });
+        document.getElementById('services').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'block';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+        document.getElementById('gallery').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'block';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+        document.getElementById('press').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'block';
+        });
 
-      document.getElementById('contact').addEventListener('click', function () {
-          document.querySelector('.about-list').style.display = 'none';
-          document.querySelector('.eco-list').style.display = 'none';
-          document.querySelector('.services-list').style.display = 'none';
-          document.querySelector('.gallery-list').style.display = 'none';
-          document.querySelector('.contact-list').style.display = 'block';
-          document.querySelector('.press-list').style.display = 'none';
-      });
+        document.getElementById('contact').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'block';
+            document.querySelector('.press-list').style.display = 'none';
+        });
 
-  </script>
+    </script>
 
 
 
-  <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          var listItems = document.querySelectorAll("#first-list li");
-          var menuPanel = document.getElementById("menu-panel");
-          var menuPanelSecond = document.getElementById("menu-panel-second");
-          var emptyArea = document.body;
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var listItems = document.querySelectorAll("#first-list li");
+            var menuPanel = document.getElementById("menu-panel");
+            var menuPanelSecond = document.getElementById("menu-panel-second");
+            var emptyArea = document.body;
 
-          listItems.forEach(function (item) {
-              item.addEventListener("click", function () {
-                  menuPanel.style.width = "100%";
-                  menuPanelSecond.style.display = "block";
-              });
-          });
-          emptyArea.addEventListener("click", function (event) {
-              if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
-                  if (window.innerWidth <= 1024) { // Mobil cihazlarda
-                      menuPanel.style.width = "100%";
-                  } else {
-                      menuPanel.style.width = "25%";
-                  }
-                  menuPanelSecond.style.display = "none";
-              }
-          });
+            listItems.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    var screenWidth = window.innerWidth;
+                    if (screenWidth <= 1024) { // Mobil cihazlarda
+                        menuPanel.style.width = "100%";
+                    } else {
+                        menuPanel.style.width = "45%";
+                    }
+                    menuPanelSecond.style.display = "block";
+                });
+            });
 
-      });
-  </script>
+            emptyArea.addEventListener("click", function (event) {
+                if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
+                    if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                        menuPanel.style.width = "100%";
+                    } else {
+                        menuPanel.style.width = "25%";
+                    }
+                    menuPanelSecond.style.display = "none";
+                }
+            });
+
+        });
+    </script>
 </div>
 
 
@@ -1036,57 +1065,57 @@
     <div id="footer-container">
       <div id="footer-elements">
         <div id="footer-column">
-          <h1>KEŞFET</h1>
-          <ul>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Galeri</a></li>
-            <li><a href="#">Sürdürülebilirlik</a></li>
-            <li><a href="#">Sektörler</a></li>
-            <li><a href="#">Haberler</a></li>
-          </ul>
-        </div>
-
-        <div id="footer-column">
-          <h1>YATIRIM</h1>
-          <ul>
-            <li><a href="#">Parsel Sorgu</a></li>
-            <li><a href="#">Teşvikler</a></li>
-          </ul>
-        </div>
-
-        <div id="footer-column">
-          <h1>İLETİŞİM</h1>
-          <div id="adress-infos">
+            <h1>KEŞFET</h1>
             <ul>
-              <li>Adres Niğde</li>
-              <li>Adres Ankara</li>
-              <li>Telefon</li>
-              <li>Mail</li>
-              <li>Fax</li>
+                <li><a href="./pages/gianedir.html">Hakkımızda</a></li>
+                <li><a href="./pages/yonetimhizmetleri.html">Hizmetler</a></li>
+                <li><a href="./pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+                <li><a href="./pages/sektorler.html">Sektörler</a></li>
+                <li><a href="./pages/basin.html">Haberler</a></li>
             </ul>
-          </div>
-          <div id="social-links">
-            <ul id="social-link-list">
-              <a href="https://www.facebook.com/giatrcom">
-                <li><i class="fa-brands fa-facebook"></i></li>
-              </a>
-              <a href="https://www.linkedin.com/company/giatrcom/about/  ">
-                <li><i class="fa-brands fa-linkedin"></i></li>
-              </a>
-              <a href="https://www.instagram.com/giatrcom/">
-                <li><i class="fa-brands fa-instagram"></i></li>
-              </a>
-              <a href="https://www.youtube.com/@giatrcom">
-                <li><i class="fa-brands fa-youtube"></i></li>
-              </a>
-              <a href="https://twitter.com/giatrcom">
-                <li><i class="fa-brands fa-x-twitter"></i></li>
-              </a>
-            </ul>
-          </div>
         </div>
 
-      </div>
+        <div id="footer-column">
+            <h1>YATIRIM</h1>
+            <ul>
+                <li><a href="./pages/viewer.html">Parsel Sorgu</a></li>
+                <li><a href="./pages/hibevetesvik.html">Teşvikler</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-column">
+            <h1>İLETİŞİM</h1>
+            <div id="adress-infos">
+                <ul>
+                    <li>Adres Niğde</li>
+                    <li>Adres Ankara</li>
+                    <li>Telefon</li>
+                    <li>Mail</li>
+                    <li>Fax</li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <ul id="social-link-list">
+                    <a href="https://www.facebook.com/giatrcom">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                    </a>
+                    <a href="https://www.linkedin.com/company/giatrcom/about/  ">
+                        <li><i class="fa-brands fa-linkedin"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/giatrcom/">
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a href="https://www.youtube.com/@giatrcom">
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                    </a>
+                    <a href="https://twitter.com/giatrcom">
+                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
     </div>
   </div>
 </body>

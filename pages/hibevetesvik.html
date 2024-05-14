@@ -13,14 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script src="https://unpkg.com/@tweenjs/tween.js@^20.0.0/dist/tween.umd.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/index-NaqL_L0Z.css">
+    <link rel="stylesheet" crossorigin href="../elements/index-CBRwfVTC.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../index.html"><img src="../assets/Logo-CzcIiDrb_111.png" alt="Logo"
-                        class="menu-logo"></a></div>
+            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
                 <script>
@@ -28,7 +27,7 @@
                         var hamburgerIcon = document.getElementById("hamburger-icon");
                         var menuPanel = document.getElementById("menu-panel");
                         var isOpen = false;
-
+    
                         hamburgerIcon.addEventListener("click", function () {
                             if (!isOpen) {
                                 openMenuWithAnimation();
@@ -36,24 +35,24 @@
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
                         document.addEventListener("click", function (event) {
                             var target = event.target;
                             var isMenu = target.closest("#menu-panel") === menuPanel;
                             var isHamburger = target === hamburgerIcon;
-
+    
                             if (!isMenu && !isHamburger && isOpen) {
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
                         function openMenuWithAnimation() {
                             menuPanel.style.display = "block";
                             menuPanel.classList.remove("close");
                             menuPanel.classList.add("open");
                             isOpen = true;
                         }
-
+    
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -63,8 +62,8 @@
                             isOpen = false;
                         }
                     });
-
-
+    
+    
                 </script>
             </div>
             <div class="item">
@@ -74,13 +73,35 @@
                 <a href="#" id="change-language">TR</a>
             </div>
             <div class="item">
-                <a href="viewer.html" id="show-stages">Parsel Sorgu</a>
+                <a href="../pages/viewer.html" id="show-stages">Parsel Sorgu</a>
             </div>
         </div>
     </header>
-
+    
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
+            <div id="closeMainMenuPanel">
+                <button id="closeMain">&#10006;</button>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var closeMainButton = document.getElementById("closeMain");
+                        var menuPanel = document.getElementById("menu-panel");
+    
+                        closeMainButton.addEventListener("click", function () {
+                            closeMenuWithAnimation();
+                        });
+    
+                        function closeMenuWithAnimation() {
+                            menuPanel.classList.remove("open");
+                            menuPanel.classList.add("close");
+                            setTimeout(function () {
+                                menuPanel.style.display = "none";
+                            }, 500);
+                        }
+                    });
+    
+                </script>
+            </div>
             <ul id="first-list">
                 <li id="about">Hakkında</li>
                 <li id="ecosystem">Ekosistem</li>
@@ -90,32 +111,35 @@
                 <li id="contact">İletişim</li>
             </ul>
             <ul id="second-list">
-                <a href="viewer.html">
+    
+                <a href="../pages/viewer.html">
                     <li>Parsel Sorgu</li>
                 </a>
+    
             </ul>
         </div>
         <div id="menu-panel-second">
             <h3 id="close-second-menu">&#x27F5; Geri</h3>
             <ul class="about-list" id="second-list">
-                <li><a href="gianedir.html">GIA Nedir</a></li>
-                <li><a href="baskaninmektubu.html">Başkanın Mektubu</a></li>
-                <li><a href="kurumsalsema.html">Kurumsal Organizasyon</a></li>
-                <li><a href="degerlerimiz.html">Değerler</a></li>
-                <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+                <li><a href="../pages/gianedir.html">GIA Nedir</a></li>
+                <li><a href="../pages/baskaninmektubu.html">Başkanın Mektubu</a></li>
+                <li><a href="../pages/kurumsalsema.html">Kurumsal Organizasyon</a></li>
+                <li><a href="../pages/degerlerimiz.html">Değerler</a></li>
+                <li><a href="../pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
             </ul>
             <ul class="eco-list" id="second-list">
-                <li><a href="konum.html">Konum</a></li>
-                <li><a href="altyapi.html">Altyapı</a></li>
-                <li><a href="sektorler.html">Sektörler</a></li>
-                <li><a href="yatirimfirsatlari.html">Yatırım Fırsatları</a></li>
-                <li><a href="hibevetesvik.html">Hibe, Teşvik ve Destekler</a></li>
-                <li><a href="sosyalimkanlar.html">Sosyal İmkanlar</a></li>
+                <li><a href="../pages/konum.html">Konum</a></li>
+                <li><a href="../pages/altyapi.html">Altyapı</a></li>
+                <li><a href="../pages/sektorler.html">Sektörler</a></li>
+                <li><a href="../pages/yatirimfirsatlari.html">Yatırım Fırsatları</a></li>
+                <li><a href="../pages/hibevetesvik.html">Hibe, Teşvik ve Destekler</a></li>
+                <li><a href="../pages/sosyalimkanlar.html">Sosyal İmkanlar</a></li>
             </ul>
             <ul class="services-list" id="second-list">
-                <li><a href="yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
+                <li><a href="../pages/yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
             </ul>
             <ul class="gallery-list" id="second-list">
+                <li><a href="../maingallery.html">Interaktif Galeri</a></li>
                 <li><a href="../merkezgaleri.html">Merkez</a></li>
                 <li><a href="../fabrikalargaleri.html">Fabrikalar</a></li>
                 <li><a href="../lojmanlargaleri.html">Lojmanlar</a></li>
@@ -124,15 +148,15 @@
                 <li><a href="../sosyaldonatilargaleri.html">Sosyal Donatılar</a></li>
             </ul>
             <ul class="contact-list" id="second-list">
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li><a href="kariyer.html">Kariyer</a></li>
+                <li><a href="../pages/iletisim.html">İletişim</a></li>
+                <li><a href="../pages/kariyer.html">Kariyer</a></li>
             </ul>
             <ul class="press-list" id="second-list">
-                <li><a href="basin.html">Haberler</a></li>
+                <li><a href="../pages/basin.html">Haberler</a></li>
             </ul>
         </div>
         <script>
-
+    
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
                 if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -141,8 +165,8 @@
                     document.querySelector('#menu-panel').style.width = '25%';
                 }
             });
-
-
+    
+    
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -151,7 +175,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('ecosystem').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'block';
@@ -160,7 +184,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('services').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -185,7 +209,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'block';
             });
-
+    
             document.getElementById('contact').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -194,24 +218,30 @@
                 document.querySelector('.contact-list').style.display = 'block';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
         </script>
-
-
-
+    
+    
+    
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var listItems = document.querySelectorAll("#first-list li");
                 var menuPanel = document.getElementById("menu-panel");
                 var menuPanelSecond = document.getElementById("menu-panel-second");
                 var emptyArea = document.body;
-
+    
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
-                        menuPanel.style.width = "100%";
+                        var screenWidth = window.innerWidth;
+                        if (screenWidth <= 1024) { // Mobil cihazlarda
+                            menuPanel.style.width = "100%";
+                        } else {
+                            menuPanel.style.width = "45%";
+                        }
                         menuPanelSecond.style.display = "block";
                     });
                 });
+    
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
                         if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -222,7 +252,7 @@
                         menuPanelSecond.style.display = "none";
                     }
                 });
-
+    
             });
         </script>
     </div>
@@ -311,19 +341,19 @@
                         <div id="footer-column">
                             <h1>KEŞFET</h1>
                             <ul>
-                                <li><a href="#">Hakkımızda</a></li>
-                                <li><a href="../maingallery.html">Galeri</a></li>
-                                <li><a href="#">Sürdürülebilirlik</a></li>
-                                <li><a href="#">Sektörler</a></li>
-                                <li><a href="#">Haberler</a></li>
+                                <li><a href="../pages/gianedir.html">Hakkımızda</a></li>
+                                <li><a href="../pages/yonetimhizmetleri.html">Hizmetler</a></li>
+                                <li><a href="../pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+                                <li><a href="../pages/sektorler.html">Sektörler</a></li>
+                                <li><a href="../pages/basin.html">Haberler</a></li>
                             </ul>
                         </div>
 
                         <div id="footer-column">
                             <h1>YATIRIM</h1>
                             <ul>
-                                <li><a href="#">Parsel Sorgu</a></li>
-                                <li><a href="#">Teşvikler</a></li>
+                                <li><a href="../pages/viewer.html">Parsel Sorgu</a></li>
+                                <li><a href="../pages/hibevetesvik.html">Teşvikler</a></li>
                             </ul>
                         </div>
 

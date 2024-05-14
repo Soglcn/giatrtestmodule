@@ -700,6 +700,11 @@ a:hover {
     width: 100%;
 }
 
+#closeMainMenuPanel{
+    display: none;
+}
+
+
 #textID{
     position: fixed;
     bottom: 5%;
