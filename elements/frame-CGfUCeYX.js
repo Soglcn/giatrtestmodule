@@ -24710,7 +24710,7 @@ ii.push({
         Gi(new R(0,0,0), .05),
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "GIA'yı Keşfetmek İçin Kaydır!",
-        et.querySelector("p").innerText = "Tamamlandığında Türkiye'nin en büyük karma nitelikli özel endüstri şehri olacak olan GIA, ekonomik büyümeyi desteklemenin yanı sıra kapsayıcı ve sürdürülebilir bir sanayi modelini teşvik etmektedir.",
+        et.querySelector("p").innerText = "Tamamlandığında Türkiye'nin en büyük karma nitelikli özel endüstri şehri olacak olan GIA, kapsayıcı ve sürdürülebilir bir sanayi modelini teşvik etmektedir.",
         et.querySelector("a").href = "../pages/gianedir.html",
         et.querySelector("#goToGalleryArea").innerText = "GIA Nedir?"
     }
@@ -24724,7 +24724,7 @@ ii.push({
         Gi(new R(0,0,0), .05),
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 200)),
         et.querySelector("h1").innerText = "Geleceğin Yatırım Merkezi!",
-        et.querySelector("p").innerText = "GIA, ülke ekonomisini uluslararası düzeyde rekabetçi hale getirmeyi, teknoloji transferini desteklemeyi, yabancı sermaye girişini hızlandırmayı ve özellikle büyük ölçekli yatırımlar için uygun sanayi alanları oluşturmayı amaçlar.",
+        et.querySelector("p").innerText = "GIA, ülke ekonomisini uluslararası düzeyde rekabetçi hale getirmeyi, teknoloji transferini desteklemeyi, yabancı sermaye girişini hızlandırmayı amaçlar.",
         et.querySelector("a").href = "../pages/yatirimfirsatlari.html",
         et.querySelector("#goToGalleryArea").innerText = "Daha Fazla Bilgi"
     }
@@ -24738,7 +24738,7 @@ ii.push({
         Gi(new R(0,0,0), .05),
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 200)),
         et.querySelector("h1").innerText = "Fonksiyonel, Yenilikçi ve Erişilebilir!",
-        et.querySelector("p").innerText = "Ulukışla bölgesi, konumu itibari ile, 4 farklı ulaşım imkanına da, rahatlıkla erişebilen stratejik bir kavşak noktasıdır. Ulaşım olanaklarındaki varyasyon, Endüstri bölgesi için ekonomik, sosyal ve çevresel olarak önemli katkılar sağlamaktadır.",
+        et.querySelector("p").innerText = "Ulukışla bölgesi, konumu itibari ile 4 farklı ulaşım imkanına da rahatlıkla erişebilen stratejik bir kavşak noktasıdır.",
         et.querySelector("a").href = "../pages/konum.html",
         et.querySelector("#goToGalleryArea").innerText = "Konumu Keşfet"
     }
@@ -24752,7 +24752,7 @@ ii.push({
         Gi(new R(0,0,0), .05),
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "Bir Endüstri Bölgesinden Daha Fazlası!",
-        et.querySelector("p").innerText = "GIA, sadece endüstriyel faaliyetlerle sınırlı kalmayarak, insan ve çevre odaklı bir yaklaşımla tasarlanmış bir iş ve yaşam alanı sunar. Bölgenin temel amacı, sürdürülebilirlik ilkelerini benimseyerek, insana ve doğaya saygılı bir çevre oluşturmaktır.",
+        et.querySelector("p").innerText = "GIA, sadece endüstriyel faaliyetlerle sınırlı kalmayarak, insan ve çevre odaklı bir yaklaşımla tasarlanmış bir iş ve yaşam alanı sunar.",
         et.querySelector("a").href = "../pages/sosyalimkanlar.html",
         et.querySelector("#goToGalleryArea").innerText = "Sosyal İmkanlar"
     }
