@@ -1452,53 +1452,55 @@ a:hover {
 @media only screen and (max-width: 500px) {
 
 
-    #closeMainMenuPanel{
-        display: block;
+    #closeMainMenuPanel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
-        top: 5%;
-        left: 10%;
-        padding: 7.5px;
+        top: 7.5%;
+        left: 90%;
+        transform: translate(-50%, -50%);
         width: 15px;
         height: 15px;
         background-color: transparent;
         color: #ffffff;
         background-color: #ffffff;
         border-radius: 250px;
+        z-index: 999;
     }
     
     #closeMainMenuPanel:hover{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
-        top: 5%;
-        left: 10%;
-        padding: 7.5px;
+        top: 7.5%;
+        left: 90%;
+        transform: translate(-50%, -50%);
         width: 15px;
         height: 15px;
         background-color: transparent;
         color: #ffffff;
         background-color: #ffffff;
         border-radius: 250px;
+        z-index: 999;
     }
     
-    #closeMain{
-        margin-top: -2px;
-        margin-left: -4px;
+    #closeMain {
         text-align: center;
         color: #000000;
         font-size: 10pt;
         background-color: transparent;
-        border:rgb(0, 153, 255);
+        border: rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
     
     #closeMain:hover{
-        margin-top: -2px;
-        margin-left: -4px;
         text-align: center;
         color: #000000;
         font-size: 10pt;
         background-color: transparent;
-        border:rgb(0, 153, 255);
+        border: rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
 
