@@ -760,7 +760,19 @@ a:hover {
 }
 
 .bg-video {
+    display: block;
     width: 100%;
+}
+
+.bg-image {
+    display: none; /* Varsayılan olarak resim gizli olsun */
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
 }
 
 .prev-btn,
@@ -2572,7 +2584,7 @@ a:hover {
     }
     
     .bg-video {
-        pointer-events: none;
+        display: none;
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -2583,6 +2595,17 @@ a:hover {
         z-index: -9999;
     }
     
+    .bg-image {
+        display: block; 
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -9999;
+    }
+
     
     .prev-btn,
     .next-btn {
