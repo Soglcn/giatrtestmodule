@@ -34,7 +34,10 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #0047BA;
 }
+
+
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
@@ -56,8 +59,11 @@ html, body {
 
 
 #MapArea {
+    overflow: hidden;
     position: relative; 
-    height: 100vh;
+    height: 95vh;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 #interactiveMapButton {
@@ -148,13 +154,13 @@ html, body {
     text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.scroll-container {
+/* .scroll-container {
     text-decoration: none;
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     position: relative;
-}
+} */
 
 section {
     text-decoration: none;
@@ -387,25 +393,54 @@ canvas {
 }
 
 .container {
+    font-family: 'CamptonLighter';
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 50%;
+    width: 60%;
+    margin: 25px 15px;
+    transform: translateX(-50%);
     display: flex;
-    background-color: rgba(37, 36, 36, 0.356);
+    background-color: rgba(27, 27, 27, 0.623);
     z-index: 9999;
+    border-radius: 50px;
 }
+
 
 .item {
     flex: 1;
-    height: 100px;
+    height: 60px;
     margin: 0 5px;
     overflow: hidden;
-    border-radius: 10px;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
+.item:nth-child(1) {
+    flex-basis: 35%;
+}
+
+.item:nth-child(2) {
+    flex-basis: 5%;
+}
+
+.item:nth-child(3) {
+    flex-basis: 20%;
+}
+
+.item:nth-child(4) {
+    flex-basis: 35%;
+}
+
+.item:nth-child(5) {
+    flex-basis: 5%;
+}
+
+
+
 .menu-logo {
-    max-width: 50%;
+    max-height: 85%;
     height: auto;
     display: block;
     position: absolute;
@@ -416,31 +451,65 @@ canvas {
 
 #hamburger-icon {
     position: absolute;
-    top: 30%;
-    font-size: 30px;
+    height: 100%;
+    width: 100%;
     line-height: 1;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+    color: #ffffff;
     cursor: pointer;
     transition: all 0.5s ease;
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 250px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 #hamburger-icon:hover {
     position: absolute;
-    top: 30%;
-    font-size: 30px;
+    height: 100%;
+    width: 100%;
     line-height: 1;
-    text-align: center;
-    color: #ffffff5d;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+    color: #87daf3f1;
     cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 250px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
+
+.homeList {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; 
+    text-align: center;
+    align-items: center;
+    padding: 0; 
+    margin: 5px; 
+}
+
+#homeListLink {
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding: 10px; 
+    margin: 5px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+    font-size: 11pt;
+}
+
+#homeListLink:hover {
+    color: #87daf3f1;
+    padding: 10px; 
+    margin: 5px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+    font-size: 11pt;
+}
 
 @keyframes slideRight {
     from {
@@ -668,25 +737,7 @@ canvas {
     text-decoration: none;
 }
 
-.item:nth-child(1) {
-    flex-basis: 15%;
-}
 
-.item:nth-child(2) {
-    flex-basis: 2.5%;
-}
-
-.item:nth-child(3) {
-    flex-basis: 40%;
-}
-
-.item:nth-child(4) {
-    flex-basis: 15%;
-}
-
-.item:nth-child(5) {
-    flex-basis: 15%;
-}
 
 /* MAIN CONTAINER */
 
@@ -802,40 +853,47 @@ canvas {
 .invest-container {
     margin-top: 5%;
     overflow: hidden;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ebebeb;
 }
 
 #invest-text-area {
-    padding-top: 10%;
     padding-bottom: 10%;
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
 }
 
 #invest-text-area h1 {
-    color: #0047ba;
-    font-size: 40pt;
+    font-family: 'CamptonBold';
+    color: #0047BA;
+    font-size: 50pt;
     letter-spacing: 3px;
-    font-weight: bold;
+    background-color: #ffffff;
+    width: 25%;
+    text-align: left;
+    padding: 50px;
+    border-radius: 15px;
 }
 
 #invest-text-area p {
-    color: #424242;
-    font-size: 25pt;
+    font-family: 'CamptonLighter';
+    text-indent: 25%;
+    color: #ffffff;
+    font-size: 28pt;
     letter-spacing: 4px;
     padding-left: 10%;
     padding-right: 10%;
     font-weight: lighter;
+    width: 75%;
+    padding-top: 15%;
+    padding-bottom: 2.5%;
+    text-align: justify;
+    letter-spacing: 2px;
 }
 
 #counter-container {
-    margin-top: 20%;
-    width: 100%;
-    text-align: center;
-    color: #0047ba;
+    width: 90%;
+    margin-left: 5%;
     font-size: 40pt;
     letter-spacing: 2px;
     font-weight: bold;
@@ -845,24 +903,21 @@ canvas {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    height: 25%;
     justify-content: space-around;
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 10%;
 }
 
 .fxBox {
     width: 3.5%;
     height: 50%;
-    background-color: black;
-    color: rgb(240, 248, 163);
+    background-color: transparent;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40pt;
-    background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
-    background-size: cover;
-    background-position: center;
+    font-size: 60pt;
 }
 
 #model-container {

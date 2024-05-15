@@ -24703,7 +24703,7 @@ const ii = []
   , ps = .0085;
 ii.push({
     start: 0,
-    end: 25,
+    end: 10,
     func: ()=>{
         rn.lookAt(Rt.position),
         Hi(new R(-50,500,800), .005),
@@ -24716,7 +24716,7 @@ ii.push({
     }
 });
 ii.push({
-    start: 25,
+    start: 10,
     end: 50,
     func: ()=>{
         rn.lookAt(Rt.position),
@@ -24731,7 +24731,7 @@ ii.push({
 });
 ii.push({
     start: 50,
-    end: 75,
+    end: 90,
     func: ()=>{
         rn.lookAt(Rt.position),
         Hi(new R(250,100,350), ps),
@@ -24744,11 +24744,11 @@ ii.push({
     }
 });
 ii.push({
-    start: 75,
+    start: 90,
     end: 100,
     func: ()=>{
         rn.lookAt(Rt.position),
-        Hi(new R(50,100,150), .005),
+        Hi(new R(-50,500,800), .005),
         Gi(new R(0,0,0), .05),
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "Bir Endüstri Bölgesinden Daha Fazlası!",
