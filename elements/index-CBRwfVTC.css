@@ -706,6 +706,7 @@ a:hover {
     position: absolute;
     top: 0;
     width: 100%;
+    
 }
 
 .main-element {
@@ -2526,7 +2527,7 @@ a:hover {
         position: absolute;
         top: 0;
         width: 100%;
-        z-index: 2;
+        z-index: 0;
     }
     
     .main-element {
@@ -2960,7 +2961,7 @@ a:hover {
         height: 100%;
         opacity: 0.8;
         background: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(21, 21, 21, 0.86), rgba(21, 21, 21, 0.47));
-        z-index: 0;
+        z-index: 1;
     }
 
     .sub-overlay h2 {
@@ -3276,17 +3277,18 @@ a:hover {
     }
 
     #hamburger-icon:hover {
-        right: 5%;
         position: absolute;
         top: 30%;
+        right: 5%;
         font-size: 30px;
         line-height: 1;
         text-align: center;
-        color: #ffffff5d;
+        color: #fff;
         display: flex;
         justify-content: center;
         padding: 5px;
         cursor: pointer;
+        transition: all 0.5s ease;
     }
 
 
