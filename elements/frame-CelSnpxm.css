@@ -139,10 +139,9 @@ body, html {
     border: 1px solid #ffffff;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 500px) and (orientation: portrait) {
 
-    #prevElements,
-    #nextElements {
+    #prevElements, #nextElements {
         text-decoration: none;
         visibility: hidden;
         color: #fff;
@@ -219,6 +218,93 @@ body, html {
         text-align: center;
         padding: 10px 15px;
         font-size: 11pt;
+        margin-left: 10%;
+        border-radius: 250px;
+        border: 1px solid #ffffff;
+        transition: all 0.5s ease;
+    }
+}
+
+@media only screen and (max-width: 960px) and (orientation: landscape) {
+
+    #prevElements, #nextElements {
+        text-decoration: none;
+        visibility: hidden;
+        color: #fff;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+        scroll-snap-type: y proximity;
+    }
+
+    #hebele {
+        width: 50%;
+        text-decoration: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0%;
+        bottom: 0%;
+        right: 0%;
+        left: 0%;
+        background: linear-gradient(to right, #000d248a, #0000);
+        color: #fff;
+        padding: 5% 10%;
+        border-radius: 5px;
+        font-size: 14pt;
+    }
+    
+    #hebele h1 {
+        text-decoration: none;
+        text-align: left;
+        font-size: 14pt;
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+        letter-spacing: 2px;
+    }
+    
+    #hebele p {
+        font-family: 'CamptonLighter';
+        text-decoration: none;
+        text-align: left;
+        font-size: 10pt;
+        margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 25%;
+        letter-spacing: 1px;
+    }
+
+    #goToGalleryArea {
+        margin-top: 5%;
+        text-decoration: none;
+        width: 35%;
+        background-color: #fff;
+        color: #0047ba;
+        text-align: center;
+        padding: 5px 5px;
+        font-size: 10pt;
+        margin-left: 10%;
+        border-radius: 250px;
+        border: 1px solid #ffffff;
+        transition: all 0.5s ease;
+    }
+    
+    #hebele a {
+        text-decoration: none;
+    }
+    
+    #goToGalleryArea:hover {
+        margin-top: 5%;
+        text-decoration: none;
+        width: 35%;
+        background-color: #fff;
+        color: #0047ba;
+        text-align: center;
+        padding: 5px 5px;
+        font-size: 10pt;
         margin-left: 10%;
         border-radius: 250px;
         border: 1px solid #ffffff;
