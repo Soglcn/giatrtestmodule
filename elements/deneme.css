@@ -26,9 +26,10 @@
 }
 
 
-html, body {
+html,
+body {
     text-decoration: none;
-    font-family: 'Campton' , Helvetica, sans-serif;
+    font-family: 'Campton', Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -60,10 +61,10 @@ html, body {
 
 #MapArea {
     overflow: hidden;
-    position: relative; 
-    height: 95vh;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    position: relative;
+    height: 100vh;
+    /* border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px; */
 }
 
 #interactiveMapButton {
@@ -105,7 +106,7 @@ html, body {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.329);
 }
 
-#closeMainMenuPanel{
+#closeMainMenuPanel {
     display: block;
     position: fixed;
     top: 5%;
@@ -116,7 +117,7 @@ html, body {
     border-radius: 250px;
 }
 
-#closeMainMenuPanel:hover{
+#closeMainMenuPanel:hover {
     display: block;
     position: fixed;
     top: 5%;
@@ -128,22 +129,22 @@ html, body {
     transition: all 0.5s ease;
 }
 
-#closeMain{
+#closeMain {
     color: #ffffff;
     font-size: 18pt;
     background-color: transparent;
-    border:rgb(0, 153, 255);
+    border: rgb(0, 153, 255);
     transition: all 0.5s ease;
 }
 
-#closeMain:hover{
+#closeMain:hover {
     color: #5e5e5e;
     font-size: 18pt;
     background-color: transparent;
-    border:rgb(0, 153, 255);
+    border: rgb(0, 153, 255);
 }
 
-#textID{
+#textID {
     position: fixed;
     bottom: 5%;
     z-index: 0;
@@ -164,7 +165,6 @@ html, body {
 
 section {
     text-decoration: none;
-    height: 100vh;
     scroll-snap-align: center;
 }
 
@@ -177,7 +177,7 @@ section {
 
 section:nth-child(2n) {
     overflow: hidden;
-  }
+}
 
 .vSlider-container {
     text-decoration: none;
@@ -189,7 +189,7 @@ section:nth-child(2n) {
 
 .vSlider {
     width: 100%;
-    height: 200vh; 
+    height: 200vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -339,7 +339,7 @@ section:nth-child(2n) {
     text-align: center;
 }
 
-#frontPanel a{
+#frontPanel a {
     display: none;
     text-decoration: none;
     padding: 15px 25px 15px 25px;
@@ -349,7 +349,7 @@ section:nth-child(2n) {
     border-radius: 250px;
 }
 
-#frontPanel a:hover{
+#frontPanel a:hover {
     text-decoration: none;
     padding: 15px 25px 15px 25px;
     background-color: transparent;
@@ -401,9 +401,10 @@ canvas {
     margin: 25px 15px;
     transform: translateX(-50%);
     display: flex;
-    background-color: rgba(27, 27, 27, 0.623);
+    background-color: rgba(27, 27, 27, 0.815);
     z-index: 9999;
     border-radius: 50px;
+    backdrop-filter: blur(5px);
 }
 
 
@@ -461,7 +462,7 @@ canvas {
     text-align: center;
     border-radius: 250px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -477,7 +478,7 @@ canvas {
     text-align: center;
     border-radius: 250px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -485,17 +486,17 @@ canvas {
 .homeList {
     display: flex;
     flex-direction: row;
-    list-style-type: none; 
+    list-style-type: none;
     text-align: center;
     align-items: center;
-    padding: 0; 
-    margin: 5px; 
+    padding: 0;
+    margin: 5px;
 }
 
 #homeListLink {
     color: #ffffff;
     letter-spacing: 2px;
-    padding: 10px; 
+    padding: 10px;
     margin: 5px;
     border-radius: 25px;
     transition: all 0.5s ease;
@@ -504,7 +505,7 @@ canvas {
 
 #homeListLink:hover {
     color: #87daf3f1;
-    padding: 10px; 
+    padding: 10px;
     margin: 5px;
     border-radius: 25px;
     transition: all 0.5s ease;
@@ -630,7 +631,8 @@ canvas {
     color: #ffffff;
 }
 
-#second-list li, a {
+#second-list li,
+a {
     cursor: pointer;
     font-weight: lighter;
     list-style-type: none;
@@ -641,7 +643,8 @@ canvas {
     cursor: pointer;
 }
 
-#second-list li:hover, a:hover {
+#second-list li:hover,
+a:hover {
     cursor: pointer;
     color: #ffffff;
 }
@@ -692,6 +695,137 @@ canvas {
     text-decoration: none;
     font-weight: lighter;
 }
+
+
+.photo-content-main {
+    font-family: 'CamptonLighter';
+    color: #0047BA;
+    width: 100%;
+    height: 100vh;
+    background-color: #ececec;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.line-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#1606fa57 1px, transparent 1px), linear-gradient(90deg, #0019fd54 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+.lineOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #ececec, #ffffff65, #ececec);
+    z-index: 2;
+}
+
+#photo-content-elements {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.photo-list {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 250px;
+    display: flex;
+    position: absolute;
+    z-index: 4;
+}
+
+.text-box {
+    text-align: center;
+    margin-right: 40px; 
+    border-right: 2px solid;
+    border-image: linear-gradient(to bottom, #ffffff00, #0047BA, #ffffff00) 1;
+    padding-right: 5%;
+    padding-left: 2.5%;
+}
+
+.text-box:last-child {
+    margin-right: 0; 
+    border-right: none; 
+}
+
+.text-box h2{
+    font-size: 32pt;
+}
+
+#contractors {
+    margin-top: -4%;
+    height: 100vh;
+    background-color: #ececec;
+}
+
+#contractors-set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#contractors-text {
+    margin-top: 5%;
+    color: #0047BA;
+    border-radius: 50px;
+    width: 50%;
+    height: 50vh;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #e6e6e6;
+    transition: all 0.5s ease;
+}
+
+#contractors-text:hover {
+    color: #ffffff;
+    border-radius: 50px;
+    width: 50%;
+    height: 50vh;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #0047BA;
+}
+
+#contractors h1 {
+    color: #0047BA;
+    font-family: 'CamptonBold';
+    text-align: center;
+    font-size: 62pt;
+}
+
+#contractors h2 {
+    font-family: 'Campton';
+    text-align: center;
+    font-size: 22pt;
+}
+
+#contractors p {
+    text-align: justify;
+    font-size: 28pt;
+    margin-left: 17%;
+}
+
+
 
 /* HEADER ELEMENTS FINAL AREA*/
 
@@ -747,7 +881,7 @@ canvas {
     position: absolute;
     top: 0;
     width: 100%;
-    
+
 }
 
 .main-element {
@@ -806,7 +940,7 @@ canvas {
 }
 
 .bg-image {
-    display: none; 
+    display: none;
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -816,7 +950,8 @@ canvas {
     z-index: -9999;
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
@@ -852,33 +987,82 @@ canvas {
 
 .invest-container {
     margin-top: 5%;
+    padding-top: 5%;
     overflow: hidden;
+    background-color: #ececec;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }
+
+#btnBoxOne {
+    font-family: 'CamptonLighter';
+    font-size: 11pt;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 50px;
+    padding: 5px;
+    margin-left: 10%;
+    width: 20%;
+    height: 50px;
+    border: 1px solid #0047BA;
+    background-color: transparent;
+    border-radius: 250px;
+    display: flex;
+    flex-direction: column;
+    color: #0047BA;
+    transition: all 0.5s ease;
+}
+
+#btnBoxOne:hover {
+    font-family: 'CamptonLighter';
+    font-size: 11pt;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 50px;
+    padding: 5px;
+    margin-left: 10%;
+    width: 20%;
+    height: 50px;
+    border: 1px solid #ffffff;
+    background-color: #0047BA;
+    border-radius: 250px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+
 
 #invest-text-area {
     padding-bottom: 10%;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 0;
     display: flex;
     flex-direction: row;
 }
 
 #invest-text-area h1 {
-    font-family: 'CamptonBold';
-    color: #0047BA;
+    font-family: 'CamptonBook';
+    color: #ffffff;
     font-size: 50pt;
-    letter-spacing: 3px;
-    background-color: #ffffff;
+    letter-spacing: 5px;
+    background-color: #0047BA;
     width: 25%;
     text-align: left;
-    padding: 50px;
-    border-radius: 15px;
+    padding: 75px;
+    border-radius: 75px;
+    margin-left: 5%;
+    margin-top: 10%;
 }
 
 #invest-text-area p {
     font-family: 'CamptonLighter';
     text-indent: 25%;
-    color: #ffffff;
+    color: #0047BA;
     font-size: 28pt;
     letter-spacing: 4px;
     padding-left: 10%;
@@ -897,6 +1081,7 @@ canvas {
     font-size: 40pt;
     letter-spacing: 2px;
     font-weight: bold;
+    margin-bottom: 5%;
 }
 
 .fxContainer {
@@ -926,7 +1111,7 @@ canvas {
     background: linear-gradient(to top left, #053b99, #0a2c66);
 }
 
-.ThreeAreaFunctions h1{
+.ThreeAreaFunctions h1 {
     margin-bottom: -225px;
     display: flex;
     z-index: 9999;
@@ -1139,7 +1324,8 @@ canvas {
     ;
 }
 
-.sub-page-content-table th, .sub-page-content-table td {
+.sub-page-content-table th,
+.sub-page-content-table td {
     border: 1.5px solid #ffffff;
     padding: 8px;
     text-align: left;
@@ -1183,7 +1369,8 @@ canvas {
     color: #003e5ab9;
 }
 
-#person-content-blue h3, #person-content h3 {
+#person-content-blue h3,
+#person-content h3 {
     padding-bottom: 5%;
     font-size: 28pt;
     text-align: center;
@@ -1492,7 +1679,7 @@ canvas {
 
 @media only screen and (max-width: 500px) and (orientation: portrait) {
 
-    #textID{
+    #textID {
         font-family: 'CamptonLighter';
         font-size: 12pt;
         padding-bottom: 25%;
@@ -1514,8 +1701,8 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
-    #closeMainMenuPanel:hover{
+
+    #closeMainMenuPanel:hover {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1531,7 +1718,7 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
+
     #closeMain {
         text-align: center;
         color: #000000;
@@ -1540,8 +1727,8 @@ canvas {
         border: rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
-    
-    #closeMain:hover{
+
+    #closeMain:hover {
         text-align: center;
         color: #000000;
         font-size: 10pt;
@@ -1573,7 +1760,7 @@ canvas {
         border-radius: 250px;
         font-weight: bolder;
     }
-    
+
     #backButton:hover {
         display: flex;
         background-color: #fff;
@@ -1597,7 +1784,7 @@ canvas {
         border-radius: 250px;
         font-weight: bolder;
     }
-    
+
     #stageInfoArea {
         color: black;
         position: fixed;
@@ -1610,7 +1797,7 @@ canvas {
         display: none;
         animation: growIn 0.5s ease forwards;
     }
-    
+
     #stageImage {
         width: auto;
         height: 100vh;
@@ -1625,7 +1812,7 @@ canvas {
         filter: grayscale(25%);
         z-index: 8888;
     }
-    
+
     #stageImage:hover {
         width: 90wv;
         left: -40%;
@@ -1639,7 +1826,7 @@ canvas {
         filter: contrast(150%);
         z-index: 8888;
     }
-    
+
     #detailsButton {
         margin-top: 5%;
         background-color: white;
@@ -1654,12 +1841,12 @@ canvas {
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.5s ease;
     }
-    
+
     #detailsButton:hover {
         background-color: #2b08f0;
         color: white;
     }
-    
+
     #frontPanel {
         background-color: rgba(2, 36, 227, 0.65);
         position: absolute;
@@ -1676,14 +1863,14 @@ canvas {
         color: #ffffff;
         z-index: 8888;
     }
-    
+
     #frontPanel h1 {
         margin: 0;
         margin-bottom: 10px;
         font-size: 16pt;
         letter-spacing: 2px;
     }
-    
+
     #frontPanel p {
         font-family: 'CamptonLighter';
         letter-spacing: 2px;
@@ -1694,8 +1881,8 @@ canvas {
         padding-right: 10%;
         text-align: center;
     }
-    
-    #frontPanel a{
+
+    #frontPanel a {
         display: block;
         font-size: 10pt;
         margin-top: 15%;
@@ -1706,8 +1893,8 @@ canvas {
         border: 1px solid #ffffff;
         border-radius: 250px;
     }
-    
-    #frontPanel a:hover{
+
+    #frontPanel a:hover {
         margin-top: 15%;
         text-decoration: none;
         padding: 15px 25px 15px 25px;
@@ -1716,30 +1903,30 @@ canvas {
         border: 1px solid #ffffff;
         border-radius: 250px;
     }
-    
+
     @keyframes growIn {
         0% {
             transform: translateY(-100%);
             opacity: 0;
         }
-    
+
         100% {
             transform: translateY(0);
             opacity: 1;
         }
     }
-    
+
     @keyframes shrinkOut {
         0% {
             transform: translateY(0);
             opacity: 1;
         }
-    
+
         100% {
             transform: translateY(-100%);
         }
     }
-    
+
     #interactiveMapButton {
         font-family: 'CamptonBold';
         text-align: center;
@@ -1761,7 +1948,7 @@ canvas {
         justify-content: center;
         align-items: center;
     }
-    
+
     #interactiveMapButton:hover {
         font-family: 'CamptonBold';
         text-align: center;
@@ -1783,7 +1970,7 @@ canvas {
         justify-content: center;
         align-items: center;
     }
-    
+
     .sub-video-container {
         position: relative;
         width: 100%;
@@ -2006,7 +2193,7 @@ canvas {
         order: 1;
         display: none;
     }
-    
+
     /* HEADER HEADER VE DAHA ÇOK HEADER!!!!! */
     #header {
         font-weight: lighter;
@@ -2017,7 +2204,7 @@ canvas {
         top: 0;
         width: 100%;
         display: flex;
-        background-color: rgba(37, 36, 36, 0.356);
+        background-color: rgba(37, 36, 36, 0.795);
         z-index: 1;
     }
 
@@ -2242,7 +2429,7 @@ canvas {
         text-align: justify;
         font-size: 12pt;
     }
-    
+
     /* KURUMSAL ORGANIZASYON*/
 
     #person-content-blue {
@@ -2510,7 +2697,7 @@ canvas {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #invest-text-area {
         display: flex;
         flex-direction: column;
@@ -2522,14 +2709,14 @@ canvas {
         margin-right: 5%;
         text-align: center;
     }
-    
+
     #invest-text-area h1 {
         color: #0047ba;
         font-size: 28pt;
         letter-spacing: 3px;
         font-weight: bold;
     }
-    
+
     #invest-text-area p {
         color: #424242;
         font-size: 12pt;
@@ -2547,11 +2734,11 @@ canvas {
         width: 100%;
         z-index: 0;
     }
-    
+
     .main-element {
         background-color: #f0f0f0;
     }
-    
+
     .slider {
         height: 100vh;
         display: flex;
@@ -2563,7 +2750,7 @@ canvas {
         overflow: hidden;
         transition: transform 0.5s ease;
     }
-    
+
     .content {
         position: absolute;
         width: 50%;
@@ -2574,13 +2761,13 @@ canvas {
         text-align: left;
         padding-left: 5%;
     }
-    
+
     .content h2 {
         color: #fff;
         font-size: 15pt;
         margin-bottom: 0;
     }
-    
+
     .content h3 {
         color: #fff;
         font-size: 12pt;
@@ -2590,7 +2777,7 @@ canvas {
         font-weight: lighter;
         letter-spacing: 2px;
     }
-    
+
     .content a {
         color: #fff;
         font-size: 12pt;
@@ -2599,7 +2786,7 @@ canvas {
         border-bottom: 5px solid rgb(0, 153, 255);
         cursor: pointer;
     }
-    
+
     .bg-video {
         display: none;
         width: 100%;
@@ -2611,9 +2798,9 @@ canvas {
         transform: translate(-50%, -50%);
         z-index: -9999;
     }
-    
+
     .bg-image {
-        display: block; 
+        display: block;
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -2623,7 +2810,8 @@ canvas {
         z-index: -9999;
     }
 
-    .prev-btn, .next-btn {
+    .prev-btn,
+    .next-btn {
         position: absolute;
         top: 75%;
         transform: translateY(-50%);
@@ -2635,19 +2823,19 @@ canvas {
         cursor: pointer;
         font-size: 24pt;
     }
-    
+
     .prev-btn {
         left: 35%;
     }
-    
+
     .next-btn {
         right: 35%;
     }
-    
+
     .video-container {
         position: relative;
     }
-    
+
     .overlay {
         position: absolute;
         top: 0;
@@ -2664,7 +2852,7 @@ canvas {
         padding: 0;
         text-align: center;
     }
-    
+
     #counter-container {
         height: 50%;
         color: #0047ba;
@@ -2684,7 +2872,7 @@ canvas {
         padding-right: 5%;
         padding-top: 50%;
     }
-    
+
     .fxBox {
         width: 15%;
         height: 100%;
@@ -2694,11 +2882,11 @@ canvas {
         justify-content: center;
         align-items: center;
         font-size: 12pt;
-        background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
+        background-image: url('../elements/counter_bg-CvNAhaYf.png');
         background-size: cover;
         background-position: center;
     }
-    
+
     #get-contact {
         color: #fff;
         background-color: #0047BA;
@@ -2709,13 +2897,13 @@ canvas {
         align-items: center;
         flex-direction: column;
     }
-    
+
     #get-contact h1 {
         padding-left: 10%;
         font-size: 25pt;
         margin: 0;
     }
-    
+
     #get-contact p {
         font-size: 12pt;
         margin: 50px;
@@ -2725,7 +2913,7 @@ canvas {
 
 @media only screen and (max-width: 960px) and (orientation: landscape) {
 
-    #textID{
+    #textID {
         font-family: 'CamptonLighter';
         letter-spacing: 2px;
         position: fixed;
@@ -2737,7 +2925,7 @@ canvas {
         color: rgb(255, 255, 255);
         text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     }
-    
+
 
     #closeMainMenuPanel {
         display: flex;
@@ -2755,8 +2943,8 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
-    #closeMainMenuPanel:hover{
+
+    #closeMainMenuPanel:hover {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2772,7 +2960,7 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
+
     #closeMain {
         text-align: center;
         color: #000000;
@@ -2781,8 +2969,8 @@ canvas {
         border: rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
-    
-    #closeMain:hover{
+
+    #closeMain:hover {
         text-align: center;
         color: #000000;
         font-size: 10pt;
@@ -2814,7 +3002,7 @@ canvas {
         border-radius: 250px;
         font-weight: bolder;
     }
-    
+
     #backButton:hover {
         display: flex;
         background-color: transparent;
@@ -2838,7 +3026,7 @@ canvas {
         border-radius: 250px;
         font-weight: bolder;
     }
-    
+
     #stageInfoArea {
         color: black;
         position: fixed;
@@ -2851,7 +3039,7 @@ canvas {
         display: none;
         animation: growIn 0.5s ease forwards;
     }
-    
+
     #stageImage {
         width: auto;
         height: 140vh;
@@ -2866,7 +3054,7 @@ canvas {
         filter: grayscale(25%);
         z-index: 8888;
     }
-    
+
     #stageImage:hover {
         width: auto;
         height: 140vh;
@@ -2881,7 +3069,7 @@ canvas {
         filter: grayscale(25%);
         z-index: 8888;
     }
-    
+
     #detailsButton {
         margin-top: 5%;
         background-color: white;
@@ -2896,12 +3084,12 @@ canvas {
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.5s ease;
     }
-    
+
     #detailsButton:hover {
         background-color: #2b08f0;
         color: white;
     }
-    
+
     #frontPanel {
         background-color: rgba(2, 36, 227, 0.65);
         position: absolute;
@@ -2918,14 +3106,14 @@ canvas {
         color: #ffffff;
         z-index: 8888;
     }
-    
+
     #frontPanel h1 {
         margin: 0;
         margin-bottom: 10px;
         font-size: 16pt;
         letter-spacing: 2px;
     }
-    
+
     #frontPanel p {
         font-family: 'CamptonLighter';
         letter-spacing: 2px;
@@ -2936,8 +3124,8 @@ canvas {
         padding-right: 10%;
         text-align: center;
     }
-    
-    #frontPanel a{
+
+    #frontPanel a {
         display: block;
         font-size: 10pt;
         margin-top: 5%;
@@ -2948,8 +3136,8 @@ canvas {
         border: 1px solid #ffffff;
         border-radius: 250px;
     }
-    
-    #frontPanel a:hover{
+
+    #frontPanel a:hover {
         margin-top: 15%;
         text-decoration: none;
         padding: 15px 25px 15px 25px;
@@ -2958,30 +3146,30 @@ canvas {
         border: 1px solid #ffffff;
         border-radius: 250px;
     }
-    
+
     @keyframes growIn {
         0% {
             transform: translateY(-100%);
             opacity: 0;
         }
-    
+
         100% {
             transform: translateY(0);
             opacity: 1;
         }
     }
-    
+
     @keyframes shrinkOut {
         0% {
             transform: translateY(0);
             opacity: 1;
         }
-    
+
         100% {
             transform: translateY(-100%);
         }
     }
-    
+
     #interactiveMapButton {
         font-family: 'CamptonBold';
         text-align: center;
@@ -3003,7 +3191,7 @@ canvas {
         justify-content: center;
         align-items: center;
     }
-    
+
     #interactiveMapButton:hover {
         font-family: 'CamptonBold';
         text-align: center;
@@ -3025,7 +3213,7 @@ canvas {
         justify-content: center;
         align-items: center;
     }
-    
+
     .sub-video-container {
         position: relative;
         width: 100%;
@@ -3256,7 +3444,7 @@ canvas {
         order: 1;
         display: none;
     }
-    
+
     /* HEADER HEADER VE DAHA ÇOK HEADER!!!!! */
     #header {
         font-weight: lighter;
@@ -3448,7 +3636,7 @@ canvas {
         cursor: pointer;
         transition: all 0.5s ease;
     }
-    
+
     #close-second-menu:hover {
         padding-left: 15%;
         color: #ffffff7e;
@@ -3471,8 +3659,8 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
-    #closeMainMenuPanel:hover{
+
+    #closeMainMenuPanel:hover {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3488,7 +3676,7 @@ canvas {
         border-radius: 250px;
         z-index: 999;
     }
-    
+
     #closeMain {
         text-align: center;
         color: #000000;
@@ -3497,8 +3685,8 @@ canvas {
         border: rgb(0, 153, 255);
         transition: all 0.5s ease;
     }
-    
-    #closeMain:hover{
+
+    #closeMain:hover {
         text-align: center;
         color: #000000;
         font-size: 10pt;
@@ -3517,13 +3705,14 @@ canvas {
         transition: all 0.5s ease;
         cursor: pointer;
     }
-    
+
     #first-list li:hover {
         cursor: pointer;
         color: #ffffff;
     }
-    
-    #second-list li, a {
+
+    #second-list li,
+    a {
         cursor: pointer;
         font-weight: lighter;
         list-style-type: none;
@@ -3533,17 +3722,18 @@ canvas {
         transition: all 0.5s ease;
         cursor: pointer;
     }
-    
-    #second-list li:hover, a:hover {
+
+    #second-list li:hover,
+    a:hover {
         cursor: pointer;
         color: #ffffff;
     }
-    
+
     #second-list a {
         cursor: pointer;
         text-decoration: none;
     }
-    
+
 
     #show-stages {
         display: none;
@@ -3598,7 +3788,7 @@ canvas {
         text-align: justify;
         font-size: 12pt;
     }
-    
+
     /* KURUMSAL ORGANIZASYON*/
 
     #person-content-blue {
@@ -3614,7 +3804,7 @@ canvas {
         font-size: 15pt;
     }
 
-    #person-content-blue h3{
+    #person-content-blue h3 {
         font-size: 12pt;
     }
 
@@ -3872,7 +4062,7 @@ canvas {
         flex-direction: column;
         align-items: center;
     }
-    
+
     #invest-text-area {
         display: flex;
         flex-direction: column;
@@ -3884,14 +4074,14 @@ canvas {
         margin-right: 5%;
         text-align: center;
     }
-    
+
     #invest-text-area h1 {
         color: #0047ba;
         font-size: 28pt;
         letter-spacing: 3px;
         font-weight: bold;
     }
-    
+
     #invest-text-area p {
         color: #424242;
         font-size: 12pt;
@@ -3909,11 +4099,11 @@ canvas {
         width: 100%;
         z-index: 0;
     }
-    
+
     .main-element {
         background-color: #f0f0f0;
     }
-    
+
     .slider {
         height: 100vh;
         display: flex;
@@ -3925,7 +4115,7 @@ canvas {
         overflow: hidden;
         transition: transform 0.5s ease;
     }
-    
+
     .content {
         position: absolute;
         width: 30%;
@@ -3936,13 +4126,13 @@ canvas {
         text-align: left;
         padding-left: 5%;
     }
-    
+
     .content h2 {
         color: #fff;
         font-size: 14pt;
         margin-bottom: 0;
     }
-    
+
     .content h3 {
         color: #fff;
         font-size: 11pt;
@@ -3952,7 +4142,7 @@ canvas {
         font-weight: lighter;
         letter-spacing: 1px;
     }
-    
+
     .content a {
         color: #fff;
         font-size: 10pt;
@@ -3961,7 +4151,7 @@ canvas {
         border-bottom: 2px solid rgb(0, 153, 255);
         cursor: pointer;
     }
-    
+
     .bg-video {
         display: none;
         width: 100%;
@@ -3973,9 +4163,9 @@ canvas {
         transform: translate(-50%, -50%);
         z-index: -9999;
     }
-    
+
     .bg-image {
-        display: block; 
+        display: block;
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -3985,7 +4175,8 @@ canvas {
         z-index: -9999;
     }
 
-    .prev-btn, .next-btn {
+    .prev-btn,
+    .next-btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -3997,19 +4188,19 @@ canvas {
         cursor: pointer;
         font-size: 8pt;
     }
-    
+
     .prev-btn {
         left: 5%;
     }
-    
+
     .next-btn {
         right: 5%;
     }
-    
+
     .video-container {
         position: relative;
     }
-    
+
     .overlay {
         position: absolute;
         top: 0;
@@ -4026,7 +4217,7 @@ canvas {
         padding: 0;
         text-align: center;
     }
-    
+
     #counter-container {
         height: 50%;
         color: #0047ba;
@@ -4044,7 +4235,7 @@ canvas {
         padding-left: 15%;
         padding-right: 15%;
     }
-    
+
     .fxBox {
         width: 3%;
         height: 65%;
@@ -4054,11 +4245,11 @@ canvas {
         justify-content: center;
         align-items: center;
         font-size: 10pt;
-        background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
+        background-image: url('../elements/counter_bg-CvNAhaYf.png');
         background-size: cover;
         background-position: center;
     }
-    
+
     #get-contact {
         color: #fff;
         background-color: #0047BA;
@@ -4069,17 +4260,16 @@ canvas {
         align-items: center;
         flex-direction: column;
     }
-    
+
     #get-contact h1 {
         padding-left: 10%;
         font-size: 25pt;
         margin: 0;
     }
-    
+
     #get-contact p {
         font-size: 12pt;
         margin: 50px;
     }
 
 }
-
