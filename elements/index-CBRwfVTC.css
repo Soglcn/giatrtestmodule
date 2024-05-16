@@ -854,15 +854,11 @@ canvas {
 .fxBox {
     width: 3.5%;
     height: 50%;
-    background-color: black;
-    color: rgb(240, 248, 163);
+    color: #0047BA;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40pt;
-    background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
-    background-size: cover;
-    background-position: center;
 }
 
 #model-container {
@@ -2639,9 +2635,6 @@ canvas {
         justify-content: center;
         align-items: center;
         font-size: 12pt;
-        background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
-        background-size: cover;
-        background-position: center;
     }
     
     #get-contact {
@@ -3999,9 +3992,6 @@ canvas {
         justify-content: center;
         align-items: center;
         font-size: 10pt;
-        background-image: url('../elements/counter_bg-CvNAhaYf.png'); 
-        background-size: cover;
-        background-position: center;
     }
     
     #get-contact {

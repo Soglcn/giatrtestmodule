@@ -20,11 +20,16 @@
             <div id="photo-content-elements">
                 <div class="text-parts">
                     <h1>
-                        <span>GIA,</span>
-                        <span>29</span>
-                        <span>milyon</span>
-                        <span>metrekarelik</span>
-                        <span>alanıyla,</span>
+                        <span>Yeni</span>
+                        <span>Yatırım</span>
+                        <span>Odağı, </span>
+                        <span>GIA</span>
+                    </h1>
+                </div>
+                <div class="text-parts">
+                    <h2>
+                        <span>GIA</span>
+                        <span>projesi,</span>
                         <span>Türkiye'nin</span>
                         <span>gelecekteki</span>
                         <span>endüstri</span>
@@ -36,7 +41,15 @@
                         <span>rol</span>
                         <span>oynamaya</span>
                         <span>adaydır.</span>
-                        <span>Çağdaş</span>
+                        <span>Sadece</span>
+                        <span>bir</span>
+                        <span>endüstri</span>
+                        <span>bölgesi</span>
+                        <span>olarak</span>
+                        <span>değil,</span>
+                        <span>aynı</span>
+                        <span>zamanda</span>
+                        <span>çağdaş</span>
                         <span>bir</span>
                         <span>yaşam</span>
                         <span>tarzı</span>
@@ -56,55 +69,86 @@
                         <span>ve</span>
                         <span>örnek</span>
                         <span>alınan</span>
+                        <span>21.</span>
+                        <span>yüzyılın</span>
                         <span>yeni</span>
                         <span>sanayi</span>
                         <span>şehri</span>
                         <span>olmayı</span>
-                        <span>hedefler.</span>
-                    </h1>
-                    
+                        <span>hedeflemektedir.</span>
+                    </h2>
                     
                 </div>
-                <div class="lineOverlay"></div>
-                <div class="line-background"></div>
             </div>
             <script>
-                // Get all the letter elements
-                let letters = document.querySelectorAll('.text-parts h1 span');
-            
+                // Function to colorize h1 letters
+                function colorizeH1(scrollPercentage) {
+                    let h1Letters = document.querySelectorAll('.text-parts h1 span');
+                    h1Letters.forEach(function (letter, index) {
+                        let letterScrollPercentage = (index + 1) / h1Letters.length * 25;
+                        if (scrollPercentage >= letterScrollPercentage) {
+                            letter.style.color = 'rgb(0, 71, 186)'; // Turn the letter blue
+                        } else {
+                            letter.style.color = 'rgb(200, 200, 200)'; // Turn the letter gray
+                        }
+                    });
+                }
+
+                // Function to colorize h2 letters
+                function colorizeH2(scrollPercentage) {
+                    let h2Letters = document.querySelectorAll('.text-parts h2 span');
+                    h2Letters.forEach(function (letter, index) {
+                        let letterScrollPercentage = (index + 1) / h2Letters.length * 50;
+                        if (scrollPercentage >= letterScrollPercentage) {
+                            letter.style.color = 'rgb(100, 100, 100)'; // Turn the letter dark gray
+                        } else {
+                            letter.style.color = 'rgb(200, 200, 200)'; // Turn the letter light gray
+                        }
+                    });
+                }
+
+                // Function to reset h2 letter colors to gray
+                function resetH2LetterColors() {
+                    let h2Letters = document.querySelectorAll('.text-parts h2 span');
+                    h2Letters.forEach(function (letter) {
+                        letter.style.color = 'rgb(200, 200, 200)'; // Set letter color to gray
+                    });
+                }
+
                 // Add event listener for scroll
                 window.addEventListener('scroll', function () {
                     // Get scroll position
                     let scrollPosition = window.scrollY;
                     // Get total scroll height
                     let totalScrollHeight = document.body.scrollHeight - window.innerHeight;
-            
-                    // Loop through each letter
-                    letters.forEach(function (letter, index) {
-                        // Calculate the scroll percentage for this letter
-                        let letterScrollPercentage = (index + 1) / letters.length;
-                        // Calculate the scroll position for this letter
-                        let letterScrollPosition = letterScrollPercentage * totalScrollHeight;
-            
-                        // Check if the scroll position is above the current letter
-                        if (scrollPosition >= letterScrollPosition) {
-                            // Turn the letter blue
-                            letter.style.color = 'rgb(0, 71, 186)';
-                        } else {
-                            // Turn the letter gray
-                            letter.style.color = 'rgb(200, 200, 200)';
-                        }
-                    });
+
+                    // Calculate the scroll percentage
+                    let scrollPercentage = (scrollPosition / totalScrollHeight) * 100;
+
+                    // Reset h2 letter colors if scroll percentage is below 25
+                    if (scrollPercentage < 25) {
+                        resetH2LetterColors();
+                    }
+
+                    // Colorize letters based on scroll percentage
+                    if (scrollPercentage <= 25) {
+                        colorizeH1(scrollPercentage);
+                    } else if (scrollPercentage > 25 && scrollPercentage <= 100) {
+                        // Turn h1 letters blue
+                        colorizeH1(100);
+                        // Turn h2 letters dark gray
+                        colorizeH2(scrollPercentage - 30); // Adjust scroll percentage for h2 letters
+                    }
                 });
+
             </script>
-            
-            
+
+
         </div>
-       
     </main>
 
 
-    
+
 </body>
 
 </html>
