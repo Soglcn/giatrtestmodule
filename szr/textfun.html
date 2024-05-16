@@ -107,37 +107,26 @@
                     });
                 }
 
-                // Function to reset h2 letter colors to gray
                 function resetH2LetterColors() {
                     let h2Letters = document.querySelectorAll('.text-parts h2 span');
                     h2Letters.forEach(function (letter) {
-                        letter.style.color = 'rgb(200, 200, 200)'; // Set letter color to gray
+                        letter.style.color = 'rgb(200, 200, 200)'; 
                     });
                 }
-
-                // Add event listener for scroll
                 window.addEventListener('scroll', function () {
-                    // Get scroll position
                     let scrollPosition = window.scrollY;
-                    // Get total scroll height
                     let totalScrollHeight = document.body.scrollHeight - window.innerHeight;
-
-                    // Calculate the scroll percentage
                     let scrollPercentage = (scrollPosition / totalScrollHeight) * 100;
 
-                    // Reset h2 letter colors if scroll percentage is below 25
                     if (scrollPercentage < 25) {
                         resetH2LetterColors();
                     }
 
-                    // Colorize letters based on scroll percentage
                     if (scrollPercentage <= 25) {
                         colorizeH1(scrollPercentage);
                     } else if (scrollPercentage > 25 && scrollPercentage <= 100) {
-                        // Turn h1 letters blue
                         colorizeH1(100);
-                        // Turn h2 letters dark gray
-                        colorizeH2(scrollPercentage - 30); // Adjust scroll percentage for h2 letters
+                        colorizeH2(scrollPercentage - 30);
                     }
                 });
 
