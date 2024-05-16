@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIA - Great Industry Area</title>
+    <link rel="icon" href="./assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" crossorigin href="../elements/deneme.css">
+</head>
+
+<body>
+    <main class="scroll-container">
+        <div class="photo-content-main">
+            <div id="photo-content-elements">
+                <div class="text-parts">
+                    <h1>
+                        <span>GIA,</span>
+                        <span>29</span>
+                        <span>milyon</span>
+                        <span>metrekarelik</span>
+                        <span>alanıyla,</span>
+                        <span>Türkiye'nin</span>
+                        <span>gelecekteki</span>
+                        <span>endüstri</span>
+                        <span>ve</span>
+                        <span>kalkınma</span>
+                        <span>stratejilerinde</span>
+                        <span>öncü</span>
+                        <span>bir</span>
+                        <span>rol</span>
+                        <span>oynamaya</span>
+                        <span>adaydır.</span>
+                        <span>Çağdaş</span>
+                        <span>bir</span>
+                        <span>yaşam</span>
+                        <span>tarzı</span>
+                        <span>ve</span>
+                        <span>çevresel</span>
+                        <span>bilinçlilik</span>
+                        <span>alanında</span>
+                        <span>bir</span>
+                        <span>örnek</span>
+                        <span>teşkil</span>
+                        <span>ederek,</span>
+                        <span>ulusal</span>
+                        <span>ve</span>
+                        <span>uluslararası</span>
+                        <span>düzeyde</span>
+                        <span>bilinen</span>
+                        <span>ve</span>
+                        <span>örnek</span>
+                        <span>alınan</span>
+                        <span>yeni</span>
+                        <span>sanayi</span>
+                        <span>şehri</span>
+                        <span>olmayı</span>
+                        <span>hedefler.</span>
+                    </h1>
+                    
+                    
+                </div>
+                <div class="lineOverlay"></div>
+                <div class="line-background"></div>
+            </div>
+            <script>
+                // Get all the letter elements
+                let letters = document.querySelectorAll('.text-parts h1 span');
+            
+                // Add event listener for scroll
+                window.addEventListener('scroll', function () {
+                    // Get scroll position
+                    let scrollPosition = window.scrollY;
+                    // Get total scroll height
+                    let totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+            
+                    // Loop through each letter
+                    letters.forEach(function (letter, index) {
+                        // Calculate the scroll percentage for this letter
+                        let letterScrollPercentage = (index + 1) / letters.length;
+                        // Calculate the scroll position for this letter
+                        let letterScrollPosition = letterScrollPercentage * totalScrollHeight;
+            
+                        // Check if the scroll position is above the current letter
+                        if (scrollPosition >= letterScrollPosition) {
+                            // Turn the letter blue
+                            letter.style.color = 'rgb(0, 71, 186)';
+                        } else {
+                            // Turn the letter gray
+                            letter.style.color = 'rgb(200, 200, 200)';
+                        }
+                    });
+                });
+            </script>
+            
+            
+        </div>
+       
+    </main>
+
+
+    
+</body>
+
+</html>
