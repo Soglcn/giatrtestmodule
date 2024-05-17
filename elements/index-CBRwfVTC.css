@@ -1507,7 +1507,8 @@ canvas {
         height: 50px;
         position: fixed;
         top: 85%;
-        right: 45%;
+        left: 50%;
+        transform: translateX(-50%);
         color: #153569;
         border: #ffffff solid 5px;
         font-size: 12pt;
@@ -1531,7 +1532,8 @@ canvas {
         height: 50px;
         position: fixed;
         top: 85%;
-        right: 45%;
+        left: 50%;
+        transform: translateX(-50%);
         color: #153569;
         border: #ffffff solid 5px;
         font-size: 12pt;
