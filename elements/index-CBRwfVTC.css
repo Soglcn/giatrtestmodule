@@ -2628,12 +2628,11 @@ canvas {
     .fxBox {
         width: 15%;
         height: 100%;
-        background-color: black;
-        color: rgb(240, 248, 163);
+        color: rgb(0, 71, 186);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 12pt;
+        font-size: 60pt;
     }
     
     #get-contact {
