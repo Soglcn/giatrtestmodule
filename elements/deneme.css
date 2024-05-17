@@ -145,3 +145,31 @@ body {
     
 
 }
+
+@media only screen and (max-width: 960px) and (orientation: landscape){
+    .scroll-container {
+        height: 100vh; 
+    }
+
+    .text-parts h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'CamptonBold';
+        margin-top: 10%;
+        position: absolute;
+        z-index: 10;
+        font-size: 18pt;
+        color: rgb(0, 71, 186);
+    }
+    
+    .text-parts h2 {
+        text-align: center;
+        color: rgb(100, 100, 100);
+        margin-top: 15%;
+        position: absolute;
+        z-index: 10;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 14pt;
+    }
+}
