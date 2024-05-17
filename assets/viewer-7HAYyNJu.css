@@ -241,3 +241,125 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
         box-shadow: 0 0 10px #000c;
     }
 }
+
+@media only screen and (max-width: 1024px) and (orientation: portrait){
+    canvas#mapViewer{
+        width: 50vh;
+        height: 50vh;
+        border:white solid 5px
+    }
+
+    #howToUse {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bolder;
+        width: 5%;
+        height: 2%;
+        padding: 10px 0;
+        background-color: #fff;
+        border-radius: 50px;
+        border: #153569 solid 5px;
+        text-align: center;
+        color: #153569;
+        cursor: pointer;
+        position: fixed;
+        bottom: 7.5%;
+        right: 7.5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #howToUse:hover {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bolder;
+        width: 5%;
+        height: 2%;
+        padding: 10px 0;
+        background-color: #fff;
+        border-radius: 50px;
+        border: #153569 solid 5px;
+        text-align: center;
+        color: #153569;
+        cursor: pointer;
+        position: fixed;
+        bottom: 7.5%;
+        right: 7.5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #legendPart {
+        font-family: Arial, Helvetica, sans-serif;
+        width: auto;
+        height: auto;
+        background-color: #f0f0f0;
+        border: 2px solid #c9c9c9;
+        position: fixed;
+        bottom: 5%;
+        left: 5%;
+        z-index: 999;
+        display: block;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    #legendContainer {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #legendColor {
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    #legendText {
+        font-size: 8pt;
+    }
+    
+    #column {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+    }
+
+    #stageChanger {
+        position: fixed;
+        align-items: center;
+        top: 5%;
+        right: 5%;
+        width: 20%;
+        font-size: 8pt;
+        font-weight: bolder;
+        color: #fff;
+        background-color: #153569;
+        padding: 8px 12px;
+        border: #153569 solid 3px;
+        outline: none;
+        cursor: pointer;
+        font-size: 5pt;
+    }
+
+    #showDetailsOnScreen {
+        display: none;
+        height: auto;
+        width: 20%;
+        padding-left: 2%;
+        background-color: var(--details-background-color, rgba(0, 0, 0, .6));
+        z-index: 9999;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        position: fixed;
+        font-weight: 700;
+        top: 0;
+        transform: translateY(-100%);
+        box-shadow: 0 0 10px #000c;
+    }
+}
