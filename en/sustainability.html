@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sektörler</title>
+    <title>Sustainability</title>
     <link rel="icon" href="../assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -19,7 +19,8 @@
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
+            <div class="item"><a href="../en.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo"
+                        class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
                 <script>
@@ -27,7 +28,7 @@
                         var hamburgerIcon = document.getElementById("hamburger-icon");
                         var menuPanel = document.getElementById("menu-panel");
                         var isOpen = false;
-    
+
                         hamburgerIcon.addEventListener("click", function () {
                             if (!isOpen) {
                                 openMenuWithAnimation();
@@ -35,24 +36,24 @@
                                 closeMenuWithAnimation();
                             }
                         });
-    
+
                         document.addEventListener("click", function (event) {
                             var target = event.target;
                             var isMenu = target.closest("#menu-panel") === menuPanel;
                             var isHamburger = target === hamburgerIcon;
-    
+
                             if (!isMenu && !isHamburger && isOpen) {
                                 closeMenuWithAnimation();
                             }
                         });
-    
+
                         function openMenuWithAnimation() {
                             menuPanel.style.display = "block";
                             menuPanel.classList.remove("close");
                             menuPanel.classList.add("open");
                             isOpen = true;
                         }
-    
+
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -62,22 +63,22 @@
                             isOpen = false;
                         }
                     });
-    
-    
+
+
                 </script>
             </div>
             <div class="item">
                 <div id="empty-area"></div>
             </div>
             <div class="item">
-                <a href="#" id="change-language">TR</a>
+                <a href="../pages/baskaninmektubu.html" id="change-language">EN</a>
             </div>
             <div class="item">
-                <a href="../pages/viewer.html" id="show-stages">Parsel Sorgu</a>
+                <a href="../pages/viewer.html" id="show-stages">Invest Map</a>
             </div>
         </div>
     </header>
-    
+
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
             <div id="closeMainMenuPanel">
@@ -86,87 +87,84 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         var closeMainButton = document.getElementById("closeMain");
                         var menuPanel = document.getElementById("menu-panel");
-    
+
                         closeMainButton.addEventListener("click", function () {
-                            closeMenuWithAnimation();
+                            closeMenuWithoutAnimation();
                         });
-    
-                        function closeMenuWithAnimation() {
-                            menuPanel.classList.remove("open");
-                            menuPanel.classList.add("close");
-                            setTimeout(function () {
-                                menuPanel.style.display = "none";
-                            }, 500);
+
+                        function closeMenuWithoutAnimation() {
+                            menuPanel.style.display = "none";
                         }
                     });
-    
                 </script>
             </div>
+
             <ul id="first-list">
-                <li id="about">Hakkında</li>
-                <li id="ecosystem">Ekosistem</li>
-                <li id="services">Hizmetler</li>
-                <li id="gallery">Galeri</li>
-                <li id="press">Basın</li>
-                <li id="contact">İletişim</li>
+                <li id="about">About</li>
+                <li id="ecosystem">Ecosystem</li>
+                <li id="services">Services</li>
+                <li id="gallery">Gallery</li>
+                <li id="press">Press</li>
+                <li id="contact">Contact</li>
             </ul>
             <ul id="second-list">
-    
+
                 <a href="../pages/viewer.html">
-                    <li>Parsel Sorgu</li>
+                    <li>Invest Map</li>
                 </a>
-    
+                <a href="../pages/baskaninmektubu.html" class="mobile-only">
+                    <li class="english-only">EN</li>
+                </a>
             </ul>
         </div>
         <div id="menu-panel-second">
-            <h3 id="close-second-menu">&#x27F5; Geri</h3>
+            <h3 id="close-second-menu">&#x27F5; Back</h3>
             <ul class="about-list" id="second-list">
-                <li><a href="../pages/gianedir.html">GIA Nedir</a></li>
-                <li><a href="../pages/baskaninmektubu.html">Başkanın Mektubu</a></li>
-                <li><a href="../pages/kurumsalsema.html">Kurumsal Organizasyon</a></li>
-                <li><a href="../pages/degerlerimiz.html">Değerler</a></li>
-                <li><a href="../pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+                <li><a href="../en/what_is_gia.html">What is GIA?</a></li>
+                <li><a href="../en/ceoletter.html">CEO's Letter</a></li>
+                <li><a href="../pages/kurumsalsema.html">Board of Directors</a></li>
+                <li><a href="../pages/degerlerimiz.html">Values</a></li>
+                <li><a href="../pages/surdurulebilirlik.html">Sustainability</a></li>
             </ul>
             <ul class="eco-list" id="second-list">
-                <li><a href="../pages/konum.html">Konum</a></li>
-                <li><a href="../pages/altyapi.html">Altyapı</a></li>
-                <li><a href="../pages/sektorler.html">Sektörler</a></li>
-                <li><a href="../pages/yatirimfirsatlari.html">Yatırım Fırsatları</a></li>
-                <li><a href="../pages/hibevetesvik.html">Hibe, Teşvik ve Destekler</a></li>
-                <li><a href="../pages/sosyalimkanlar.html">Sosyal İmkanlar</a></li>
+                <li><a href="./pages/konum.html">Location</a></li>
+                <li><a href="./pages/altyapi.html">Infrastructure</a></li>
+                <li><a href="./pages/sektorler.html">Sectors</a></li>
+                <li><a href="./pages/yatirimfirsatlari.html">Investment Opportunities </a></li>
+                <li><a href="./pages/hibevetesvik.html">Grants, Incentives and Supports </a></li>
+                <li><a href="./pages/sosyalimkanlar.html">Social Amenities</a></li>
             </ul>
             <ul class="services-list" id="second-list">
-                <li><a href="../pages/yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
+                <li><a href="./pages/yonetimhizmetleri.html">Management Support Services</a></li>
             </ul>
             <ul class="gallery-list" id="second-list">
-                <li><a href="../maingallery.html">Interaktif Galeri</a></li>
-                <li><a href="../merkezgaleri.html">Merkez</a></li>
-                <li><a href="../fabrikalargaleri.html">Fabrikalar</a></li>
-                <li><a href="../lojmanlargaleri.html">Lojmanlar</a></li>
-                <li><a href="../kurulimangaleri.html">Kuru Liman</a></li>
-                <li><a href="../lojistikbolgegaleri.html">Lojistik Bölge</a></li>
-                <li><a href="../sosyaldonatilargaleri.html">Sosyal Donatılar</a></li>
+                <li><a href="maingallery.html">Interactive Gallery</a></li>
+                <li><a href="merkezgaleri.html">Center</a></li>
+                <li><a href="fabrikalargaleri.html">Factories</a></li>
+                <li><a href="lojmanlargaleri.html">Residences</a></li>
+                <li><a href="kurulimangaleri.html">Port</a></li>
+                <li><a href="lojistikbolgegaleri.html">Logistics Area</a></li>
+                <li><a href="sosyaldonatilargaleri.html">Social Amenities</a></li>
             </ul>
             <ul class="contact-list" id="second-list">
-                <li><a href="../pages/iletisim.html">İletişim</a></li>
-                <li><a href="../pages/kariyer.html">Kariyer</a></li>
+                <li><a href="./pages/iletisim.html">Contact</a></li>
+                <li><a href="./pages/kariyer.html">Career</a></li>
             </ul>
             <ul class="press-list" id="second-list">
-                <li><a href="../pages/basin.html">Haberler</a></li>
+                <li><a href="./pages/basin.html">News</a></li>
             </ul>
         </div>
         <script>
-    
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
-                if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                if (window.innerWidth <= 1024) {
                     document.querySelector('#menu-panel').style.width = '100%';
                 } else {
                     document.querySelector('#menu-panel').style.width = '25%';
                 }
             });
-    
-    
+
+
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -175,7 +173,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
             document.getElementById('ecosystem').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'block';
@@ -184,7 +182,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
             document.getElementById('services').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -209,7 +207,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'block';
             });
-    
+
             document.getElementById('contact').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -218,22 +216,22 @@
                 document.querySelector('.contact-list').style.display = 'block';
                 document.querySelector('.press-list').style.display = 'none';
             });
-    
+
         </script>
-    
-    
-    
+
+
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var listItems = document.querySelectorAll("#first-list li");
                 var menuPanel = document.getElementById("menu-panel");
                 var menuPanelSecond = document.getElementById("menu-panel-second");
                 var emptyArea = document.body;
-    
+
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
                         var screenWidth = window.innerWidth;
-                        if (screenWidth <= 1024) { // Mobil cihazlarda
+                        if (screenWidth <= 1024) {
                             menuPanel.style.width = "100%";
                         } else {
                             menuPanel.style.width = "45%";
@@ -241,10 +239,10 @@
                         menuPanelSecond.style.display = "block";
                     });
                 });
-    
+
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
-                        if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                        if (window.innerWidth <= 1024) {
                             menuPanel.style.width = "100%";
                         } else {
                             menuPanel.style.width = "25%";
@@ -252,17 +250,17 @@
                         menuPanelSecond.style.display = "none";
                     }
                 });
-    
             });
         </script>
     </div>
+
 
     <div class="main-container">
         <div class="main-container">
             <div class="main-element">
                 <div class="sub-video-container">
                     <div class="sub-overlay">
-                        <h2>Ekosistem > Sektörler</h2>
+                        <h2>About > Sustainability</h2>
                     </div>
                     <img src="../images/site-images/kurumsal_sema_header.jpg" class="sub-bg-video">
                     Your browser does not support the video tag.
@@ -274,25 +272,29 @@
             <div class="main-element">
                 <div id="sub-page-title">
                     <!-- <h2>Yeni bir çalışma, üretme ve yaşama biçimi öneren akıllı sanayi şehri</h2> -->
-                    <h1>Sektörler</h1>
+                    <h1>Sustainability</h1>
                 </div>
             </div>
 
             <div class="main-element">
                 <div id="sub-page-content">
                     <div id="person-content-black">
-                        <p>GIA, Karma nitelikli endüstri bölgesi olmasından dolayı tüm endüstriyel sektörlerin kendileri
-                            için uygun yatırım alanları bulabileceği bir bölgedir. Vizyonu, Türk sanayisini dünya
-                            çapında geliştirmeyi amaçlayan, ülke sanayisinin sürdürülebilir rekabet gücünü ve
-                            yetkinliklerini artırmayı hedeflemek olmasından dolayı alt yapı ve üst yapı hizmetleri bu
-                            doğrultuda tasarlanmıştır.
+                        <h1>Overview</h1>
+                        <p>At every stage of our integrated service approach, we embrace a sustainability-focused
+                            approach that supports growth and development. Our sustainability policy reflects our
+                            conscious commitment to fulfilling our responsibilities to society and nature by providing a
+                            comprehensive roadmap in every area of our operations.
                             <br>
                             <br>
-                            Galeri Sistemi ile denetlenebilir ve yönetilebilir alt yapı oluşturan GIA, hem sanayi
-                            yerleşkelerine sağlayacağı güneş enerji panellerinden üretilen elektrikle yatırımcıların
-                            yatırım masraflarını azaltmak yönünde iç politikalar geliştirmiştir.
-                            <br>
-                            <br>
+                        <p>
+                        <p><strong>Our Sustainability Approach: (Innovative Approach, Fair Society, Green
+                                Future)</strong></p>
+                        <p><br>
+                            Operating in accordance with strong ethical principles, we adhere to the best practices
+                            established in environmental, social, and corporate governance. Our management, compliance,
+                            health, and safety procedures have a contemporary, progressive, and professional character.
+                            Our organizational structure, experiences, effective governance policies, and clear
+                            processes enable us to undertake challenging and ambitious projects in various sectors.
                         </p>
                     </div>
                 </div>
@@ -300,14 +302,21 @@
 
             <div class="main-element">
                 <div id="sub-page-content-blue">
-                    <p> Ayrıca, GIA, yüksek karbon emisyonuna sahip <strong>demir-çelik, çimento, gübre</strong> ve
-                        <strong>alüminyum </strong> gibi
-                        Sınırda Karbon Denetim Mekanizmasından (SKDM) ilk etapta etkilenecek sektörlerin kurulmaları
-                        için gerekli gelişmiş atık yönetimi sistemi ve yeşil enerji desteği ile bu sektörlerden
-                        yatırımcıların imalat ve ihracat potansiyellerinin yükselmesini hedeflemektedir. SKDM kapsamının
-                        genişletilmesinden itibaren ise GIA sağlayacağı yeşil odak odaklı çözüm hizmetleri ile tüm
-                        sektörlerin karbon kredilendirmesi gibi geleceğe yönelik sorunlarının çözülmesine yönelik destek
-                        hizmeti de sunmaktadır.
+                    <h1>Innovative Approach</h1>
+                    <p> • We conduct all our operations in line with the United Nations Sustainable Development Goals
+                        and aim to allocate our resources to R&D efforts.
+                        <br>
+                        <br>
+                        • We strive to facilitate and develop innovative technologies that contribute to sustainable
+                        development.
+                        <br>
+                        <br>
+                        • We aim to transform our organizational culture into one that is aware of the impacts of
+                        sustainability.
+                        <br>
+                        <br>
+                        • Constantly measuring and evaluating the economic, environmental, and social impacts, we
+                        endeavor to minimize the negative effects of our activities.
                     </p>
                 </div>
             </div>
@@ -315,17 +324,24 @@
             <div class="main-element">
                 <div id="sub-page-content">
                     <div id="person-content-black">
-                        <p>Proje alanından geçen Irak-Türkiye Ham Petrol Boru hattının varlığı, <strong>petrokimya ve rafineri</strong>
-                            sektörlerine yönelik yatırım imkânlarını artırarak, endüstriyel altyapı ve lojistik
-                            avantajlar sunmaktadır.
+                        <h1>Fair Society</h1>
+                        <p> • We ensure equal opportunities and prioritize social health in every sector and geography
+                            where we operate.
                             <br><br>
-                            Ulukışla Bölgesinin Konumu, Mersin ve İskenderiye Limanlarının İç Anadolu ile olan
-                            bağlantısı arasında yer alacağı özel lokasyon ve sahip olduğu çoklu metotları ile birlikte
-                            <strong>Yapı Malzemeleri, Ambalajlı Tüketici Ürünleri, Ambalaj ve Kağıt Üretilmesi, Organik Besin
-                            İşlenmesi, İklimlendirme ve Medikal Cihazların İmalatı ve Parça üretimi, Bilişim
-                            Teknolojileri ürünleri, Yarı iletkenler, elektronik alet ve parça imalatı ve Savunma ve
-                            Havacılık Sanayisine</strong> ait sektörler GIA içerisinde sorunsuzca yatırım yapabilir, yer
-                            alabilir.
+                            • We develop and implement practices that enhance occupational health and safety for our
+                            employees and stakeholders.
+                            <br><br>
+                            • We prioritize local employment to support local communities and collaborate with various
+                            institutions to create social projects.
+                            <br><br>
+                            • By increasing employee loyalty and well-being, we create conditions to make the work
+                            environment more efficient.
+                            <br><br>
+                            • We provide equal rights to our employees and potential candidates by preventing any form
+                            of discrimination.
+                            <br><br>
+                            • We support gender equality, women's empowerment, women's employment, and the qualified
+                            active participation of women at all levels.
                         </p>
                     </div>
                 </div>
@@ -333,45 +349,60 @@
 
             <div class="main-element">
                 <div id="sub-page-content-blue">
-                    <div class="sub-page-content-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th><h2>SEKTÖRLER</h2></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Savunma ve Havacılık Sanayisi</td>
-                                </tr>
-                                <tr>
-                                    <td>Petrokimya Endüstrisi ve İnorganik-Kimyasal ürün üretimi</td>
-                                </tr>
-                                <tr>
-                                    <td>İklimlendirme ve Medikal Cihazların İmalatı ve Parça üretimi</td>
-                                </tr>
-                                <tr>
-                                    <td>Bilişim Teknolojileri ürünleri, Yarı iletkenler, Elektronik Alet ve Parça İmalatı</td>
-                                </tr>
-                                <tr>
-                                    <td>Ambalajlı Tüketici Ürünleri</td>
-                                </tr>
-                                <tr>
-                                    <td>Ambalaj ve Kağıt Üretilmesi</td>
-                                </tr>
-                                <tr>
-                                    <td>Yapı Malzemeleri</td>
-                                </tr>
-                                <tr>
-                                    <td>Organik Besin İşlenmesi</td>
-                                </tr>
-                                <tr>
-                                    <td>Çimento, Demir-Çelik, Gübre, Alüminyum ve Hidrojen Bazlı Sanayi</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h1>Green Future</h1>
+                    <p>
+                        • We take improvement steps to achieve sectoral targets by measuring and reporting the
+                        environmental impacts of our activities.
+                        <br><br>
+                        • We constantly monitor, evaluate and implement changes in the infrastructure to increase energy
+                        efficiency.
+                        <br><br>
+                        • We review our energy consumption to increase the use of renewable energy resources.
+                        <br><br>
+                        • We develop projects that ensure the effective use of water and raise the awareness of all
+                        stakeholders and employees.
+                        <br><br>
+                        • We aim to fulfill our responsibilities by calculating, verifying and monitoring our emissions
+                        within the scope of combating climate change.
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-element">
+                <div id="sub-page-content">
+                    <div id="person-content-black">
+                        <h1>Sustainable Development Goals</h1>
+                        <p> As GIA, we believe that implementing SDGs is not only the responsibility of governments but
+                            also of all of us. In this regard, we advocate for the collective understanding and
+                            implementation of SDGs by companies, civil society organizations, and humanity as a whole.
+                            <br><br>
+                            We support SDGs at every stage of our value chain, focusing on expanding our social,
+                            environmental, and economic impact areas. Our dialogues with stakeholders serve the 8
+                            Sustainable Development Goals set by national and international sector alliances in line
+                            with global standards:
+                            <br>
+                        </p>
+
+                        <img src="../images/f.png" alt="">
+                        <p>
+                            <strong>Goal 5:</strong> Gender Equality
+                            <br>
+                            <strong>Goal 6:</strong> Clean Water and Sanitation
+                            <br>
+                            <strong>Goal 7:</strong> Affordable and Clean Energy
+                            <br>
+                            <strong>Goal 8:</strong> Decent Work and Economic Growth
+                            <br>
+                            <strong>Goal 9:</strong> Industry, Innovation, and Infrastructure
+                            <br>
+                            <strong>Goal 11:</strong> Sustainable Cities and Communities
+                            <br>
+                            <strong>Goal 12:</strong> Responsible Consumption and Production
+                            <br>
+                            <strong>Goal 13:</strong> Climate Action
+                        </p>
+                        
                     </div>
-                    
                 </div>
             </div>
 
@@ -379,32 +410,32 @@
                 <div id="footer-container">
                     <div id="footer-elements">
                         <div id="footer-column">
-                            <h1>KEŞFET</h1>
+                            <h1>EXPLORE</h1>
                             <ul>
-                                <li><a href="../pages/gianedir.html">Hakkımızda</a></li>
-                                <li><a href="../pages/yonetimhizmetleri.html">Hizmetler</a></li>
-                                <li><a href="../pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
-                                <li><a href="../pages/sektorler.html">Sektörler</a></li>
-                                <li><a href="../pages/basin.html">Haberler</a></li>
+                                <li><a href="../en/what_is_gia.html">About Us</a></li>
+                                <li><a href="../pages/management-services.html">Services</a></li>
+                                <li><a href="../pages/sustainability.html">Sustainability</a></li>
+                                <li><a href="../pages/sectors.html">Sectors</a></li>
+                                <li><a href="../pages/press.html">Press</a></li>
                             </ul>
                         </div>
 
                         <div id="footer-column">
-                            <h1>YATIRIM</h1>
+                            <h1>INVESTMENT</h1>
                             <ul>
-                                <li><a href="../pages/viewer.html">Parsel Sorgu</a></li>
-                                <li><a href="../pages/hibevetesvik.html">Teşvikler</a></li>
+                                <li><a href="../pages/viewer.html">Invest Map</a></li>
+                                <li><a href="../pages/incentives.html">Incentives</a></li>
                             </ul>
                         </div>
 
                         <div id="footer-column">
-                            <h1>İLETİŞİM</h1>
-                            <div id="adress-infos">
+                            <h1>CONTACT</h1>
+                            <div id="address-infos">
                                 <ul>
-                                    <li>Adres Niğde</li>
-                                    <li>Adres Ankara</li>
-                                    <li>Telefon</li>
-                                    <li>Mail</li>
+                                    <li>Address Niğde</li>
+                                    <li>Address Ankara</li>
+                                    <li>Phone</li>
+                                    <li>Email</li>
                                     <li>Fax</li>
                                 </ul>
                             </div>
@@ -428,7 +459,6 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
