@@ -90,22 +90,18 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         var closeMainButton = document.getElementById("closeMain");
                         var menuPanel = document.getElementById("menu-panel");
-
+            
                         closeMainButton.addEventListener("click", function () {
-                            closeMenuWithAnimation();
+                            closeMenuWithoutAnimation();
                         });
-
-                        function closeMenuWithAnimation() {
-                            menuPanel.classList.remove("open");
-                            menuPanel.classList.add("close");
-                            setTimeout(function () {
-                                menuPanel.style.display = "none";
-                            }, 500);
+            
+                        function closeMenuWithoutAnimation() {
+                            menuPanel.style.display = "none";
                         }
                     });
-
                 </script>
             </div>
+            
             <ul id="first-list">
                 <li id="about">Hakkında</li>
                 <li id="ecosystem">Ekosistem</li>
@@ -165,7 +161,7 @@
 
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
-                if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                if (window.innerWidth <= 1024) {
                     document.querySelector('#menu-panel').style.width = '100%';
                 } else {
                     document.querySelector('#menu-panel').style.width = '25%';
@@ -239,7 +235,7 @@
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
                         var screenWidth = window.innerWidth;
-                        if (screenWidth <= 1024) { // Mobil cihazlarda
+                        if (screenWidth <= 1024) { 
                             menuPanel.style.width = "100%";
                         } else {
                             menuPanel.style.width = "45%";
@@ -250,7 +246,7 @@
 
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
-                        if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                        if (window.innerWidth <= 1024) { 
                             menuPanel.style.width = "100%";
                         } else {
                             menuPanel.style.width = "25%";
@@ -258,7 +254,6 @@
                         menuPanelSecond.style.display = "none";
                     }
                 });
-
             });
         </script>
     </div>
