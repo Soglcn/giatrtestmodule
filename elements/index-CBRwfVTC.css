@@ -34,6 +34,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #ececec;
 }
 
 /* SCROLL BAR */
@@ -806,7 +807,7 @@ canvas {
     overflow: hidden;
     flex-direction: column;
     align-items: center;
-    background-color: #ebebeb;
+    background-color: #ececec;
 }
 
 #invest-text-area {
