@@ -439,19 +439,19 @@
             <iframe src="./szr/frame.html" style="border: none;  width:  100vw; height: 100vh; z-index: -555;">
             </iframe>
             <script>
-                const iframe = document.querySelector('iframe');
-                iframe.onload = function () {
-                    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-                    const links = iframeDocument.querySelectorAll('a');
-                    links.forEach(link => {
-                        link.addEventListener('click', function (event) {
-                            event.preventDefault();
-                            window.open(link.href, '_blank');
+                const iframes = document.querySelectorAll('iframe');
+                iframes.forEach(iframe => {
+                    iframe.onload = function () {
+                        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                        const links = iframeDocument.querySelectorAll('a');
+                        links.forEach(link => {
+                            link.setAttribute('target', '_blank');
                         });
-                    });
-                };
+                    };
+                });
             </script>
         </section>
+        
 
         <section>
             <div class="main-element">
