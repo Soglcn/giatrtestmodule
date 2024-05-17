@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+    integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/site-images/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
+  <link rel="stylesheet" crossorigin href="./elements/index-CBRwfVTC.css">
+  <title>Social Amenities</title>
+  <style>
+    .gia-gallery {
+      width: 100%;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 1%;
+    }
+
+    .grid-row {
+      width: 80%;
+      height: 250px;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .grid-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 2px solid #ffffff;
+      overflow: hidden;
+    }
+
+    .grid-item img {
+      width: 120%;
+      object-fit: cover;
+      margin-bottom: -2%;
+    }
+
+    .overlayGallery {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.473));
+      transition: all 0.5s ease;
+    }
+
+    .overlayGallery:hover {
+      opacity: 0.25;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.473));
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+
+    .overlayGallery h1 {
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .modal-overlayGallery {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: auto;
+      overflow: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modal-content img,
+    .modal-content video {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      z-index: 0;
+    }
+
+    .close {
+      position: fixed;
+      top: 5%;
+      right: 5%;
+      font-size: 15pt;
+      color: #333;
+      cursor: pointer;
+      background-color: #e6e6e6;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 100%;
+      transition: all 0.5s ease;
+      z-index: 999;
+    }
+
+    @media only screen and (max-width: 960px) and (orientation: landscape){
+      #classified {
+        color: #000;
+        padding-top: 12.5%;
+        padding-left: 4%;
+      }
+
+      .grid-row {
+        width: 94%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+
+      .grid-item {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @media only screen and (orientation: portrait) {
+
+      /* GALLERY ELEMENTS */
+      .gia-gallery {
+        width: 100%;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 2.5%;
+      }
+
+      #classified {
+        color: #000;
+        padding-top: 35%;
+        padding-left: 4%;
+      }
+
+      #classified h1 {
+        font-size: 15pt;
+      }
+
+
+      .overlayGallery {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.473));
+        transition: all 0.5s ease;
+      }
+
+      .overlayGallery:hover {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.473));
+        transition: all 0.5s ease;
+      }
+
+
+      .grid-row {
+        width: 94%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+
+      .grid-item {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .grid-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+
+      /* FOOTER ELEMENTS */
+      /* #footer-container {
+        width: 100%;
+        padding-top: 15%;
+        position: absolute;
+        color: #383838;
+        display: flex;
+        background-color: #EBEBEB;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #footer-elements {
+        display: flex;
+        order: 2;
+        height: 15vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #footer-column h1 {
+        text-align: center;
+        font-size: 9pt;
+        font-weight: lighter;
+        letter-spacing: 2px;
+      }
+
+      #footer-column {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #footer-column ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        color: #4d4d4d;
+        margin-top: 2%;
+      }
+
+      #footer-column ul li a {
+        z-index: 9999;
+        text-decoration: none;
+        color: #4d4d4d;
+      }
+
+      #footer-column ul li {
+        margin-top: 2%;
+        letter-spacing: 2px;
+      }
+
+      #social-link-list li {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4d4d4d;
+        padding: 15px;
+        width: 15px;
+        border-radius: 35%;
+        height: 15px;
+        margin-right: 2.5%;
+        color: #EBEBEB;
+        transition: all 0.5s ease;
+      }
+
+      #social-link-list a {
+        text-decoration: none;
+        font-size: 15pt;
+
+      }
+
+      #social-link-list li:hover {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4d4d4d;
+        padding: 15px;
+        width: 15px;
+        border-radius: 35%;
+        height: 15px;
+        margin-right: 2.5%;
+        color: #EBEBEB;
+        transition: all 0.5s ease;
+      } */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="item"><img src="./elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></div>
+        <div class="item">
+            <div id="hamburger-icon">&#9776;</div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var hamburgerIcon = document.getElementById("hamburger-icon");
+                    var menuPanel = document.getElementById("menu-panel");
+                    var isOpen = false;
+
+                    hamburgerIcon.addEventListener("click", function () {
+                        if (!isOpen) {
+                            openMenuWithAnimation();
+                        } else {
+                            closeMenuWithAnimation();
+                        }
+                    });
+
+                    document.addEventListener("click", function (event) {
+                        var target = event.target;
+                        var isMenu = target.closest("#menu-panel") === menuPanel;
+                        var isHamburger = target === hamburgerIcon;
+
+                        if (!isMenu && !isHamburger && isOpen) {
+                            closeMenuWithAnimation();
+                        }
+                    });
+
+
+
+
+                    function openMenuWithAnimation() {
+                        menuPanel.style.display = "block";
+                        menuPanel.classList.remove("close");
+                        menuPanel.classList.add("open");
+                        isOpen = true;
+                    }
+
+                    function closeMenuWithAnimation() {
+                        menuPanel.classList.remove("open");
+                        menuPanel.classList.add("close");
+                        setTimeout(function () {
+                            menuPanel.style.display = "none";
+                        }, 500);
+                        isOpen = false;
+                    }
+                });
+
+
+            </script>
+        </div>
+        <div class="item">
+            <div id="empty-area"></div>
+        </div>
+        <div class="item">
+            <a href="index.html" id="change-language">EN</a>
+        </div>
+        <div class="item">
+            <a href="./pages/viewer.html" id="show-stages">Invest Map</a>
+        </div>
+    </div>
+</header>
+
+<div class="item" id="menu-panel">
+    <div id="menu-panel-first">
+        <div id="closeMainMenuPanel">
+            <button id="closeMain">&#10006;</button>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var closeMainButton = document.getElementById("closeMain");
+                    var menuPanel = document.getElementById("menu-panel");
+
+                    closeMainButton.addEventListener("click", function () {
+                        closeMenuWithoutAnimation();
+                    });
+
+                    function closeMenuWithoutAnimation() {
+                        menuPanel.style.display = "none";
+                    }
+                });
+            </script>
+        </div>
+
+        <ul id="first-list">
+            <li id="about">About</li>
+            <li id="ecosystem">Ecosystem</li>
+            <li id="services">Services</li>
+            <li id="gallery">Gallery</li>
+            <li id="press">Press</li>
+            <li id="contact">Contact</li>
+        </ul>
+        <ul id="second-list">
+
+            <a href="./pages/viewer.html">
+                <li>Invest Map</li>
+            </a>
+            <a href="index.html" class="mobile-only">
+                <li class="english-only">TR</li>
+            </a>
+        </ul>
+    </div>
+    <div id="menu-panel-second">
+        <h3 id="close-second-menu">&#x27F5; Back</h3>
+        <ul class="about-list" id="second-list">
+            <li><a href="./en/what_is_gia.html">What is GIA?</a></li>
+            <li><a href="./pages/baskaninmektubu.html">CEO's Letter</a></li>
+            <li><a href="./pages/kurumsalsema.html">Board of Directors</a></li>
+            <li><a href="./pages/degerlerimiz.html">Values</a></li>
+            <li><a href="./pages/surdurulebilirlik.html">Sustainability</a></li>
+        </ul>
+        <ul class="eco-list" id="second-list">
+            <li><a href="./pages/konum.html">Location</a></li>
+            <li><a href="./pages/altyapi.html">Infrastructure</a></li>
+            <li><a href="./pages/sektorler.html">Sectors</a></li>
+            <li><a href="./pages/yatirimfirsatlari.html">Investment Opportunities </a></li>
+            <li><a href="./pages/hibevetesvik.html">Grants, Incentives and Supports </a></li>
+            <li><a href="./pages/sosyalimkanlar.html">Social Amenities</a></li>
+        </ul>
+        <ul class="services-list" id="second-list">
+            <li><a href="./pages/yonetimhizmetleri.html">Management Support Services</a></li>
+        </ul>
+        <ul class="gallery-list" id="second-list">
+            <li><a href="maingallery.html">Interactive Gallery</a></li>
+            <li><a href="merkezgaleri.html">Center</a></li>
+            <li><a href="fabrikalargaleri.html">Factories</a></li>
+            <li><a href="lojmanlargaleri.html">Residences</a></li>
+            <li><a href="kurulimangaleri.html">Port</a></li>
+            <li><a href="lojistikbolgegaleri.html">Logistics Area</a></li>
+            <li><a href="sosyaldonatilargaleri.html">Social Amenities</a></li>
+        </ul>
+        <ul class="contact-list" id="second-list">
+            <li><a href="./pages/iletisim.html">Contact</a></li>
+            <li><a href="./pages/kariyer.html">Career</a></li>
+        </ul>
+        <ul class="press-list" id="second-list">
+            <li><a href="./pages/basin.html">News</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('close-second-menu').addEventListener('click', function () {
+            document.querySelector('#menu-panel-second').style.display = 'none';
+            if (window.innerWidth <= 1024) {
+                document.querySelector('#menu-panel').style.width = '100%';
+            } else {
+                document.querySelector('#menu-panel').style.width = '25%';
+            }
+        });
+
+
+        document.getElementById('about').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'block';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+
+        document.getElementById('ecosystem').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'block';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+
+        document.getElementById('services').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'block';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+        document.getElementById('gallery').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'block';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+        document.getElementById('press').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'none';
+            document.querySelector('.press-list').style.display = 'block';
+        });
+
+        document.getElementById('contact').addEventListener('click', function () {
+            document.querySelector('.about-list').style.display = 'none';
+            document.querySelector('.eco-list').style.display = 'none';
+            document.querySelector('.services-list').style.display = 'none';
+            document.querySelector('.gallery-list').style.display = 'none';
+            document.querySelector('.contact-list').style.display = 'block';
+            document.querySelector('.press-list').style.display = 'none';
+        });
+
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var listItems = document.querySelectorAll("#first-list li");
+            var menuPanel = document.getElementById("menu-panel");
+            var menuPanelSecond = document.getElementById("menu-panel-second");
+            var emptyArea = document.body;
+
+            listItems.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    var screenWidth = window.innerWidth;
+                    if (screenWidth <= 1024) {
+                        menuPanel.style.width = "100%";
+                    } else {
+                        menuPanel.style.width = "45%";
+                    }
+                    menuPanelSecond.style.display = "block";
+                });
+            });
+
+            emptyArea.addEventListener("click", function (event) {
+                if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
+                    if (window.innerWidth <= 1024) {
+                        menuPanel.style.width = "100%";
+                    } else {
+                        menuPanel.style.width = "25%";
+                    }
+                    menuPanelSecond.style.display = "none";
+                }
+            });
+        });
+    </script>
+</div>
+
+
+
+  <div class="gia-gallery">
+    <div id="classified">
+      <h1>Social Amenities</h1>
+    </div>
+    <div class="gia-gallery">
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/DİNLENME_TESİS (1).jpg">
+          <div class="overlayGallery">
+            <h1></h1>
+          </div>
+          <img src="./images/detailed-gallery/lq/DİNLENME_TESİS (1).jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/DİNLENME_TESİS (2).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/DİNLENME_TESİS (2).jpg" alt="">
+        </div>
+
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/DİNLENME_TESİS (3).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/DİNLENME_TESİS (3).jpg" alt="">
+        </div>
+
+      </div>
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (1).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (1).jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (2) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (2) kopya.jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (3) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (3) kopya.jpg" alt="">
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (4) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (4) kopya.jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (5) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (5) kopya.jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (6).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (6).jpg" alt="">
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/OTEL (2).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/OTEL (2).jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/OTEL (4).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/OTEL (4).jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/OTEL (5).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/OTEL (5).jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        gridItems.forEach(item => {
+          item.addEventListener('click', function () {
+            const mediaUrl = item.getAttribute('data-media');
+            if (mediaUrl) {
+              const mediaType = mediaUrl.endsWith('.mp4') ? 'video' : 'image';
+              openMedia(mediaUrl, mediaType);
+            }
+          });
+        });
+
+        function openMedia(mediaUrl, mediaType) {
+          const modaloverlayGallery = document.createElement('div');
+          modaloverlayGallery.classList.add('modal-overlayGallery');
+          modaloverlayGallery.innerHTML = `
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              ${mediaType === 'video' ? `<video controls autoplay><source src="${mediaUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : `<img src="${mediaUrl}" alt="">`}
+          </div>
+      `;
+          document.body.appendChild(modaloverlayGallery);
+
+          const closeModal = modaloverlayGallery.querySelector('.close');
+          closeModal.addEventListener('click', function () {
+            modaloverlayGallery.remove();
+          });
+        }
+      });
+
+
+    </script>
+  </div>
+
+  <div class="main-element">
+    <div id="footer-container">
+      <div id="footer-elements">
+        <div id="footer-column">
+            <h1>EXPLORE</h1>
+            <ul>
+                <li><a href="./pages/what-is-gia.html">About Us</a></li>
+                <li><a href="./pages/management-services.html">Services</a></li>
+                <li><a href="./pages/sustainability.html">Sustainability</a></li>
+                <li><a href="./pages/sectors.html">Sectors</a></li>
+                <li><a href="./pages/press.html">Press</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-column">
+            <h1>INVESTMENT</h1>
+            <ul>
+                <li><a href="./pages/viewer.html">Invest Map</a></li>
+                <li><a href="./pages/incentives.html">Incentives</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-column">
+            <h1>CONTACT</h1>
+            <div id="address-infos">
+                <ul>
+                    <li>Address Niğde</li>
+                    <li>Address Ankara</li>
+                    <li>Phone</li>
+                    <li>Email</li>
+                    <li>Fax</li>
+                </ul>
+            </div>
+            <div id="social-links">
+                <ul id="social-link-list">
+                    <a href="https://www.facebook.com/giatrcom">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                    </a>
+                    <a href="https://www.linkedin.com/company/giatrcom/about/  ">
+                        <li><i class="fa-brands fa-linkedin"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/giatrcom/">
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a href="https://www.youtube.com/@giatrcom">
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                    </a>
+                    <a href="https://twitter.com/giatrcom">
+                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</body>
+
+</html>

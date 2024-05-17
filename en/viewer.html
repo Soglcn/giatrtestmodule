@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="tr">
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GIA - Viewer</title>
+    <title>Invest Map</title>
 
     <link rel="icon" href="../assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
-    <script type="module" crossorigin src="../assets/viewer-DKigH7-p.js"></script>
+    <script type="module" crossorigin src="../assets/viewer-DKigH7-p en.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/FBXLoader-CkEVmeCW.js">
     <link rel="stylesheet" crossorigin href="../assets/viewer-7HAYyNJu.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="root">
 
     </div>
@@ -19,70 +21,71 @@
     <div id="showDetailsOnScreen"></div>
     <script>
         const showDetailsOnScreen = document.getElementById('showDetailsOnScreen');
-        const distanceFromMouse = 5; 
-      
+        const distanceFromMouse = 5;
+
         document.addEventListener('mousemove', (event) => {
             const mouseX = event.clientX + distanceFromMouse;
             const mouseY = event.clientY - distanceFromMouse;
-      
+
             showDetailsOnScreen.style.left = `${mouseX}px`;
             showDetailsOnScreen.style.top = `${mouseY}px`;
         });
-      </script>
+    </script>
     <div id="footer">GIA_OOP_WebGL_Version_0.1.1</div>
 
 
     <!-- Açılır Kapanır Panel Özellikleri -->
     <div id="howToUse">?</div>
     <script>
-      let isHowToUsePanelOpen = false;
-    
-      // Paneli Aç
-      const howToUseButton = document.getElementById('howToUse');
-      howToUseButton.addEventListener('click', () => {
-          if (isHowToUsePanelOpen) return;
-    
-          const howToUsePanel = document.createElement('div');
-          howToUsePanel.id = 'howToUsePanel';
-          howToUsePanel.innerHTML = `
-              <h2>Nasıl Kullanılır?</h2>
-              <div>
-                <img src="../assets/src/media/Mouse_Left_Dark.png">
-                <p>Haritanın açısını değiştirmek için <b> sol mouse tuşuna </b> basılı tutarak hareket ettirin.</p>
-              </div>
-              <div>
-                <img src="../assets/src/media/Mouse_Right_Dark.png">
-                <p>Haritayı hareket ettirmek için <b> sağ mouse tuşuna </b> basılı tutarak hareket ettirin.</p>
-              </div>
-              <div>
-                <img src="../assets/src/media/Mouse_Wheel_Dark.png">
-                <p>Haritaya yakınlaşmak ve uzaklaşmak için <b> mouse tekerleğini </b> ileri ya da geri çevirin.</p>
-              </div>
-              <div>
-                <img src="../assets/src/media/Mouse_Left_Click_Dark.png">
-                <p>Haritada ilgilendiğiniz bölgenin özelliklerini görmek için <b> işaretlenen alanın </b> üzerine sol tuş ile tıklayın.</p>
-              </div>
-              <button id="closeHowToUsePanel">Tamam</button>
+        let isHowToUsePanelOpen = false;
+
+        // Paneli Aç
+        const howToUseButton = document.getElementById('howToUse');
+        howToUseButton.addEventListener('click', () => {
+            if (isHowToUsePanelOpen) return;
+
+            const howToUsePanel = document.createElement('div');
+            howToUsePanel.id = 'howToUsePanel';
+            howToUsePanel.innerHTML = `
+          <h2>How to Use?</h2>
+<div>
+  <img src="../assets/src/media/Mouse_Left_Dark.png">
+  <p>To change the angle of the map, hold down the <b>left mouse button</b> and move it.</p>
+</div>
+<div>
+  <img src="../assets/src/media/Mouse_Right_Dark.png">
+  <p>To move the map, hold down the <b>right mouse button</b> and move it.</p>
+</div>
+<div>
+  <img src="../assets/src/media/Mouse_Wheel_Dark.png">
+  <p>To zoom in and out of the map, rotate the <b>mouse wheel</b> forward or backward.</p>
+</div>
+<div>
+  <img src="../assets/src/media/Mouse_Left_Click_Dark.png">
+  <p>To see the features of the area you are interested in on the map, click on the <b>marked area</b> with the left button.</p>
+</div>
+<button id="closeHowToUsePanel">Okay</button>
+
           `;
-          document.body.appendChild(howToUsePanel);
-    
-          isHowToUsePanelOpen = true;
-    
-          const closeHowToUsePanelButton = document.getElementById('closeHowToUsePanel');
-          closeHowToUsePanelButton.addEventListener('click', () => {
-              howToUsePanel.remove();
-              isHowToUsePanelOpen = false;
-          });
-    
-          // Panel dışındaki herhangi bir yere tıklandığında paneli kapat
-          document.addEventListener('click', (event) => {
-              const clickedElement = event.target;
-              if (!howToUsePanel.contains(clickedElement) && clickedElement !== howToUseButton) {
-                  howToUsePanel.remove();
-                  isHowToUsePanelOpen = false;
-              }
-          });
-      });
+            document.body.appendChild(howToUsePanel);
+
+            isHowToUsePanelOpen = true;
+
+            const closeHowToUsePanelButton = document.getElementById('closeHowToUsePanel');
+            closeHowToUsePanelButton.addEventListener('click', () => {
+                howToUsePanel.remove();
+                isHowToUsePanelOpen = false;
+            });
+
+            // Panel dışındaki herhangi bir yere tıklandığında paneli kapat
+            document.addEventListener('click', (event) => {
+                const clickedElement = event.target;
+                if (!howToUsePanel.contains(clickedElement) && clickedElement !== howToUseButton) {
+                    howToUsePanel.remove();
+                    isHowToUsePanelOpen = false;
+                }
+            });
+        });
     </script>
 
 
@@ -94,64 +97,65 @@
         <div id="column">
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #ff0000;"></div>
-                <div id="legendText">Ticari Bölge</div>
+                <div id="legendText">Commercial Zone</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #4db4ff;"></div>
-                <div id="legendText">Sanayi Bölgesi</div>
+                <div id="legendText">Industrial Zone</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #00ffe5;"></div>
-                <div id="legendText">İbadethane</div>
+                <div id="legendText">Worship Area</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #468a3a;"></div>
-                <div id="legendText">Yeşil Alan</div>
+                <div id="legendText">Green Area</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #7732a8;"></div>
-                <div id="legendText">Enerji Tesisi</div>
+                <div id="legendText">Power Facility</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #faa357;"></div>
-                <div id="legendText">Lojmanlar</div>
+                <div id="legendText">Residential Area</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #f2ea05;"></div>
-                <div id="legendText">Merkezi Yönetim</div>
+                <div id="legendText">Central Management</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #f196f2;"></div>
-                <div id="legendText">Lojistik Bölgesi</div>
+                <div id="legendText">Logistics Area</div>
             </div>
         </div>
         <div id="column">
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #f20558;"></div>
-                <div id="legendText">Dinlenme Tesisi</div>
+                <div id="legendText">Resting Facility</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #c6f562;"></div>
-                <div id="legendText">Spor Tesisi</div>
+                <div id="legendText">Sports Facility</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #733c02;"></div>
-                <div id="legendText">Otel</div>
+                <div id="legendText">Hotel</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #ad5dfc;"></div>
-                <div id="legendText">Fuar Alanı</div>
+                <div id="legendText">Exhibition Area</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #de355d;"></div>
-                <div id="legendText">Eğitim Alanı</div>
+                <div id="legendText">Education Area</div>
             </div>
             <div id="legendContainer">
                 <div id="legendColor" style="background-color: #9be5e8;"></div>
-                <div id="legendText">Hastane</div>
+                <div id="legendText">Hospital</div>
+            </div>
         </div>
     </div>
+    
+</body>
 
-    </div>
-  </body>
 </html>

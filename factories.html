@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,8 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./images/site-images/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
   <link rel="stylesheet" crossorigin href="./elements/index-CBRwfVTC.css">
-
-  <title>Lojmanlar</title>
+  <title>Factories</title>
   <style>
     .gia-gallery {
       width: 100%;
@@ -328,7 +327,7 @@
 <body>
   <header>
     <div class="container">
-      <div class="item"><a href="index.html"><img src="./elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
+        <div class="item"><img src="./elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></div>
         <div class="item">
             <div id="hamburger-icon">&#9776;</div>
             <script>
@@ -346,15 +345,18 @@
                     });
 
                     document.addEventListener("click", function (event) {
-              var target = event.target;
-              var isMenu = target.closest("#menu-panel") === menuPanel;
-              var isHamburger = target === hamburgerIcon;
+                        var target = event.target;
+                        var isMenu = target.closest("#menu-panel") === menuPanel;
+                        var isHamburger = target === hamburgerIcon;
 
-              if (!isMenu && !isHamburger && isOpen) {
-                menuPanel.style.display = "none";
-                isOpen = false;
-              }
-            });
+                        if (!isMenu && !isHamburger && isOpen) {
+                            closeMenuWithAnimation();
+                        }
+                    });
+
+
+
+
                     function openMenuWithAnimation() {
                         menuPanel.style.display = "block";
                         menuPanel.classList.remove("close");
@@ -379,10 +381,10 @@
             <div id="empty-area"></div>
         </div>
         <div class="item">
-            <a href="#" id="change-language">TR</a>
+            <a href="index.html" id="change-language">EN</a>
         </div>
         <div class="item">
-            <a href="./pages/viewer.html" id="show-stages">Parsel Sorgu</a>
+            <a href="./pages/viewer.html" id="show-stages">Invest Map</a>
         </div>
     </div>
 </header>
@@ -392,79 +394,80 @@
         <div id="closeMainMenuPanel">
             <button id="closeMain">&#10006;</button>
             <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                  var closeMainButton = document.getElementById("closeMain");
-                  var menuPanel = document.getElementById("menu-panel");
-          
-                  closeMainButton.addEventListener("click", function () {
-                      closeMenuWithoutAnimation();
-                  });
-          
-                  function closeMenuWithoutAnimation() {
-                      menuPanel.style.display = "none";
-                  }
-              });
-          </script>
-          
+                document.addEventListener("DOMContentLoaded", function () {
+                    var closeMainButton = document.getElementById("closeMain");
+                    var menuPanel = document.getElementById("menu-panel");
+
+                    closeMainButton.addEventListener("click", function () {
+                        closeMenuWithoutAnimation();
+                    });
+
+                    function closeMenuWithoutAnimation() {
+                        menuPanel.style.display = "none";
+                    }
+                });
+            </script>
         </div>
+
         <ul id="first-list">
-            <li id="about">Hakkında</li>
-            <li id="ecosystem">Ekosistem</li>
-            <li id="services">Hizmetler</li>
-            <li id="gallery">Galeri</li>
-            <li id="press">Basın</li>
-            <li id="contact">İletişim</li>
+            <li id="about">About</li>
+            <li id="ecosystem">Ecosystem</li>
+            <li id="services">Services</li>
+            <li id="gallery">Gallery</li>
+            <li id="press">Press</li>
+            <li id="contact">Contact</li>
         </ul>
         <ul id="second-list">
 
             <a href="./pages/viewer.html">
-                <li>Parsel Sorgu</li>
+                <li>Invest Map</li>
             </a>
-
+            <a href="index.html" class="mobile-only">
+                <li class="english-only">TR</li>
+            </a>
         </ul>
     </div>
     <div id="menu-panel-second">
-        <h3 id="close-second-menu">&#x27F5; Geri</h3>
+        <h3 id="close-second-menu">&#x27F5; Back</h3>
         <ul class="about-list" id="second-list">
-            <li><a href="./pages/gianedir.html">GIA Nedir</a></li>
-            <li><a href="./pages/baskaninmektubu.html">Başkanın Mektubu</a></li>
-            <li><a href="./pages/kurumsalsema.html">Kurumsal Organizasyon</a></li>
-            <li><a href="./pages/degerlerimiz.html">Değerler</a></li>
-            <li><a href="./pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+            <li><a href="./en/what_is_gia.html">What is GIA?</a></li>
+            <li><a href="./pages/baskaninmektubu.html">CEO's Letter</a></li>
+            <li><a href="./pages/kurumsalsema.html">Board of Directors</a></li>
+            <li><a href="./pages/degerlerimiz.html">Values</a></li>
+            <li><a href="./pages/surdurulebilirlik.html">Sustainability</a></li>
         </ul>
         <ul class="eco-list" id="second-list">
-            <li><a href="./pages/konum.html">Konum</a></li>
-            <li><a href="./pages/altyapi.html">Altyapı</a></li>
-            <li><a href="./pages/sektorler.html">Sektörler</a></li>
-            <li><a href="./pages/yatirimfirsatlari.html">Yatırım Fırsatları</a></li>
-            <li><a href="./pages/hibevetesvik.html">Hibe, Teşvik ve Destekler</a></li>
-            <li><a href="./pages/sosyalimkanlar.html">Sosyal İmkanlar</a></li>
+            <li><a href="./pages/konum.html">Location</a></li>
+            <li><a href="./pages/altyapi.html">Infrastructure</a></li>
+            <li><a href="./pages/sektorler.html">Sectors</a></li>
+            <li><a href="./pages/yatirimfirsatlari.html">Investment Opportunities </a></li>
+            <li><a href="./pages/hibevetesvik.html">Grants, Incentives and Supports </a></li>
+            <li><a href="./pages/sosyalimkanlar.html">Social Amenities</a></li>
         </ul>
         <ul class="services-list" id="second-list">
-            <li><a href="./pages/yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
+            <li><a href="./pages/yonetimhizmetleri.html">Management Support Services</a></li>
         </ul>
         <ul class="gallery-list" id="second-list">
-            <li><a href="maingallery.html">Interaktif Galeri</a></li>
-            <li><a href="merkezgaleri.html">Merkez</a></li>
-            <li><a href="fabrikalargaleri.html">Fabrikalar</a></li>
-            <li><a href="lojmanlargaleri.html">Lojmanlar</a></li>
-            <li><a href="kurulimangaleri.html">Kuru Liman</a></li>
-            <li><a href="lojistikbolgegaleri.html">Lojistik Bölge</a></li>
-            <li><a href="sosyaldonatilargaleri.html">Sosyal Donatılar</a></li>
+            <li><a href="maingallery.html">Interactive Gallery</a></li>
+            <li><a href="merkezgaleri.html">Center</a></li>
+            <li><a href="fabrikalargaleri.html">Factories</a></li>
+            <li><a href="lojmanlargaleri.html">Residences</a></li>
+            <li><a href="kurulimangaleri.html">Port</a></li>
+            <li><a href="lojistikbolgegaleri.html">Logistics Area</a></li>
+            <li><a href="sosyaldonatilargaleri.html">Social Amenities</a></li>
         </ul>
         <ul class="contact-list" id="second-list">
-            <li><a href="./pages/iletisim.html">İletişim</a></li>
-            <li><a href="./pages/kariyer.html">Kariyer</a></li>
+            <li><a href="./pages/iletisim.html">Contact</a></li>
+            <li><a href="./pages/kariyer.html">Career</a></li>
         </ul>
         <ul class="press-list" id="second-list">
-            <li><a href="./pages/basin.html">Haberler</a></li>
+            <li><a href="./pages/basin.html">News</a></li>
         </ul>
     </div>
     <script>
-
         document.getElementById('close-second-menu').addEventListener('click', function () {
             document.querySelector('#menu-panel-second').style.display = 'none';
-            if (window.innerWidth <= 1024) { // Mobil cihazlarda
+            if (window.innerWidth <= 1024) {
                 document.querySelector('#menu-panel').style.width = '100%';
             } else {
                 document.querySelector('#menu-panel').style.width = '25%';
@@ -538,7 +541,7 @@
             listItems.forEach(function (item) {
                 item.addEventListener("click", function () {
                     var screenWidth = window.innerWidth;
-                    if (screenWidth <= 1024) { // Mobil cihazlarda
+                    if (screenWidth <= 1024) {
                         menuPanel.style.width = "100%";
                     } else {
                         menuPanel.style.width = "45%";
@@ -549,7 +552,7 @@
 
             emptyArea.addEventListener("click", function (event) {
                 if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
-                    if (window.innerWidth <= 1024) { // Mobil cihazlarda
+                    if (window.innerWidth <= 1024) {
                         menuPanel.style.width = "100%";
                     } else {
                         menuPanel.style.width = "25%";
@@ -557,7 +560,6 @@
                     menuPanelSecond.style.display = "none";
                 }
             });
-
         });
     </script>
 </div>
@@ -565,51 +567,107 @@
 
   <div class="gia-gallery">
     <div id="classified">
-      <h1>Lojmanlar</h1>
+      <h1>Factories</h1>
     </div>
     <div class="gia-gallery">
       <div class="grid-row">
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOJMAN (1) copy3.jpg">
-          <div class="overlayGallery">
-            <h1></h1>
-          </div>
-          <img src="./images/detailed-gallery/lq/LOJMAN (1) copy3.jpg" alt="">
-        </div>
-
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOJMAN (2) copy.jpg">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (1) kopya.jpg">
           <div class="overlayGallery">
           </div>
-          <img src="./images/detailed-gallery/lq/LOJMAN (2) copy.jpg" alt="">
+          <img src="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (1) kopya.jpg" alt="">
         </div>
 
-
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOJMAN (3) COPY.jpg">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (2).jpg">
           <div class="overlayGallery">
           </div>
-          <img src="./images/detailed-gallery/lq/LOJMAN (3) COPY.jpg" alt="">
+          <img src="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (2).jpg" alt="">
         </div>
 
+
+        <div class="grid-item" data-media="./images/gallery-images/image_2.png">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/gallery-images/image_2.png" alt="">
+        </div>
       </div>
       <div class="grid-row">
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOJMAN (4) Copy.jpg">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (4) kopya.jpg">
           <div class="overlayGallery">
           </div>
-          <img src="./images/detailed-gallery/lq/LOJMAN (4) Copy.jpg" alt="">
+          <img src="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (4) kopya.jpg" alt="">
         </div>
 
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOJMAN (5) copy.jpg">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (8) copy-yeni.jpg">
           <div class="overlayGallery">
           </div>
-          <img src="./images/detailed-gallery/lq/LOJMAN (5) copy.jpg" alt="">
+          <img src="./images/detailed-gallery/lq/BÜYÜK_FABRİKA (8) copy-yeni.jpg" alt="">
         </div>
 
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/lojman genel.jpg">
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKA (1) COPY.jpg">
           <div class="overlayGallery">
           </div>
-          <img src="./images/detailed-gallery/lq/lojman genel.jpg" alt="">
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKA (1) COPY.jpg" alt="">
         </div>
       </div>
 
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKA (2) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKA (2) kopya.jpg" alt="">
+        </div>
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (3).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (3).jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (4).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (4).jpg" alt="">
+        </div>
+
+
+
+      </div>
+
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (5) copya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (5) copya.jpg" alt="">
+        </div>
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (6) kopya.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (6) kopya.jpg" alt="">
+        </div>
+
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (8).jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/KÜÇÜK_FABRİKALAR (8).jpg" alt="">
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/LOFT-ZFABRİKA2.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/LOFT-ZFABRİKA2.jpg" alt="">
+        </div>
+        <div class="grid-item" data-media="./images/detailed-gallery/lq/DesignPlus.jpg">
+          <div class="overlayGallery">
+          </div>
+          <img src="./images/detailed-gallery/lq/DesignPlus.jpg" alt="">
+        </div>
+
+        <div class="grid-item">
+          <img src="#" alt="">
+        </div>
+      </div>
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -651,32 +709,32 @@
     <div id="footer-container">
       <div id="footer-elements">
         <div id="footer-column">
-            <h1>KEŞFET</h1>
+            <h1>EXPLORE</h1>
             <ul>
-                <li><a href="./pages/gianedir.html">Hakkımızda</a></li>
-                <li><a href="./pages/yonetimhizmetleri.html">Hizmetler</a></li>
-                <li><a href="./pages/surdurulebilirlik.html">Sürdürülebilirlik</a></li>
-                <li><a href="./pages/sektorler.html">Sektörler</a></li>
-                <li><a href="./pages/basin.html">Haberler</a></li>
+                <li><a href="./pages/what-is-gia.html">About Us</a></li>
+                <li><a href="./pages/management-services.html">Services</a></li>
+                <li><a href="./pages/sustainability.html">Sustainability</a></li>
+                <li><a href="./pages/sectors.html">Sectors</a></li>
+                <li><a href="./pages/press.html">Press</a></li>
             </ul>
         </div>
 
         <div id="footer-column">
-            <h1>YATIRIM</h1>
+            <h1>INVESTMENT</h1>
             <ul>
-                <li><a href="./pages/viewer.html">Parsel Sorgu</a></li>
-                <li><a href="./pages/hibevetesvik.html">Teşvikler</a></li>
+                <li><a href="./pages/viewer.html">Invest Map</a></li>
+                <li><a href="./pages/incentives.html">Incentives</a></li>
             </ul>
         </div>
 
         <div id="footer-column">
-            <h1>İLETİŞİM</h1>
-            <div id="adress-infos">
+            <h1>CONTACT</h1>
+            <div id="address-infos">
                 <ul>
-                    <li>Adres Niğde</li>
-                    <li>Adres Ankara</li>
-                    <li>Telefon</li>
-                    <li>Mail</li>
+                    <li>Address Niğde</li>
+                    <li>Address Ankara</li>
+                    <li>Phone</li>
+                    <li>Email</li>
                     <li>Fax</li>
                 </ul>
             </div>
@@ -700,7 +758,6 @@
                 </ul>
             </div>
         </div>
-
     </div>
     </div>
   </div>
