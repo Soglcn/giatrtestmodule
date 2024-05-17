@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arazi Geliştirme</title>
+    <title>Contact</title>
     <link rel="icon" href="../assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -13,13 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script src="https://unpkg.com/@tweenjs/tween.js@^20.0.0/dist/tween.umd.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/index-NaqL_L0Z.css">
+    <link rel="stylesheet" crossorigin href="../elements/index-CBRwfVTC.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../index.html"><img src="../assets/Logo-CzcIiDrb_111.png" alt="Logo"
+            <div class="item"><a href="../en.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo"
                         class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
@@ -71,73 +71,99 @@
                 <div id="empty-area"></div>
             </div>
             <div class="item">
-                <a href="#" id="change-language">TR</a>
+                <a href="../pages/baskaninmektubu.html" id="change-language">EN</a>
             </div>
             <div class="item">
-                <a href="viewer.html" id="show-stages">Parsel Sorgu</a>
+                <a href="../pages/viewer.html" id="show-stages">Invest Map</a>
             </div>
         </div>
     </header>
 
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
+            <div id="closeMainMenuPanel">
+                <button id="closeMain">&#10006;</button>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var closeMainButton = document.getElementById("closeMain");
+                        var menuPanel = document.getElementById("menu-panel");
+
+                        closeMainButton.addEventListener("click", function () {
+                            closeMenuWithoutAnimation();
+                        });
+
+                        function closeMenuWithoutAnimation() {
+                            menuPanel.style.display = "none";
+                        }
+                    });
+                </script>
+            </div>
+
             <ul id="first-list">
-                <li id="about">Hakkında</li>
-                <li id="ecosystem">Ekosistem</li>
-                <li id="services">Hizmetler</li>
-                <li id="gallery">Galeri</li>
-                <li id="press">Basın</li>
-                <li id="contact">İletişim</li>
+                <li id="about">About</li>
+                <li id="ecosystem">Ecosystem</li>
+                <li id="services">Services</li>
+                <li id="gallery">Gallery</li>
+                <li id="press">Press</li>
+                <li id="contact">Contact</li>
             </ul>
             <ul id="second-list">
-                <a href="viewer.html">
-                    <li>Parsel Sorgu</li>
+
+                <a href="../pages/viewer.html">
+                    <li>Invest Map</li>
+                </a>
+                <a href="../pages/baskaninmektubu.html" class="mobile-only">
+                    <li class="english-only">EN</li>
                 </a>
             </ul>
         </div>
         <div id="menu-panel-second">
-            <h3 id="close-second-menu">&#x27F5; Geri</h3>
+            <h3 id="close-second-menu">&#x27F5; Back</h3>
             <ul class="about-list" id="second-list">
-                <li><a href="gianedir.html">GIA Nedir</a></li>
-                <li><a href="baskaninmektubu.html">Başkanın Mektubu</a></li>
-                <li><a href="kurumsalsema.html">Kurumsal Organizasyon</a></li>
-                <li><a href="degerlerimiz.html">Değerler</a></li>
-                <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+                <li><a href="../en/what_is_gia.html">What is GIA?</a></li>
+                <li><a href="../en/ceoletter.html">CEO's Letter</a></li>
+                <li><a href="../pages/kurumsalsema.html">Board of Directors</a></li>
+                <li><a href="../pages/degerlerimiz.html">Values</a></li>
+                <li><a href="../pages/surdurulebilirlik.html">Sustainability</a></li>
             </ul>
             <ul class="eco-list" id="second-list">
-                <li><a href="konum.html">Konum</a></li>
-                <li><a href="altyapi.html">Altyapı</a></li>
-                <li><a href="sektorler.html">Sektörler</a></li>
-                <li><a href="yatirimfirsatlari.html">Yatırım Fırsatları</a></li>
-                <li><a href="hibevetesvik.html">Hibe, Teşvik ve Destekler</a></li>
-                <li><a href="sosyalimkanlar.html">Sosyal İmkanlar</a></li>
+                <li><a href="./pages/konum.html">Location</a></li>
+                <li><a href="./pages/altyapi.html">Infrastructure</a></li>
+                <li><a href="./pages/sektorler.html">Sectors</a></li>
+                <li><a href="./pages/yatirimfirsatlari.html">Investment Opportunities </a></li>
+                <li><a href="./pages/hibevetesvik.html">Grants, Incentives and Supports </a></li>
+                <li><a href="./pages/sosyalimkanlar.html">Social Amenities</a></li>
             </ul>
             <ul class="services-list" id="second-list">
-                <li><a href="yonetimhizmetleri.html">Yönetim Destek Hizmetleri</a></li>
+                <li><a href="./pages/yonetimhizmetleri.html">Management Support Services</a></li>
             </ul>
             <ul class="gallery-list" id="second-list">
-                <li><a href="../merkezgaleri.html">Merkez</a></li>
-                <li><a href="../fabrikalargaleri.html">Fabrikalar</a></li>
-                <li><a href="../lojmanlargaleri.html">Lojmanlar</a></li>
-                <li><a href="../kurulimangaleri.html">Kuru Liman</a></li>
-                <li><a href="../lojistikbolgegaleri.html">Lojistik Bölge</a></li>
-                <li><a href="../sosyaldonatilargaleri.html">Sosyal Donatılar</a></li>
+                <li><a href="maingallery.html">Interactive Gallery</a></li>
+                <li><a href="merkezgaleri.html">Center</a></li>
+                <li><a href="fabrikalargaleri.html">Factories</a></li>
+                <li><a href="lojmanlargaleri.html">Residences</a></li>
+                <li><a href="kurulimangaleri.html">Port</a></li>
+                <li><a href="lojistikbolgegaleri.html">Logistics Area</a></li>
+                <li><a href="sosyaldonatilargaleri.html">Social Amenities</a></li>
             </ul>
             <ul class="contact-list" id="second-list">
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li><a href="kariyer.html">Kariyer</a></li>
+                <li><a href="./pages/iletisim.html">Contact</a></li>
+                <li><a href="./pages/kariyer.html">Career</a></li>
             </ul>
             <ul class="press-list" id="second-list">
-                <li><a href="basin.html">Haberler</a></li>
+                <li><a href="./pages/basin.html">News</a></li>
             </ul>
         </div>
         <script>
-
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
-                document.querySelector('#menu-panel').style.width = '25%';
+                if (window.innerWidth <= 1024) {
+                    document.querySelector('#menu-panel').style.width = '100%';
+                } else {
+                    document.querySelector('#menu-panel').style.width = '25%';
+                }
+            });
 
-            })
 
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
@@ -204,14 +230,23 @@
 
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
-                        menuPanel.style.width = "45%";
+                        var screenWidth = window.innerWidth;
+                        if (screenWidth <= 1024) {
+                            menuPanel.style.width = "100%";
+                        } else {
+                            menuPanel.style.width = "45%";
+                        }
                         menuPanelSecond.style.display = "block";
                     });
                 });
 
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
-                        menuPanel.style.width = "25%";
+                        if (window.innerWidth <= 1024) {
+                            menuPanel.style.width = "100%";
+                        } else {
+                            menuPanel.style.width = "25%";
+                        }
                         menuPanelSecond.style.display = "none";
                     }
                 });
@@ -219,12 +254,13 @@
         </script>
     </div>
 
+
     <div class="main-container">
         <div class="main-container">
             <div class="main-element">
                 <div class="sub-video-container">
                     <div class="sub-overlay">
-                        <h2>Hizmetler > Arazi Geliştirme</h2>
+                        <h2>Contact > Contact</h2>
                     </div>
                     <img src="../images/site-images/kurumsal_sema_header.jpg" class="sub-bg-video">
                         Your browser does not support the video tag.
@@ -236,9 +272,72 @@
             <div class="main-element">
                 <div id="sub-page-title">
                     <!-- <h2>Yeni bir çalışma, üretme ve yaşama biçimi öneren akıllı sanayi şehri</h2> -->
-                    <h1>Arazi Geliştirme</h1>
+                    <h1>Contact</h1>
                 </div>
             </div>
+
+            <div class="main-element">
+                <div id="sub-page-content">
+                    <div id="comm-titles">
+                        <div id="press-content-container">
+                            <div id="press-content-text-area">
+                                <div id="press-content-main">
+                                    <h1>Public Disclosure Platform</h1>
+                                    <!-- <h3>03 NİSAN 2024</h3> -->
+                                    <p>
+                                    </p>
+                                </div>
+                                <div id="press-content-buttton">
+                                    <a href="https://www.kap.org.tr/tr/" target="_blank">Go</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comm-content-container">
+                            <div id="press-content-text-area">
+                                <div id="press-content-main">
+                                    <h1>Investor Relations</h1>
+                                    <!-- <h3>03 NİSAN 2024</h3> -->
+                                    <p>
+                                        <p><a href="mailto:someone@example.com"><strong>E-mail:</strong> yatirimciiliskileri@example.com</a></p>
+                                        <br> 
+                                        <p><a href="tel:+901234567890"><strong>Phone: <br></strong> +90-(123)-456-78-90</a></p>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comm-content-container">
+                            <div id="press-content-text-area">
+                                <div id="press-content-main">
+                                    <h1>Ankara Corporate Communication</h1>
+                                    <!-- <h3>April 3, 2024</h3> -->
+                                    <p>
+                                        <p><a href="mailto:someone@example.com"><strong>Email:</strong> ankara.corporate@example.com</a></p>
+                                        <br> 
+                                        <p><a href="tel:+901234567890"><strong>Phone: <br></strong> +90-(312)-456-78-90</a></p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comm-content-container">
+                            <div id="press-content-text-area">
+                                <div id="press-content-main">
+                                    <h1>Niğde Corporate Communication</h1>
+                                    <!-- <h3>April 3, 2024</h3> -->
+                                    <p>
+                                        <p><a href="mailto:someone@example.com"><strong>Email:</strong> nigde.corporate@example.com</a></p>
+                                        <br> 
+                                        <p><a href="tel:+901234567890"><strong>Phone: <br></strong> +90-(388)-456-78-90</a></p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
 
 
 
@@ -246,32 +345,32 @@
                 <div id="footer-container">
                     <div id="footer-elements">
                         <div id="footer-column">
-                            <h1>KEŞFET</h1>
+                            <h1>EXPLORE</h1>
                             <ul>
-                                <li><a href="#">Hakkımızda</a></li>
-                                <li><a href="../maingallery.html">Galeri</a></li>
-                                <li><a href="#">Sürdürülebilirlik</a></li>
-                                <li><a href="#">Sektörler</a></li>
-                                <li><a href="#">Haberler</a></li>
+                                <li><a href="../en/what_is_gia.html">About Us</a></li>
+                                <li><a href="../pages/management-services.html">Services</a></li>
+                                <li><a href="../pages/sustainability.html">Sustainability</a></li>
+                                <li><a href="../pages/sectors.html">Sectors</a></li>
+                                <li><a href="../pages/press.html">Press</a></li>
                             </ul>
                         </div>
 
                         <div id="footer-column">
-                            <h1>YATIRIM</h1>
+                            <h1>INVESTMENT</h1>
                             <ul>
-                                <li><a href="#">Parsel Sorgu</a></li>
-                                <li><a href="#">Teşvikler</a></li>
+                                <li><a href="../pages/viewer.html">Invest Map</a></li>
+                                <li><a href="../pages/incentives.html">Incentives</a></li>
                             </ul>
                         </div>
 
                         <div id="footer-column">
-                            <h1>İLETİŞİM</h1>
-                            <div id="adress-infos">
+                            <h1>CONTACT</h1>
+                            <div id="address-infos">
                                 <ul>
-                                    <li>Adres Niğde</li>
-                                    <li>Adres Ankara</li>
-                                    <li>Telefon</li>
-                                    <li>Mail</li>
+                                    <li>Address Niğde</li>
+                                    <li>Address Ankara</li>
+                                    <li>Phone</li>
+                                    <li>Email</li>
                                     <li>Fax</li>
                                 </ul>
                             </div>
@@ -295,7 +394,6 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
