@@ -34,7 +34,7 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: #ececec;
+    background-color: #ffffff;
 }
 
 /* SCROLL BAR */
@@ -988,13 +988,12 @@ canvas {
 #social-link-list li {
     text-decoration: none;
     display: inline-block;
-    background-color: #4d4d4d;
     padding: 10px;
     width: 5%;
     text-align: center;
     border-radius: 100%;
     margin-right: 2.5%;
-    color: #EBEBEB;
+    color: #4d4d4d;
     transition: all 0.5s ease;
 }
 
@@ -1007,13 +1006,13 @@ canvas {
 #social-link-list li:hover {
     text-decoration: none;
     display: inline-block;
-    background-color: #0047BA;
     padding: 10px;
-    width: 6%;
+    width: 5%;
     text-align: center;
     border-radius: 100%;
     margin-right: 2.5%;
-    color: #d8f3ff;
+    color: #0818ff;
+    transition: all 0.5s ease;
 }
 
 .sub-video-container {
@@ -1697,7 +1696,7 @@ canvas {
         position: absolute;
         border-radius: 100%;
         padding: 50px;
-        bottom: 70%;
+        bottom: 65%;
         right: 10%;
         width: 15px;
         height: 15px;
@@ -1919,13 +1918,12 @@ canvas {
     #social-link-list li {
         text-decoration: none;
         display: inline-block;
-        background-color: #4d4d4d;
         padding: 10px;
         width: 6%;
         text-align: center;
         border-radius: 100%;
         margin-right: 2.5%;
-        color: #EBEBEB;
+        color: #4d4d4d;
         transition: all 0.5s ease;
     }
 
@@ -1938,13 +1936,13 @@ canvas {
     #social-link-list li:hover {
         text-decoration: none;
         display: inline-block;
-        background-color: #0047BA;
         padding: 10px;
         width: 6%;
         text-align: center;
         border-radius: 100%;
         margin-right: 2.5%;
-        color: #d8f3ff;
+        color: #4d4d4d;
+        transition: all 0.5s ease;
     }
 
     #press-container {
