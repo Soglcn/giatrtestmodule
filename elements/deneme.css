@@ -113,3 +113,30 @@ body {
     background-image: linear-gradient(to bottom, #ececec, #ffffff65, #ececec);
     z-index: 2;
 }
+
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+
+    .text-parts h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'CamptonBold';
+        margin-top: 50%;
+        position: absolute;
+        z-index: 10;
+        font-size: 18pt;
+    }
+    
+    .text-parts h2 {
+        text-align: center;
+        color: rgb(200, 200, 200);
+        margin-top: 65%;
+        position: absolute;
+        z-index: 10;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 14pt;
+    }
+    
+
+}

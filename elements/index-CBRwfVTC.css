@@ -843,7 +843,7 @@ canvas {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    height: 26%;
+    height: 25%;
     justify-content: space-around;
     padding-left: 5%;
     padding-right: 5%;
