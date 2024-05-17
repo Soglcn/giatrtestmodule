@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIA Nedir?</title>
+    <title>Sosyal İmkanlar</title>
     <link rel="icon" href="../assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -13,27 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script src="https://unpkg.com/@tweenjs/tween.js@^20.0.0/dist/tween.umd.js"></script>
-    <noscript>
-        <!--A letter for all of the F12 clickers!
-            Dear Developer, 
-            UP 'TILL THIS MORNING, ONLY GOD AND I KNEW HOW THE
-            3D AREA WORKED. NOW, ONLY GOD KNOWS! (actually, ChatGPT knows too) 
-            YEEEAAAH, I TOOK THE JOKE; YEAH YEAH! WHATEVER... 
-            AND I'M SURE THAT TONY STARK WILL RETURN!
-            HOLD ON, WHY ARE YOU READING THIS? WHY'D YOU PRESS F12? LEAVE ME ALONE!
-            LEARN JS, THEY SAID. LEAVE YOUR ARCHAEOLOGY JOB, THEY SAID. YOU'LL BE HAPPY, THEY SAID...
-            I'LL JUST CRY A LIL.
-            Sincerely 
-            SOCY -->
-    </noscript>
     <link rel="stylesheet" crossorigin href="../elements/index-CBRwfVTC.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo"
-                        class="menu-logo"></a></div>
+            <div class="item"><a href="../index.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
                 <script>
@@ -41,7 +27,7 @@
                         var hamburgerIcon = document.getElementById("hamburger-icon");
                         var menuPanel = document.getElementById("menu-panel");
                         var isOpen = false;
-
+    
                         hamburgerIcon.addEventListener("click", function () {
                             if (!isOpen) {
                                 openMenuWithAnimation();
@@ -49,24 +35,24 @@
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
                         document.addEventListener("click", function (event) {
                             var target = event.target;
                             var isMenu = target.closest("#menu-panel") === menuPanel;
                             var isHamburger = target === hamburgerIcon;
-
+    
                             if (!isMenu && !isHamburger && isOpen) {
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
                         function openMenuWithAnimation() {
                             menuPanel.style.display = "block";
                             menuPanel.classList.remove("close");
                             menuPanel.classList.add("open");
                             isOpen = true;
                         }
-
+    
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -76,22 +62,22 @@
                             isOpen = false;
                         }
                     });
-
-
+    
+    
                 </script>
             </div>
             <div class="item">
                 <div id="empty-area"></div>
             </div>
             <div class="item">
-                <a href="../en/what_is_gia.html" id="change-language">TR</a>
+                <a href="#" id="change-language">TR</a>
             </div>
             <div class="item">
                 <a href="../pages/viewer.html" id="show-stages">Parsel Sorgu</a>
             </div>
         </div>
     </header>
-
+    
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
             <div id="closeMainMenuPanel">
@@ -100,11 +86,11 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         var closeMainButton = document.getElementById("closeMain");
                         var menuPanel = document.getElementById("menu-panel");
-
+    
                         closeMainButton.addEventListener("click", function () {
                             closeMenuWithAnimation();
                         });
-
+    
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -113,7 +99,7 @@
                             }, 500);
                         }
                     });
-
+    
                 </script>
             </div>
             <ul id="first-list">
@@ -125,14 +111,11 @@
                 <li id="contact">İletişim</li>
             </ul>
             <ul id="second-list">
-
+    
                 <a href="../pages/viewer.html">
                     <li>Parsel Sorgu</li>
                 </a>
-                <a href="../en/what_is_gia.html" class="mobile-only">
-                    <li class="english-only">EN</li>
-                </a>
-
+    
             </ul>
         </div>
         <div id="menu-panel-second">
@@ -173,7 +156,7 @@
             </ul>
         </div>
         <script>
-
+    
             document.getElementById('close-second-menu').addEventListener('click', function () {
                 document.querySelector('#menu-panel-second').style.display = 'none';
                 if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -182,8 +165,8 @@
                     document.querySelector('#menu-panel').style.width = '25%';
                 }
             });
-
-
+    
+    
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -192,7 +175,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('ecosystem').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'block';
@@ -201,7 +184,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('services').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -226,7 +209,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'block';
             });
-
+    
             document.getElementById('contact').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -235,18 +218,18 @@
                 document.querySelector('.contact-list').style.display = 'block';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
         </script>
-
-
-
+    
+    
+    
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var listItems = document.querySelectorAll("#first-list li");
                 var menuPanel = document.getElementById("menu-panel");
                 var menuPanelSecond = document.getElementById("menu-panel-second");
                 var emptyArea = document.body;
-
+    
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
                         var screenWidth = window.innerWidth;
@@ -258,7 +241,7 @@
                         menuPanelSecond.style.display = "block";
                     });
                 });
-
+    
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
                         if (window.innerWidth <= 1024) { // Mobil cihazlarda
@@ -269,87 +252,65 @@
                         menuPanelSecond.style.display = "none";
                     }
                 });
-
+    
             });
         </script>
     </div>
+
 
     <div class="main-container">
         <div class="main-container">
             <div class="main-element">
                 <div class="sub-video-container">
                     <div class="sub-overlay">
-                        <h2>Hakkında > GIA Nedir?</h2>
+                        <h2>Ekosistem > Sosyal İmkanlar</h2>
                     </div>
                     <img src="../images/site-images/kurumsal_sema_header.jpg" class="sub-bg-video">
+                    Your browser does not support the video tag.
+                    </img>
                 </div>
 
             </div>
 
             <div class="main-element">
                 <div id="sub-page-title">
-                    <h2>Yeni bir çalışma, üretme ve yaşama biçimi öneren akıllı sanayi şehri</h2>
-                    <h1>GIA Nedir?</h1>
-                </div>
-            </div>
-
-            <div class="main-element">
-                <div id="sub-page-content">
-                    <div id="sub-page-paragraph">
-                        <p>Niğde ilinin Ulukışla ilçesinde konumlanan Anadolu Uluslararası Özel Endüstri Bölgesi, 17
-                            Mayıs 2023 tarihinde Cumhurbaşkanlığı kararnamesiyle resmen ilan edilmiş ve 4737 sayılı
-                            Endüstri Bölgesi Kanunu'nun 4/Ç maddesi uyarınca hayata geçirilmiştir. Sıradan bir endüstri
-                            bölgesi olmaktan öteye geçerek, GIA üst kimliği altında faaliyet gösteren; Lojmanlar,
-                            Merkezi Yönetim Alanı, Ar-Ge Merkezi, Tır Parkı, Konaklama Merkezi ve Fuar Alanı gibi modern
-                            donatılarla tasarlanmış bir yapı sunmaktadır. Bu donatılar, sadece endüstriyel faaliyetlerin
-                            yürütülmesini değil, aynı zamanda yeni bir çalışma, üretme ve yaşam tarzı sunmayı
-                            amaçlamaktadır.
-
-                        <p>
-                    </div>
-                    <div id="sub-page-image">
-                        <img src="../assets/gia_entrance.png" alt="sub-page-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-element">
-                <div id="sub-page-content-blue">
-                    <p>Tamamlandığında Türkiye'nin en büyük karma nitelikli özel endüstri şehri olacak olan GIA,
-                        ekonomik büyümeyi desteklemenin yanı sıra kapsayıcı ve sürdürülebilir bir sanayi modelini teşvik
-                        etmektedir. Bölgenin kuruluş amacı, çevresel ve sosyal etkileri dikkate alarak Türkiye'nin yeşil
-                        sanayi dönüşümü politikaları kapsamında sürdürülebilir ekonomik kalkınmasına katkı destek olmak,
-                        yeşil teknolojilerin benimsenmesi, enerji verimliliğinin artırılması, atık yönetimi gibi
-                        alanlarda yapılacak yatırımlarla, çevresel etkilerin azaltılması ve toplumun refahının
-                        artırılmasıdır.
-                    <p>
+                    <h2>Aynı zamanda yaşamın da bir parçası</h2>
+                    <h1>Sosyal İmkanlar</h1>
                 </div>
             </div>
 
             <div class="main-element">
                 <div id="sub-page-content">
                     <div id="person-content-black">
-                        <p>GIA projesi, Türkiye'nin gelecekteki endüstri ve kalkınma stratejilerinde öncü bir rol
-                            oynamaya adaydır. Sadece bir endüstri bölgesi olarak değil, aynı zamanda çağdaş bir yaşam
-                            tarzı ve çevresel bilinçlilik alanında bir örnek teşkil ederek, ulusal ve uluslararası
-                            düzeyde bilinen ve örnek alınan 21. yüzyılın yeni sanayi şehri olmayı hedeflemektedir.
-                        <p>
+                        <p>GIA, sadece endüstriyel faaliyetlerle sınırlı kalmayarak, insan ve çevre odaklı bir
+                            yaklaşımla tasarlanmış bir iş ve yaşam alanı sunar. Bölgenin temel amacı, sürdürülebilirlik
+                            ilkelerini benimseyerek, insana ve doğaya saygılı bir çevre oluşturmaktır.
+                            <br><br>
+                            Bu bağlamda, GIA'nın sosyal imkanları oldukça çeşitlidir ve herkesin ihtiyaçlarına hitap
+                            edecek şekilde planlanmıştır. Bölgede bulunan akredite çevre sertifikalarıyla, şirketlerin
+                            yenilenebilir enerji kaynaklarından yararlanması teşvik edilirken, çevreye duyarlı
+                            uygulamaları teşvik edilmektedir.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="main-element">
-                <div id="sub-page-content-empty">
-                    <div id="sub-page-image-empty">
-                        <img src="../assets/yuzyil.png" alt="sub-page-image">
-                    </div>
-                    <div id="sub-page-empty-paragraph">
-                        <p>Bu proje, Sanayi ve Teknoloji Bakanlığımızın teklifi ve
-                            Sayın Cumhurbaşkanımızın tensipleriyle <strong>18 Mayıs 2023</strong>
-                            tarihli <strong>32194</strong> sayılı resmi gazete kararı ile
-                            yürürlüğe girmiştir.
-                        <p>
-                    </div>
+                <div id="sub-page-content-blue">
+                    <p>GIA'da bulunan sosyal donatı alanları, çeşitli ihtiyaçları karşılayacak şekilde tasarlanmıştır.
+                        Ticaret alanları, yönetim merkezi, eğitim tesisleri, camiler, kreşler, oteller, konferans
+                        salonları ve spor merkezleri gibi çeşitli olanaklar, bölge sakinlerinin ve çalışanların
+                        ihtiyaçlarını karşılamak için sunulmaktadır.
+                        <br><br>
+                        Ayrıca, GIA bünyesinde bulunacak lojmanlar içerisinde yeşil alanlar, yürüyüş parkurları ve çocuk
+                        oyun alanları gibi açık hava alanları, sağlıklı bir yaşam tarzını teşvik ederken, topluluk
+                        etkinlikleri ve kültürel etkinlikler de sosyal bağları güçlendirecek, 21. yüzyılın sanayi
+                        şehrinin yapı taşlarını oluşturacaktır.
+                        <br><br>
+                        Bu sebebe GIA, Yeni bir çalışma, üretme ve yaşama biçimi olarak tanımlanırken arkasında yatan
+                        sebeplerden birisi de sadece işin değil, aynı zamanda yaşamın da bir parçası olmayı
+                        hedeflemesidir.
+                    </p>
                 </div>
             </div>
 

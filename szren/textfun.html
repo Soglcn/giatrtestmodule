@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIA - Great Industry Area</title>
+    <link rel="icon" href="./assets/GIA_TOP-DoaWIIJW.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" crossorigin href="../elements/deneme.css">
+</head>
+
+<body>
+    <main class="scroll-container">
+        <div class="photo-content-main">
+            <div id="photo-content-elements">
+                <div class="text-parts">
+                    <h1>
+                        <span>A New</span>
+                        <span>Investment</span>
+                        <span>Area, </span>
+                        <span>GIA</span>
+                    </h1>
+                </div>
+                <div class="text-parts">
+                    <h2>
+                        <span>The GIA project</span>
+                        <span>aims to play a leading role</span>
+                        <span>in Turkey's future</span>
+                        <span>industry and development strategies.</span>
+                        <span>Not only as an industrial zone,</span>
+                        <span>but also by setting an example</span>
+                        <span>in contemporary lifestyle</span>
+                        <span>and environmental consciousness,</span>
+                        <span>it aspires to become</span>
+                        <span>the new industrial city</span>
+                        <span>of the 21st century,</span>
+                        <span>known and emulated</span>
+                        <span>at national and international levels.</span>
+                    </h2>
+                </div>
+                
+            </div>
+            <script>
+                // Function to colorize h1 letters
+                function colorizeH1(scrollPercentage) {
+                    let h1Letters = document.querySelectorAll('.text-parts h1 span');
+                    h1Letters.forEach(function (letter, index) {
+                        let letterScrollPercentage = (index + 1) / h1Letters.length * 25;
+                        if (scrollPercentage >= letterScrollPercentage) {
+                            letter.style.color = 'rgb(0, 71, 186)'; // Turn the letter blue
+                        } else {
+                            letter.style.color = 'rgb(200, 200, 200)'; // Turn the letter gray
+                        }
+                    });
+                }
+
+                // Function to colorize h2 letters
+                function colorizeH2(scrollPercentage) {
+                    let h2Letters = document.querySelectorAll('.text-parts h2 span');
+                    h2Letters.forEach(function (letter, index) {
+                        let letterScrollPercentage = (index + 1) / h2Letters.length * 50;
+                        if (scrollPercentage >= letterScrollPercentage) {
+                            letter.style.color = 'rgb(100, 100, 100)'; // Turn the letter dark gray
+                        } else {
+                            letter.style.color = 'rgb(200, 200, 200)'; // Turn the letter light gray
+                        }
+                    });
+                }
+
+                function resetH2LetterColors() {
+                    let h2Letters = document.querySelectorAll('.text-parts h2 span');
+                    h2Letters.forEach(function (letter) {
+                        letter.style.color = 'rgb(200, 200, 200)'; 
+                    });
+                }
+                window.addEventListener('scroll', function () {
+                    let scrollPosition = window.scrollY;
+                    let totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+                    let scrollPercentage = (scrollPosition / totalScrollHeight) * 100;
+
+                    if (scrollPercentage < 25) {
+                        resetH2LetterColors();
+                    }
+
+                    if (scrollPercentage <= 25) {
+                        colorizeH1(scrollPercentage);
+                    } else if (scrollPercentage > 25 && scrollPercentage <= 100) {
+                        colorizeH1(100);
+                        colorizeH2(scrollPercentage - 30);
+                    }
+                });
+
+            </script>
+
+
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>
