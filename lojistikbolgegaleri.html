@@ -12,406 +12,6 @@
   <link rel="stylesheet" crossorigin href="./elements/index-CBRwfVTC.css">
   <title>Lojistik Bölge</title>
   <style>
-    @font-face {
-
-      font-family: "CamptonLighter";
-      src: url("fonts/CamptonLight.otf");
-
-      font-family: "Campton";
-      src: url("./fonts/CamptonMedium.otf");
-
-      font-family: "CamptonSemiBold";
-      src: url("fonts/CamptonSemiBold.otf");
-
-      font-family: "CamptonBold";
-      src: url("fonts/CamptonBold.otf");
-
-      font-family: "CamptonBook";
-      src: url("fonts/CamptonBook.otf");
-    }
-
-    body {
-      background-color: #fff;
-      font-family: "Campton", Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      overflow-x: hidden;
-      color: #3f3f3f;
-    }
-
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: linear-gradient(135deg, #0f0355, #3528e6);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(135deg, #13aeeb, #226bf3);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0f82e0;
-    }
-
-    #classified {
-      color: #000;
-      padding-left: 10%;
-      padding-top: 10%;
-    }
-
-    .main-container {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -2;
-    }
-
-    .sub-video-container {
-      position: relative;
-      width: 100%;
-      height: 85vh;
-      overflow-y: hidden;
-    }
-
-
-    .sub-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
-      background: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(21, 21, 21, 0.86), rgba(21, 21, 21, 0.47));
-      z-index: 1;
-      transition: all 0.5s ease;
-    }
-
-    .sub-overlay:hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.1;
-      background: linear-gradient(to right, rgba(17, 17, 17, 1), rgba(21, 21, 21, 0.86), rgba(21, 21, 21, 0.47));
-      z-index: 1;
-    }
-
-    .sub-overlay h2 {
-      padding-left: 15%;
-      padding-top: 30%;
-      font-size: 40pt;
-      color: #fff;
-    }
-
-    .sub-bg-video {
-      position: absolute;
-      top: -20%;
-      width: 100%;
-    }
-
-    #sub-page-title {
-      padding-top: 5%;
-      padding-left: 15%;
-    }
-
-    #sub-page-title h1 {
-      font-size: 75pt;
-      color: #0047BA;
-    }
-
-    #sub-page-title h2 {
-      padding-left: 10%;
-      font-size: 25pt;
-      color: #000;
-    }
-
-    #sub-page-content {
-      width: 100%;
-      display: flex;
-    }
-
-    #sub-page-image {
-      flex: 1;
-      box-sizing: border-box;
-      padding-right: 5%;
-      padding-top: 5%;
-      padding-bottom: 5%;
-    }
-
-    #sub-page-paragraph {
-      flex: 1;
-      box-sizing: border-box;
-      padding-left: 24%;
-      padding-right: 5%;
-      text-align: left;
-      font-size: 35pt;
-      padding-top: 3%;
-      padding-bottom: 5%;
-    }
-
-    #sub-page-image img {
-      max-width: 75%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    #sub-page-content-blue {
-      text-align: justify;
-      background-color: #0047BA;
-      margin-top: 50px;
-      padding-top: 2.5%;
-      padding-bottom: 2.5%;
-      padding-left: 24%;
-      padding-right: 25%;
-      color: #fff;
-      font-size: 15pt;
-    }
-
-    #sub-page-content-empty {
-      width: 100%;
-      flex-direction: row;
-    }
-
-    #sub-page-image-empty {
-      flex: 1;
-      box-sizing: border-box;
-      padding-top: 5%;
-      text-align: center;
-    }
-
-    #sub-page-empty-paragraph {
-      text-align: center;
-      font-size: 15pt;
-      flex: 1;
-      box-sizing: border-box;
-      padding-top: 2%;
-      padding-left: 25%;
-      padding-right: 25%;
-      padding-bottom: 5%;
-    }
-
-    #sub-page-image-empty img {
-      max-width: 30%;
-      height: auto;
-    }
-
-    .slider-container {
-      position: relative;
-      height: 1020px;
-      overflow: hidden;
-    }
-
-    .slider-container h1 {
-      position: absolute;
-      z-index: 1000;
-    }
-
-    .slider {
-      top: -250px;
-      height: 50%;
-    }
-
-    .slider img {
-      width: 100%;
-      height: 75%;
-    }
-
-    .slider-controls {
-      display: none;
-      position: absolute;
-      bottom: 45%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .slider-controls button {
-      background: transparent;
-      border: none;
-      color: whitesmoke;
-      cursor: pointer;
-      opacity: 0.75;
-      font-size: 50pt;
-      transition: all 0.5s ease;
-    }
-
-    .slider-controls button:hover {
-      background: transparent;
-      border: none;
-      color: whitesmoke;
-      cursor: pointer;
-      opacity: 0.5;
-      font-size: 50pt;
-    }
-
-    .thumbnail-container {
-      display: flex;
-      justify-content: center;
-      background-color: #fff;
-      height: 25%;
-      margin-top: 5%;
-    }
-
-    .thumbnail {
-      margin: 0;
-      padding-top: 0.15%;
-    }
-
-    .thumbnail img {
-      width: 95%;
-      height: auto;
-      cursor: pointer;
-      filter: grayscale(100%);
-    }
-
-    .thumbnail.active img {
-      filter: none;
-    }
-
-    .item {
-      flex: 1;
-      height: 100px;
-      margin: 0 5px;
-      overflow: hidden;
-      border-radius: 10px;
-      position: relative;
-    }
-
-    .menu-logo {
-      max-height: 80%;
-      height: auto;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    #redirect-to-gallery {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      background-color: yellowgreen;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
-      margin-top: -15%;
-    }
-
-    #redirect-to-gallery h1 {
-      border: 2px solid #fff;
-      margin-left: 42.5%;
-      margin-right: 42.5%;
-      padding: 15px;
-      border-radius: 250px;
-      color: #fff;
-      transition: all 0.5s ease;
-      font-size: 15pt;
-    }
-
-    #redirect-to-gallery h1:hover {
-      border: 2px solid #fff;
-      background-color: #fff;
-      margin-left: 42.5%;
-      margin-right: 42.5%;
-      padding: 15px;
-      border-radius: 250px;
-      color: yellowgreen;
-      transition: all 0.5s ease;
-      font-size: 15pt;
-    }
-
-    /* 
-    #footer-container {
-      width: 100%;
-      color: #383838;
-      display: flex;
-      background-color: #EBEBEB;
-      flex-direction: row;
-    }
-
-    #footer-elements {
-      display: flex;
-      order: 2;
-      height: 15vh;
-      width: 50%;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #footer-column h1 {
-      text-align: center;
-      font-size: 12pt;
-      font-weight: lighter;
-      letter-spacing: 2px;
-    }
-
-    #footer-column {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-    }
-
-    #footer-column ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: right;
-      color: #4d4d4d;
-      margin-top: 2%;
-    }
-
-    #footer-column ul li a {
-      z-index: 9999;
-      text-decoration: none;
-      color: #4d4d4d;
-    }
-
-    #footer-column ul li {
-      margin-top: 2%;
-      letter-spacing: 2px;
-    }
-
-    #social-link-list li {
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #4d4d4d;
-      padding: 15px;
-      width: 15px;
-      border-radius: 35%;
-      height: 15px;
-      margin-right: 2.5%;
-      color: #EBEBEB;
-      transition: all 0.5s ease;
-    }
-
-    #social-link-list a {
-      text-decoration: none;
-      font-size: 15pt;
-
-    }
-
-    #social-link-list li:hover {
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #0047BA;
-      padding: 15px;
-      width: 15px;
-      border-radius: 100%;
-      height: 15px;
-      margin-right: 2.5%;
-      color: #EBEBEB;
-    } */
-
     .gia-gallery {
       width: 100%;
       color: #fff;
@@ -442,7 +42,7 @@
       margin-bottom: -2%;
     }
 
-    .overlay {
+    .overlayGallery {
       position: absolute;
       top: 0;
       left: 0;
@@ -455,7 +55,7 @@
       transition: all 0.5s ease;
     }
 
-    .overlay:hover {
+    .overlayGallery:hover {
       opacity: 0.25;
       position: absolute;
       top: 0;
@@ -470,7 +70,7 @@
       cursor: pointer;
     }
 
-    .overlay h1 {
+    .overlayGallery h1 {
       position: absolute;
       bottom: 0;
       left: 5%;
@@ -479,7 +79,7 @@
       font-size: 24px;
     }
 
-    .modal-overlay {
+    .modal-overlayGallery {
       position: fixed;
       top: 0;
       left: 0;
@@ -526,7 +126,36 @@
       z-index: 999;
     }
 
+    @media only screen and (max-width: 960px) and (orientation: landscape){
+      #classified {
+        color: #000;
+        padding-top: 12.5%;
+        padding-left: 4%;
+      }
 
+      .grid-row {
+        width: 94%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+
+      .grid-item {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
     @media only screen and (orientation: portrait) {
 
@@ -539,20 +168,18 @@
         padding-bottom: 2.5%;
       }
 
-
       #classified {
         color: #000;
         padding-top: 35%;
         padding-left: 4%;
       }
 
-
       #classified h1 {
         font-size: 15pt;
       }
 
 
-      .overlay {
+      .overlayGallery {
         position: absolute;
         top: 0;
         left: 0;
@@ -565,7 +192,7 @@
         transition: all 0.5s ease;
       }
 
-      .overlay:hover {
+      .overlayGallery:hover {
         opacity: 1;
         position: absolute;
         top: 0;
@@ -765,24 +392,19 @@
         <div id="closeMainMenuPanel">
             <button id="closeMain">&#10006;</button>
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    var closeMainButton = document.getElementById("closeMain");
-                    var menuPanel = document.getElementById("menu-panel");
-
-                    closeMainButton.addEventListener("click", function () {
-                        closeMenuWithAnimation();
-                    });
-
-                    function closeMenuWithAnimation() {
-                        menuPanel.classList.remove("open");
-                        menuPanel.classList.add("close");
-                        setTimeout(function () {
-                            menuPanel.style.display = "none";
-                        }, 500);
-                    }
-                });
-
-            </script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  var closeMainButton = document.getElementById("closeMain");
+                  var menuPanel = document.getElementById("menu-panel");
+          
+                  closeMainButton.addEventListener("click", function () {
+                      closeMenuWithoutAnimation();
+                  });
+          
+                  function closeMenuWithoutAnimation() {
+                      menuPanel.style.display = "none";
+                  }
+              });
+          </script>
         </div>
         <ul id="first-list">
             <li id="about">Hakkında</li>
@@ -947,21 +569,21 @@
     <div class="gia-gallery">
       <div class="grid-row">
         <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (1).jpg">
-          <div class="overlay">
+          <div class="overlayGallery">
             <h1></h1>
           </div>
           <img src="./images/detailed-gallery/lq/tır_parkı (1).jpg" alt="">
         </div>
 
         <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (2).jpg">
-          <div class="overlay">
+          <div class="overlayGallery">
           </div>
           <img src="./images/detailed-gallery/lq/tır_parkı (2).jpg" alt="">
         </div>
 
 
         <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (3).jpg">
-          <div class="overlay">
+          <div class="overlayGallery">
           </div>
           <img src="./images/detailed-gallery/lq/tır_parkı (3).jpg" alt="">
         </div>
@@ -969,13 +591,13 @@
       </div>
       <div class="grid-row">
         <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (4).jpg">
-          <div class="overlay">
+          <div class="overlayGallery">
           </div>
           <img src="./images/detailed-gallery/lq/tır_parkı (4).jpg" alt="">
         </div>
 
         <div class="grid-item" data-media="./images/detailed-gallery/lq/KURU_LİMAN.jpg">
-          <div class="overlay">
+          <div class="overlayGallery">
           </div>
           <img src="./images/detailed-gallery/lq/KURU_LİMAN.jpg" alt="">
         </div>
@@ -1005,19 +627,19 @@
         });
 
         function openMedia(mediaUrl, mediaType) {
-          const modalOverlay = document.createElement('div');
-          modalOverlay.classList.add('modal-overlay');
-          modalOverlay.innerHTML = `
+          const modaloverlayGallery = document.createElement('div');
+          modaloverlayGallery.classList.add('modal-overlayGallery');
+          modaloverlayGallery.innerHTML = `
           <div class="modal-content">
               <span class="close">&times;</span>
               ${mediaType === 'video' ? `<video controls autoplay><source src="${mediaUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : `<img src="${mediaUrl}" alt="">`}
           </div>
       `;
-          document.body.appendChild(modalOverlay);
+          document.body.appendChild(modaloverlayGallery);
 
-          const closeModal = modalOverlay.querySelector('.close');
+          const closeModal = modaloverlayGallery.querySelector('.close');
           closeModal.addEventListener('click', function () {
-            modalOverlay.remove();
+            modaloverlayGallery.remove();
           });
         }
       });
