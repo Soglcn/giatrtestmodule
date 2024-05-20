@@ -24711,7 +24711,7 @@ ii.push({
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "Scroll to Explore GIA!",
         et.querySelector("p").innerText = "GIA, when completed, will be Turkey's largest mixed-use private industrial city, promoting an inclusive and sustainable industrial model.",
-        et.querySelector("a").href = "../pages/what-is-gia.html",
+        et.querySelector("a").href = "../en/what-is-gia.html",
         et.querySelector("#goToGalleryArea").innerText = "What is GIA?"        
     }
 });
@@ -24725,7 +24725,7 @@ ii.push({
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 200)),
         et.querySelector("h1").innerText = "The Investment Hub of the Future!",
         et.querySelector("p").innerText = "GIA aims to make the country's economy internationally competitive, support technology transfer, and accelerate foreign capital inflows.",
-        et.querySelector("a").href = "../pages/investment-opportunities.html",
+        et.querySelector("a").href = "../en/investmentopportunities.html",
         et.querySelector("#goToGalleryArea").innerText = "Learn More"        
     }
 });
@@ -24739,7 +24739,7 @@ ii.push({
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 200)),
         et.querySelector("h1").innerText = "Functional, Innovative, and Accessible!",
         et.querySelector("p").innerText = "The Ulukışla region is a strategic intersection that can easily access 4 different transportation options due to its location.",
-        et.querySelector("a").href = "../pages/location.html",
+        et.querySelector("a").href = "../en/location.html",
         et.querySelector("#goToGalleryArea").innerText = "Explore"        
     }
 });
@@ -24753,7 +24753,7 @@ ii.push({
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "More Than Just an Industrial Zone!",
         et.querySelector("p").innerText = "GIA offers a workspace and living area designed with a human and environmentally focused approach, not limited to industrial activities.",
-        et.querySelector("a").href = "../pages/social-facilities.html",
+        et.querySelector("a").href = "../en/socialamenities.html",
         et.querySelector("#goToGalleryArea").innerText = "Social Facilities"        
     }
 });
