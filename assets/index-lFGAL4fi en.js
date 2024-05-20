@@ -151,7 +151,7 @@ F.load("./assets/src/model/MainModels/FactoryArea.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (Z(),
-        x("Factories Zone", "GIA is designed as a mixed-use private industrial zone to support investments in various sectors with sustainable modern industrial facilities.", "fabrikalargaleri.html"),
+        x("Factories Zone", "GIA is designed as a mixed-use private industrial zone to support investments in various sectors with sustainable modern industrial facilities.", "factories.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/BÜYÜK_FABRİKA (3).jpg"))
         
@@ -194,7 +194,7 @@ F.load("./assets/src/model/MainModels/GiaCenter.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && ($(),
-        x("GIA Center", "GIA aims to bring together production and life; supporting value-added production with its modern urban identity and integration into Industry 5.0.", "merkezgaleri.html"),
+        x("GIA Center", "GIA aims to bring together production and life; supporting value-added production with its modern urban identity and integration into Industry 5.0.", "center.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/ÇARŞI (2) kopya.jpg"))        
     }
@@ -236,7 +236,7 @@ F.load("./assets/src/model/MainModels/FairArea.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (b(),
-        x("Social Amenities", "GIA shapes economic and social life with its education, health, tourism, and management complexes.", "sosyaldonatilargaleri.html"),
+        x("Social Amenities", "GIA shapes economic and social life with its education, health, tourism, and management complexes.", "socialamenities.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (4) kopya.jpg"))
         
@@ -279,7 +279,7 @@ F.load("./assets/src/model/MainModels/Houses.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (j(),
-        x("Housing Area", "With a housing area for 50,000 people, it aims to minimize time and energy loss by integrating production and living.", "lojmanlargaleri.html"),
+        x("Housing Area", "With a housing area for 50,000 people, it aims to minimize time and energy loss by integrating production and living.", "lodging.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/LOJMAN (4) Copy.jpg"))        
     }
@@ -321,7 +321,7 @@ F.load("./assets/src/model/MainModels/Trucks.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (D(),
-        x("Dry Port and Truck Park", "The Dry Port and Truck Park will be the logistics hub of the region; producers will have quick and easy access to the market and raw materials.", "lojistikbolgegaleri.html"),
+        x("Dry Port and Truck Park", "The Dry Port and Truck Park will be the logistics hub of the region; producers will have quick and easy access to the market and raw materials.", "logistic.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/KURU_LİMAN.jpg"))
         
@@ -364,7 +364,7 @@ F.load("./assets/src/model/MainModels/RestingArea.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (D(),
-        x("Rest Area", "The rest facility, with its outlet stores, will serve as a comfortable rest and shopping point for employees, travelers, and producers.", "sosyaldonatilargaleri.html"),
+        x("Rest Area", "The rest facility, with its outlet stores, will serve as a comfortable rest and shopping point for employees, travelers, and producers.", "socialamenities.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/DİNLENME_TESİS (2).jpg"))
         
@@ -407,7 +407,7 @@ F.load("./assets/src/model/MainModels/FreeArea.fbx", function(e) {
           , t = new h;
         t.setFromCamera(r, s),
         t.intersectObject(e, !0).length > 0 && (ee(),
-        x("Free Zone", "GIA Free Zone will be a special economic area with tax advantages for imports and exports, and where trade is liberalized.", "kurulimangaleri.html", "google.com"),
+        x("Free Zone", "GIA Free Zone will be a special economic area with tax advantages for imports and exports, and where trade is liberalized.", "port.html"),
         frontPanel.style.display = "flex",
         L("./images/detailed-gallery/lq/TAG (1).jpg"))
         

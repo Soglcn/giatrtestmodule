@@ -19,8 +19,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="item"><a href="../en.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo"
-                        class="menu-logo"></a></div>
+            <div class="item"><a href="../en.html"><img src="../elements/Logo-CzcIiDrb_111-CCbXfJUT.png" alt="Logo" class="menu-logo"></a></div>
             <div class="item">
                 <div id="hamburger-icon">&#9776;</div>
                 <script>
@@ -28,7 +27,7 @@
                         var hamburgerIcon = document.getElementById("hamburger-icon");
                         var menuPanel = document.getElementById("menu-panel");
                         var isOpen = false;
-
+    
                         hamburgerIcon.addEventListener("click", function () {
                             if (!isOpen) {
                                 openMenuWithAnimation();
@@ -36,24 +35,27 @@
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
                         document.addEventListener("click", function (event) {
                             var target = event.target;
                             var isMenu = target.closest("#menu-panel") === menuPanel;
                             var isHamburger = target === hamburgerIcon;
-
+    
                             if (!isMenu && !isHamburger && isOpen) {
                                 closeMenuWithAnimation();
                             }
                         });
-
+    
+    
+    
+    
                         function openMenuWithAnimation() {
                             menuPanel.style.display = "block";
                             menuPanel.classList.remove("close");
                             menuPanel.classList.add("open");
                             isOpen = true;
                         }
-
+    
                         function closeMenuWithAnimation() {
                             menuPanel.classList.remove("open");
                             menuPanel.classList.add("close");
@@ -63,8 +65,8 @@
                             isOpen = false;
                         }
                     });
-
-
+    
+    
                 </script>
             </div>
             <div class="item">
@@ -74,11 +76,11 @@
                 <a href="../pages/baskaninmektubu.html" id="change-language">EN</a>
             </div>
             <div class="item">
-                <a href="../pages/viewer.html" id="show-stages">Invest Map</a>
+                <a href="../en/viewer.html" id="show-stages">Invest Map</a>
             </div>
         </div>
     </header>
-
+    
     <div class="item" id="menu-panel">
         <div id="menu-panel-first">
             <div id="closeMainMenuPanel">
@@ -87,18 +89,18 @@
                     document.addEventListener("DOMContentLoaded", function () {
                         var closeMainButton = document.getElementById("closeMain");
                         var menuPanel = document.getElementById("menu-panel");
-
+    
                         closeMainButton.addEventListener("click", function () {
                             closeMenuWithoutAnimation();
                         });
-
+    
                         function closeMenuWithoutAnimation() {
                             menuPanel.style.display = "none";
                         }
                     });
                 </script>
             </div>
-
+    
             <ul id="first-list">
                 <li id="about">About</li>
                 <li id="ecosystem">Ecosystem</li>
@@ -108,50 +110,50 @@
                 <li id="contact">Contact</li>
             </ul>
             <ul id="second-list">
-
-                <a href="../pages/viewer.html">
+    
+                <a href="../en/viewer.html">
                     <li>Invest Map</li>
                 </a>
                 <a href="../pages/baskaninmektubu.html" class="mobile-only">
-                    <li class="english-only">EN</li>
+                    <li class="english-only">TR</li>
                 </a>
             </ul>
         </div>
         <div id="menu-panel-second">
             <h3 id="close-second-menu">&#x27F5; Back</h3>
             <ul class="about-list" id="second-list">
-                <li><a href="../en/what_is_gia.html">What is GIA?</a></li>
-                <li><a href="../en/ceoletter.html">CEO's Letter</a></li>
-                <li><a href="../pages/kurumsalsema.html">Board of Directors</a></li>
-                <li><a href="../pages/degerlerimiz.html">Values</a></li>
-                <li><a href="../pages/surdurulebilirlik.html">Sustainability</a></li>
+                <li><a href="what_is_gia.html">What is GIA?</a></li>
+                <li><a href="ceoletter.html">CEO's Letter</a></li>
+                <li><a href="boardofdirectors.html">Board of Directors</a></li>
+                <li><a href="values.html">Values</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
             </ul>
             <ul class="eco-list" id="second-list">
-                <li><a href="./pages/konum.html">Location</a></li>
-                <li><a href="./pages/altyapi.html">Infrastructure</a></li>
-                <li><a href="./pages/sektorler.html">Sectors</a></li>
-                <li><a href="./pages/yatirimfirsatlari.html">Investment Opportunities </a></li>
-                <li><a href="./pages/hibevetesvik.html">Grants, Incentives and Supports </a></li>
-                <li><a href="./pages/sosyalimkanlar.html">Social Amenities</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="infrastructure.html">Infrastructure</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="investmentopportunities.html">Investment Opportunities </a></li>
+                <li><a href="grantsandsupports.html">Grants, Incentives and Supports </a></li>
+                <li><a href="socialamenities.html">Social Amenities</a></li>
             </ul>
             <ul class="services-list" id="second-list">
-                <li><a href="./pages/yonetimhizmetleri.html">Management Support Services</a></li>
+                <li><a href="managementsupportservices.html">Management Support Services</a></li>
             </ul>
             <ul class="gallery-list" id="second-list">
-                <li><a href="maingallery.html">Interactive Gallery</a></li>
-                <li><a href="merkezgaleri.html">Center</a></li>
-                <li><a href="fabrikalargaleri.html">Factories</a></li>
-                <li><a href="lojmanlargaleri.html">Residences</a></li>
-                <li><a href="kurulimangaleri.html">Port</a></li>
-                <li><a href="lojistikbolgegaleri.html">Logistics Area</a></li>
-                <li><a href="sosyaldonatilargaleri.html">Social Amenities</a></li>
+                <li><a href="../interactivegallery.html">Interactive Gallery</a></li>
+                <li><a href="../center.html">Center</a></li>
+                <li><a href="../factories.html">Factories</a></li>
+                <li><a href="../lodging.html">Residences</a></li>
+                <li><a href="../port.html">Port</a></li>
+                <li><a href="../logistic.html">Logistics Area</a></li>
+                <li><a href="../socialamenities.html">Social Amenities</a></li>
             </ul>
             <ul class="contact-list" id="second-list">
-                <li><a href="./pages/iletisim.html">Contact</a></li>
-                <li><a href="./pages/kariyer.html">Career</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="career.html">Career</a></li>
             </ul>
             <ul class="press-list" id="second-list">
-                <li><a href="./pages/basin.html">News</a></li>
+                <li><a href="press.html">News</a></li>
             </ul>
         </div>
         <script>
@@ -163,8 +165,8 @@
                     document.querySelector('#menu-panel').style.width = '25%';
                 }
             });
-
-
+    
+    
             document.getElementById('about').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'block';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -173,7 +175,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('ecosystem').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'block';
@@ -182,7 +184,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
             document.getElementById('services').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -207,7 +209,7 @@
                 document.querySelector('.contact-list').style.display = 'none';
                 document.querySelector('.press-list').style.display = 'block';
             });
-
+    
             document.getElementById('contact').addEventListener('click', function () {
                 document.querySelector('.about-list').style.display = 'none';
                 document.querySelector('.eco-list').style.display = 'none';
@@ -216,18 +218,18 @@
                 document.querySelector('.contact-list').style.display = 'block';
                 document.querySelector('.press-list').style.display = 'none';
             });
-
+    
         </script>
-
-
-
+    
+    
+    
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 var listItems = document.querySelectorAll("#first-list li");
                 var menuPanel = document.getElementById("menu-panel");
                 var menuPanelSecond = document.getElementById("menu-panel-second");
                 var emptyArea = document.body;
-
+    
                 listItems.forEach(function (item) {
                     item.addEventListener("click", function () {
                         var screenWidth = window.innerWidth;
@@ -239,7 +241,7 @@
                         menuPanelSecond.style.display = "block";
                     });
                 });
-
+    
                 emptyArea.addEventListener("click", function (event) {
                     if (!menuPanel.contains(event.target) && !menuPanelSecond.contains(event.target)) {
                         if (window.innerWidth <= 1024) {
@@ -319,18 +321,18 @@
                             <h1>EXPLORE</h1>
                             <ul>
                                 <li><a href="../en/what_is_gia.html">About Us</a></li>
-                                <li><a href="../pages/management-services.html">Services</a></li>
-                                <li><a href="../pages/sustainability.html">Sustainability</a></li>
-                                <li><a href="../pages/sectors.html">Sectors</a></li>
-                                <li><a href="../pages/press.html">Press</a></li>
+                                <li><a href="../en/managementsupportservices.html">Services</a></li>
+                                <li><a href="../en/sustainability.html">Sustainability</a></li>
+                                <li><a href="../en/sectors.html">Sectors</a></li>
+                                <li><a href="../en/press.html">Press</a></li>
                             </ul>
                         </div>
         
                         <div id="footer-column">
                             <h1>INVESTMENT</h1>
                             <ul>
-                                <li><a href="../pages/viewer.html">Invest Map</a></li>
-                                <li><a href="../pages/incentives.html">Incentives</a></li>
+                                <li><a href="../en/viewer.html">Invest Map</a></li>
+                                <li><a href="../en/grantsandsupports.html">Incentives</a></li>
                             </ul>
                         </div>
         

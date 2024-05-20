@@ -12143,7 +12143,7 @@ function np() {
                 left: "5%"
             },
             children: ae.jsx("a", {
-                href: "../index.html",
+                href: "../en.html",
                 children: ae.jsx("img", {
                     src: "../assets/Logo-CzcIiDrb.png",
                     alt: "Logo",
