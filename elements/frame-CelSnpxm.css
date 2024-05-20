@@ -456,13 +456,13 @@ body, html {
     }
     
     #goToGalleryArea:hover {
-        margin-top: 10%;
+        margin-top: 5%;
         text-decoration: none;
-        width: 35%;
-        background-color: #fff;
-        color: #0047ba;
+        width: 20%;
+        background-color: transparent;
+        color: #ffffff;
         text-align: center;
-        padding: 10px 15px;
+        padding: 10px 10px;
         font-size: 11pt;
         margin-left: 10%;
         border-radius: 250px;
