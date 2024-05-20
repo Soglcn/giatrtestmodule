@@ -24711,7 +24711,7 @@ ii.push({
         Rt.rotation.y = Wi(0, Math.PI, Xi(100, 120)),
         et.querySelector("h1").innerText = "Scroll to Explore GIA!",
         et.querySelector("p").innerText = "GIA, when completed, will be Turkey's largest mixed-use private industrial city, promoting an inclusive and sustainable industrial model.",
-        et.querySelector("a").href = "../en/what-is-gia.html",
+        et.querySelector("a").href = "../en/what_is_gia.html",
         et.querySelector("#goToGalleryArea").innerText = "What is GIA?"        
     }
 });
