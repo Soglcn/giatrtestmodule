@@ -1543,6 +1543,44 @@ a:hover {
         padding-bottom: 25%;
     }
 
+
+    #second-list li,
+    a {
+        cursor: pointer;
+        font-weight: lighter;
+        list-style-type: none;
+        color: #ffffff8e;
+        margin-top: 15%;
+        font-size: 14pt;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    #second-list li:hover,
+    a:hover {
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    #second-list a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #close-second-menu {
+        margin-bottom: -75px;
+        padding-left: 15%;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    #close-second-menu:hover {
+        padding-left: 15%;
+        color: #ffffff7e;
+        cursor: pointer;
+    }
+
     .english-only {
         display: block;
     }
@@ -6716,5 +6754,5 @@ a:hover {
         padding-top: 15%;
         padding-left: 10%;
     }
-    
+
 }
