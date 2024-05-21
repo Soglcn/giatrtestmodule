@@ -40,7 +40,7 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
 #column{display:inline-block;vertical-align:top;margin-left:15px}
 
 
-@media only screen and (max-width: 500px) and (orientation: portrait){
+@media only screen and (max-width: 480px) and (orientation: portrait){
     canvas#mapViewer{
         width: 50vh;
         height: 50vh;
@@ -250,7 +250,7 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
     }
 
     #howToUse {
-        display: block;
+        display: none;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12pt;
         font-weight: bolder;
@@ -271,7 +271,7 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
     }
 
     #howToUse:hover {
-        display: block;
+        display: none;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12pt;
         font-weight: bolder;
