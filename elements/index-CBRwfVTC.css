@@ -1550,8 +1550,8 @@ a:hover {
         font-weight: lighter;
         list-style-type: none;
         color: #ffffff8e;
-        margin-top: 15%;
-        font-size: 14pt;
+        margin-top: 5%;
+        font-size: 12pt;
         transition: all 0.5s ease;
         cursor: pointer;
     }
@@ -1567,9 +1567,25 @@ a:hover {
         text-decoration: none;
     }
 
+    #first-list li {
+        list-style-type: none;
+        color: #dcdcdcce;
+        font-size: 16pt;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    #first-list li:hover {
+        cursor: pointer;
+        color: #ffffff;
+    }
+
     #close-second-menu {
         margin-bottom: -75px;
         padding-left: 15%;
+        padding-bottom: 15%;
         color: #fff;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -2284,7 +2300,7 @@ a:hover {
     #menu-panel-first {
         position: fixed;
         padding-left: 25px;
-        top: 10%;
+        top: 5%;
         left: 0;
         z-index: 0;
 
