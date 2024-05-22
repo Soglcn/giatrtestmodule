@@ -68,7 +68,7 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
         justify-content: center;
     }
 
-    #legendPart {
+    body #legendPart {
         font-family: Arial, Helvetica, sans-serif;
         width: auto;
         height: auto;
@@ -124,10 +124,10 @@ canvas#mapViewer{width:100vh;border:white solid 5px}
         font-size: 5pt;
     }
 
-    #showDetailsOnScreen {
+     body #showDetailsOnScreen {
         display: none;
         height: auto;
-        width: 35%;
+        width: 40%;
         padding-left: 2%;
         background-color: var(--details-background-color, rgba(0, 0, 0, .6));
         z-index: 9999;
