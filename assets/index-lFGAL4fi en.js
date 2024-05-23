@@ -153,7 +153,7 @@ F.load("./assets/src/model/MainModels/FactoryArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (Z(),
         x("Factories Zone", "GIA is designed as a mixed-use private industrial zone to support investments in various sectors with sustainable modern industrial facilities.", "factories.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/BÜYÜK_FABRİKA (3).jpg"))
+        L("./images/detailed-gallery/lq/buyukfarbika.jpg"))
         
     }
     function d(n) {
@@ -196,7 +196,7 @@ F.load("./assets/src/model/MainModels/GiaCenter.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && ($(),
         x("GIA Center", "GIA aims to bring together production and life; supporting value-added production with its modern urban identity and integration into Industry 5.0.", "center.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/ÇARŞI (2) kopya.jpg"))        
+        L("./images/detailed-gallery/lq/carsi2.jpg"))       
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
@@ -238,7 +238,7 @@ F.load("./assets/src/model/MainModels/FairArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (b(),
         x("Social Amenities", "GIA shapes economic and social life with its education, health, tourism, and management complexes.", "socialamenities.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (4) kopya.jpg"))
+        L("./images/detailed-gallery/lq/egitimkampusu1.jpg"))
         
     }
     function d(n) {
@@ -323,7 +323,7 @@ F.load("./assets/src/model/MainModels/Trucks.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (D(),
         x("Dry Port and Truck Park", "The Dry Port and Truck Park will be the logistics hub of the region; producers will have quick and easy access to the market and raw materials.", "logistic.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/KURU_LİMAN.jpg"))
+        L("./images/detailed-gallery/lq/kliman.jpg"))
         
     }
     function d(n) {
@@ -366,7 +366,7 @@ F.load("./assets/src/model/MainModels/RestingArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (D(),
         x("Rest Area", "The rest facility, with its outlet stores, will serve as a comfortable rest and shopping point for employees, travelers, and producers.", "socialamenities.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/DİNLENME_TESİS (2).jpg"))
+        L("./images/detailed-gallery/lq/dinlenmealani.jpg"))
         
     }
     function d(n) {

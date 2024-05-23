@@ -561,93 +561,90 @@
     </script>
 </div>
 
-
+<div class="gia-gallery">
+  <div id="classified">
+    <h1>Lojistik Bölge</h1>
+  </div>
   <div class="gia-gallery">
-    <div id="classified">
-      <h1>Lojistik</h1>
-    </div>
-    <div class="gia-gallery">
-      <div class="grid-row">
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (1).jpg">
-          <div class="overlayGallery">
-            <h1></h1>
-          </div>
-          <img src="./images/detailed-gallery/lq/tır_parkı (1).jpg" alt="">
+    <div class="grid-row">
+      <div class="grid-item" data-media="./images/detailed-gallery/lq/tir_parki (1).jpg">
+        <div class="overlayGallery">
+          <h1></h1>
         </div>
-
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (2).jpg">
-          <div class="overlayGallery">
-          </div>
-          <img src="./images/detailed-gallery/lq/tır_parkı (2).jpg" alt="">
-        </div>
-
-
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (3).jpg">
-          <div class="overlayGallery">
-          </div>
-          <img src="./images/detailed-gallery/lq/tır_parkı (3).jpg" alt="">
-        </div>
-
+        <img src="./images/detailed-gallery/lq/tir_parki (1).jpg" alt="">
       </div>
-      <div class="grid-row">
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (4).jpg">
-          <div class="overlayGallery">
-          </div>
-          <img src="./images/detailed-gallery/lq/tır_parkı (4).jpg" alt="">
-        </div>
 
-        <div class="grid-item" data-media="./images/detailed-gallery/lq/KURU_LİMAN.jpg">
-          <div class="overlayGallery">
-          </div>
-          <img src="./images/detailed-gallery/lq/KURU_LİMAN.jpg" alt="">
+      <div class="grid-item" data-media="./images/detailed-gallery/lq/tir2.jpg">
+        <div class="overlayGallery">
         </div>
+        <img src="./images/detailed-gallery/lq/tir2.jpg" alt="">
+      </div>
 
-        <div class="grid-item" data-media="">
 
-          <img src="" alt="">
+      <div class="grid-item" data-media="./images/detailed-gallery/lq/tir3.jpg">
+        <div class="overlayGallery">
         </div>
+        <img src="./images/detailed-gallery/lq/tir3.jpg" alt="">
       </div>
 
     </div>
+    <div class="grid-row">
+      <div class="grid-item" data-media="./images/detailed-gallery/lq/tır_parkı (4).jpg">
+        <div class="overlayGallery">
+        </div>
+        <img src="./images/detailed-gallery/lq/tır_parkı (4).jpg" alt="">
+      </div>
 
+      <div class="grid-item" data-media="./images/detailed-gallery/lq/kliman.jpg">
+        <div class="overlayGallery">
+        </div>
+        <img src="./images/detailed-gallery/lq/kliman.jpg" alt="">
+      </div>
 
+      <div class="grid-item" data-media="">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const gridItems = document.querySelectorAll('.grid-item');
+        <img src="" alt="">
+      </div>
+    </div>
 
-        gridItems.forEach(item => {
-          item.addEventListener('click', function () {
-            const mediaUrl = item.getAttribute('data-media');
-            if (mediaUrl) {
-              const mediaType = mediaUrl.endsWith('.mp4') ? 'video' : 'image';
-              openMedia(mediaUrl, mediaType);
-            }
-          });
-        });
-
-        function openMedia(mediaUrl, mediaType) {
-          const modaloverlayGallery = document.createElement('div');
-          modaloverlayGallery.classList.add('modal-overlayGallery');
-          modaloverlayGallery.innerHTML = `
-          <div class="modal-content">
-              <span class="close">&times;</span>
-              ${mediaType === 'video' ? `<video controls autoplay><source src="${mediaUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : `<img src="${mediaUrl}" alt="">`}
-          </div>
-      `;
-          document.body.appendChild(modaloverlayGallery);
-
-          const closeModal = modaloverlayGallery.querySelector('.close');
-          closeModal.addEventListener('click', function () {
-            modaloverlayGallery.remove();
-          });
-        }
-      });
-
-
-    </script>
   </div>
 
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gridItems = document.querySelectorAll('.grid-item');
+
+      gridItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const mediaUrl = item.getAttribute('data-media');
+          if (mediaUrl) {
+            const mediaType = mediaUrl.endsWith('.mp4') ? 'video' : 'image';
+            openMedia(mediaUrl, mediaType);
+          }
+        });
+      });
+
+      function openMedia(mediaUrl, mediaType) {
+        const modaloverlayGallery = document.createElement('div');
+        modaloverlayGallery.classList.add('modal-overlayGallery');
+        modaloverlayGallery.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            ${mediaType === 'video' ? `<video controls autoplay><source src="${mediaUrl}" type="video/mp4">Your browser does not support the video tag.</video>` : `<img src="${mediaUrl}" alt="">`}
+        </div>
+    `;
+        document.body.appendChild(modaloverlayGallery);
+
+        const closeModal = modaloverlayGallery.querySelector('.close');
+        closeModal.addEventListener('click', function () {
+          modaloverlayGallery.remove();
+        });
+      }
+    });
+
+
+  </script>
+</div>
   <div class="main-element">
     <div id="footer-container">
       <div id="footer-elements">

@@ -153,7 +153,7 @@ F.load("./assets/src/model/MainModels/FactoryArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (Z(),
         x("Fabrikalar Bölgesi", "GIA, sürdürülebilir modern sanayi tesisleriyle; birçok sektörde yatırımları desteklemek üzere karma yapıda özel bir endüstri bölgesi olarak tasarlanmıştır.", "fabrikalargaleri.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/BÜYÜK_FABRİKA (3).jpg"))
+        L("./images/detailed-gallery/lq/buyukfarbika.jpg"))
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
@@ -195,7 +195,7 @@ F.load("./assets/src/model/MainModels/GiaCenter.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && ($(),
         x("GIA Merkez", "GIA, üretim ile yaşamı buluşturmayı hedeflerken; modern kent kimliğiyle ve Endüstri 5.0'a entegrasyonuyla katma değer üretimini destekler.", "merkezgaleri.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/ÇARŞI (2) kopya.jpg"))
+        L("./images/detailed-gallery/lq/carsi2.jpg"))
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
@@ -237,7 +237,7 @@ F.load("./assets/src/model/MainModels/FairArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (b(),
         x("Sosyal Donatılar", "GIA, bünyesinde barındırdığı eğitim, sağlık, turizm ve yönetim kompleksleriyle ekonomik ve sosyal hayata yön verir.", "sosyaldonatilargaleri.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/EĞİTİM_KAMPÜSÜ (4) kopya.jpg"))
+        L("./images/detailed-gallery/lq/egitimkampusu1.jpg"))
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
@@ -321,7 +321,7 @@ F.load("./assets/src/model/MainModels/Trucks.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (D(),
         x("Kuru Liman ve Tır Parkı", "Kuru Liman ve Tır Parkı, bölgenin lojistik üssü olacak; üreticiler pazara ve hammaddeye hızlı bir şekilde kolayca erişebilecektir.", "lojistikbolgegaleri.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/KURU_LİMAN.jpg"))
+        L("./images/detailed-gallery/lq/kliman.jpg"))
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
@@ -363,7 +363,7 @@ F.load("./assets/src/model/MainModels/RestingArea.fbx", function(e) {
         t.intersectObject(e, !0).length > 0 && (D(),
         x("Dinlenme Alanı", "Dinlenme tesisi, bünyesindeki outlet mağazalar ile çalışanlar, yolcular ve üreticiler için konforlu bir mola ve alışveriş noktası olacaktır.", "sosyaldonatilargaleri.html"),
         frontPanel.style.display = "flex",
-        L("./images/detailed-gallery/lq/DİNLENME_TESİS (2).jpg"))
+        L("./images/detailed-gallery/lq/dinlenmealani.jpg"))
     }
     function d(n) {
         const r = new E(n.clientX / window.innerWidth * 2 - 1,-(n.clientY / window.innerHeight) * 2 + 1)
