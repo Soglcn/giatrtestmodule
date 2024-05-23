@@ -6775,3 +6775,29 @@ a:hover {
     }
 
 }
+
+@media only screen and (max-width: 2560px){
+    header .menu-logo {
+        max-width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+@media only screen and (max-width: 3840px){
+    header .menu-logo {
+        max-width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
