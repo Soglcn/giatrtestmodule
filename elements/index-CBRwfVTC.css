@@ -408,8 +408,8 @@ canvas {
     position: relative;
 }
 
-.menu-logo {
-    max-width: 5vw;
+header .menu-logo {
+    max-width: 45%;
     height: auto;
     display: block;
     position: absolute;
@@ -6779,9 +6779,9 @@ a:hover {
 
 }
 
-@media only screen and (max-width: 2560px){
-    .menu-logo {
-        max-width: 5vw;
+@media only screen and (min-width: 2000px) and (max-width: 3000px){
+    header.menu-logo {
+        max-width: 25%;
         height: auto;
         display: block;
         position: absolute;
@@ -6792,8 +6792,8 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 3840px){
-    .menu-logo {
+@media only screen and (min-width: 3800px){
+     header .menu-logo {
         max-width: 5vw;
         height: auto;
         display: block;
