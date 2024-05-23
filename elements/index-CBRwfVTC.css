@@ -409,13 +409,14 @@ canvas {
 }
 
 .menu-logo {
-    max-width: 50%;
+    max-width: 5vw;
     height: auto;
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 #hamburger-icon {
@@ -2214,7 +2215,7 @@ a:hover {
     }
 
     header .menu-logo {
-        max-width: 25vw;
+        max-width: 20vw;
         height: auto;
         display: block;
         position: absolute;
@@ -3491,13 +3492,14 @@ a:hover {
     }
 
     .menu-logo {
-        max-width: 25%;
+        max-width: 25vw;
         height: auto;
         display: block;
         position: absolute;
         top: 50%;
-        left: 25%;
+        left: 50%;
         transform: translate(-50%, -50%);
+
     }
 
     #hamburger-icon {
@@ -4847,8 +4849,8 @@ a:hover {
         font-weight: lighter;
     }
 
-    .menu-logo {
-        max-width: 50%;
+    header .menu-logo {
+        max-width: 15vw;
         height: auto;
         display: block;
         position: absolute;
@@ -6107,13 +6109,14 @@ a:hover {
     }
 
     .menu-logo {
-        max-width: 30%;
+        max-width: 25vw;
         height: auto;
         display: block;
         position: absolute;
         top: 50%;
-        left: 25%;
+        left: 50%;
         transform: translate(-50%, -50%);
+
     }
 
     #hamburger-icon {
@@ -6777,7 +6780,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 2560px){
-    header .menu-logo {
+    .menu-logo {
         max-width: 5vw;
         height: auto;
         display: block;
@@ -6790,7 +6793,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 3840px){
-    header .menu-logo {
+    .menu-logo {
         max-width: 5vw;
         height: auto;
         display: block;
